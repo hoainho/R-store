@@ -1,0 +1,181 @@
+.product-special{
+    position: relative;
+    background-image: url(../../img/bgproducttab3.png);
+    background-size: 7rem;
+    background-repeat: no-repeat;
+    margin-top: 3rem;
+    &--top{
+        margin-top: 0rem !important;
+        bottom: 4rem !important;
+    }
+    &--container{
+        margin: 0 10rem;
+        &_box{
+            pad: 0 .5rem;
+        }
+        &_bestprice{
+            display: flex;
+            position: relative;
+            flex-direction: row-reverse;
+            border-radius: 5px;
+            overflow: hidden;
+            background: linear-gradient(-45deg, $color-divider, $color-white, $color-divider,transparent);
+            animation: gradient 10s ease infinite;
+            background-size: 400% 400%  ;
+            cursor: pointer;
+            &::before{
+                content: "";
+                position: absolute;
+                display: block;
+                z-index: 1;
+                -webkit-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                height: 1px;
+                top: 10px;
+                left: 50%;
+                right: 50%;
+                background-color: $color-white;
+            }
+            &::after{
+                content: "";
+                position: absolute;
+                display: block;
+                z-index: 1;
+                -webkit-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                height: 1px;
+                bottom: 10px;
+                left: 50%;
+                right: 50%;
+                background-color: $color-white;
+            }
+            &--rightbanner{
+                &:hover{ 
+                    &::before  {
+                   left: 5% !important;
+                   right: 5% !important;
+                    }
+                    &::after  {
+                        left: 5% !important;
+                        right: 5% !important;
+                    }
+                }
+            }
+            &-hover{
+                content: "";
+                position: absolute;
+                display: block;
+                z-index: 1;
+                -webkit-transition: all .5s ease-in-out;
+                -o-transition: all .5s ease-in-out;
+                transition: all .5s ease-in-out;
+                width: 1px;
+                right: 2rem;
+                top: 50%;
+                bottom: 50%;
+                background-color: #fff;
+                &::before{
+                    content: "";
+                    position: absolute;
+                    display: block;
+                    z-index: 1;
+                    -webkit-transition: all .5s ease-in-out;
+                    -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+                    width: 1px;
+                    right: 33.5rem;
+                    top: 50%;
+                    bottom: 50%;
+                    background-color: #fff;
+                }
+                &-banner{
+                    &::before{
+                        right: 45.5rem !important;
+                    }
+                }
+                &--rightbanner{
+                    &::before{
+                        right: 21rem !important;
+                    }
+                }
+            }
+            &:hover{ 
+                &::before  {
+                    left: 3% ;
+                    right: 2.5% ;
+                }
+                &::after  {
+                    left: 3% ;
+                    right: 2.5% ;
+                }
+            }
+            &:hover ~ &-hover{
+                    top: 5% !important;
+                    bottom: 5% !important;
+            }
+            &:hover ~ &-hover::before{
+                top: 1% !important;
+                bottom: 1% !important;
+            }
+            &__pic{
+                position: relative;
+                width: 31%;
+                height: 20vh;
+                left: -1rem;
+                &-banner{
+                    width: 27% !important;
+                    left: -2rem;
+                }
+                &--rightbanner{
+                    top: 3rem;
+                    left: -3rem;
+                    height: 13vh;
+                }
+            }
+            &__content{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+                right: 5rem;
+                font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+                &-banner{
+                    right: -1rem !important;
+                    padding: 1rem 0 ;
+                }
+                &-left{
+                    right: 1rem;
+                    &-banner{
+                        right: 11rem;
+                        padding: 1.35rem;
+                    }
+                }
+                &___tittle{
+                    color: rgba($color-textdark,.7);
+                    &-banner{
+                        font-family: 'Cambria', 'Cochin', Georgia, Times, 'Times New Roman', serif;
+                        font-size: 1.4rem !important;
+                        width: 100%;
+                        font-weight: bold;
+                    }
+                    
+                }
+                &___sub{
+                    color: $color-divider;
+                    position: relative;
+                    bottom: .5rem;
+                }
+                &___sale{
+                    margin-top: 2rem;
+                    color: $color-divider;
+                    font-size: .85rem;
+                    &-banner{
+                        margin-top: 3.2rem;
+                    }
+                }
+            }
+        }
+    }
+}

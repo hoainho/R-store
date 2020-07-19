@@ -1,0 +1,292 @@
+.footer{
+    height: 60vh;
+    position: relative;
+    background-color: $color-background;
+    &-container{
+        position: relative;
+        bottom: 6rem;
+        height: 100%;
+        width: 100%;
+    
+    }
+    &-left{
+        height: 100%;
+        &--logo{
+            position: relative;
+            width: 44%;
+            left: 38%;
+            &_box{
+              width: 72% !important;
+              z-index: 0 !important;
+            }
+            &__icon{
+                
+            }
+            &__name{
+                bottom: 1rem !important;
+            }
+        }
+        &--rock{
+            position: absolute;
+            width: 100%;
+            top: 6rem;
+            height: 100%;
+            &_pic{
+                position: relative;
+                bottom: 3rem;
+                left: 31%;
+                width: 40%;
+                height: 110%;
+            }
+        }
+    }
+    &-center{
+        top: 3rem;
+        &--content{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            justify-items: center;
+            position: relative;
+            top: 3rem;
+            &-rowfirst{
+                display: flex;
+                flex-direction: row;
+                justify-items: center;
+                border-bottom: 1px solid rgba($color-divider, .3);
+            }
+            &-rowsecond{
+                display: flex;
+                flex-direction: row;
+                justify-items: center;
+                margin-top: 1rem;
+            }
+            &-box{
+               
+                margin: 1rem !important;
+                text-align: left;
+                width: 50%;
+                &:nth-child(-n+1){
+                    border-right: 1px solid rgba($color-divider, .3);
+                }
+            }
+            &_tittle{
+              color: $color-primary;
+            }
+            &_list{
+                list-style-type: none;
+            }
+            &_item{
+                margin: .3rem;
+
+            }
+            &_link{
+                text-decoration: none;
+                font-size: 1rem;
+                transition: all .25s ease-in-out 0s;
+                color: $color-divider;
+                position: relative;
+                &:active,
+                &:link{
+                    text-decoration: none;
+                    color: $color-primary;
+                }
+                &:hover{
+                    text-decoration: none;
+                    color:$color-primary;
+                    left: .5rem;
+                }
+            }   
+        }
+
+    }
+    &-right{
+        top: 3rem;
+        &--contact{
+            &_tittle{
+                color: $color-primary;
+            }
+            &_sub{
+                position: relative;
+                color: $color-divider;
+                font-size: .8rem;
+            }
+            &_follow{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                justify-items: center;
+
+                &__input{
+                    background-color: transparent;
+                    border: none;
+                    border-bottom: 1px solid rgba($color-divider,.3);
+                    outline: none;
+                    height: 7vh;
+                    color: $color-white;
+                    margin: 1rem 0;
+                    &:visited{
+                        border-bottom: 1px solid $color-primary;
+                    }
+                }
+                &__button{
+                    height: 6vh;
+                    position: relative;
+                    left: 22%;
+                    width: 60%;
+                    background-color: $color-primary;
+                    color: $color-white;
+                    font-weight: bold;
+                    border-radius: 30px;
+                    border: none;
+                    outline: none;
+                    transition: all .25s ease-in-out 0s;
+                    cursor: pointer;
+                    &:active
+                    {
+                        border: none;
+                        outline: none;
+                        transform: scale(.95);
+                    }
+                    &:hover{
+                        border: none;
+                        outline: none;
+                        transform: scale(1.05);
+                    }
+                }
+            }
+            &_hotline{
+              margin: 2rem 0 4rem 0;
+                &__icon{
+                    
+                    &___details{
+                      
+                    }
+                }
+                &__name{
+                  color: $color-primary;
+                }
+                &__address{
+                  color:$color-divider;
+                }
+            }
+            &_payment{
+
+                &__box{
+                    margin: .2rem;
+                    &:hover &___icon{
+                      opacity: 1;
+                    }
+                    &___icon{
+                        width: 10%;
+                        opacity: .3;
+                        transition: .1s ease-in-out .1s;
+                    }
+                }
+
+            }
+            &_copyright{
+                color: $color-divider;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+//Frame Footer
+@import url("https://fonts.googleapis.com/css?family=Lato:400,400i,700");
+
+body {
+  font-family: Lato, sans-serif;
+  --col-deepblue:  $color-background;
+}
+a {
+  color:$color-white;
+  text-decoration:none;
+}
+footer {
+  width:100%;
+  position: relative;;
+  bottom:0px
+}
+footer div {
+  background-color:  $color-background;
+  margin: -5px 0px 0px 0px;
+  padding:0px;
+  color: $color-white;
+  text-align:center;
+}
+svg {
+  width:100%;
+  overflow:visible;
+}
+
+.wave {
+  animation: wave 3s linear;
+  animation-iteration-count:infinite;
+  fill: $color-background;
+}
+.drop {
+  fill:  $color-background;
+  
+  animation: drop 3.2s linear infinite normal;
+  stroke: var(--col-deepblue);
+  stroke-width:0.5;
+  transform: translateY(25px) ;
+  transform-box: fill-box;
+  transform-origin: 50% 100%;
+}
+.drop1 {
+  
+}
+.drop2 {
+  animation-delay: 3s;
+  animation-duration:3s;
+}
+.drop3 {
+  animation-delay: -2s;
+  animation-duration:3.4s;
+}
+.drop4 {
+  animation-delay: 1.7s;
+}
+.drop5 {
+  animation-delay: 2.7s;
+  animation-duration:3.1s;
+}
+.drop6 {
+  animation-delay: -2.1s;
+  animation-duration:3.2s;
+}
+.gooeff {
+    filter: url(#goo);
+}
+#wave2 {
+  animation-duration:5s;
+  animation-direction: reverse;
+  opacity: .6
+}
+#wave3 {
+  animation-duration: 7s;
+  opacity:.3;
+}
+@keyframes drop {
+  0% {
+    transform: translateY(25px); 
+  }
+  30% {
+    transform: translateY(-10px) scale(.1);
+  }
+  30.001% {
+    transform: translateY(25px) scale(1); 
+  }
+  70% {
+    transform: translateY(25px); 
+  }
+  100% { 
+    transform: translateY(-10px) scale(.1);  
+  }
+}
+@keyframes wave {
+  to {transform: translateX(-100%);}
+}

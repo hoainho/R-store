@@ -1,0 +1,79 @@
+.contact{
+    margin: 0 25rem;
+    &-container{
+        background-image: url(../../img/backgroundtech1.png);
+        background-size: 20rem;
+        background-repeat: no-repeat;
+        background-position: 12rem 6rem;
+        &--tittle{
+            &_details{
+                position: relative;
+                font-family: serif;
+                font-size: 2rem;
+                font-weight: 900;
+                text-align: center;
+                &::before{
+                    content: '';
+                    position: absolute;
+                    height: 3px;
+                    width: 10%;
+                    background-color: $color-primary;
+                    top: 3rem;
+                    left: 45%;  
+                }
+            }
+            &_slogan{
+                font-size: .8rem;
+                font-weight: 900;
+                font-style: oblique;
+                font-family: serif;
+                color: rgba($color-divider, .5);
+                text-align: center;
+            }
+        }
+        &--input{
+            &_tittle{
+                font-size: 1rem;
+                font-weight: 600;
+                color: $color-textdark;
+            }
+            &_place{
+                &:focus{
+                    border-color: $color-primary;
+                    outline: 0;
+                    box-shadow: 0 0 0 0.2rem rgba($color-primary,.25);
+                }
+            }
+        }
+        &--submit{
+            position: relative;
+            width: 100%;
+            &_box{
+                position: relative;
+                width: 100%;
+                display:flex; 
+                justify-content: center;
+                &__details{
+                    background: $color-primary;
+                    color: $color-white;
+                    font-size: 1rem;
+                    font-weight: 900;
+                    font-style: oblique;
+                    font-family: serif;
+                    outline: none;
+                    border-color: rgba($color-primary,.25);
+                    &:focus{
+                        background: $color-primary;
+                        color: $color-white;
+                        border: rgba($color-primary,.25);
+                        box-shadow: 0 0 0 0.2rem rgba($color-primary,.25);
+                    }
+                    &:active,&:visited,&:hover{
+                        color: $color-primary !important;
+                        background: $color-background !important;
+                    }
+                }   
+            }
+        }
+    }
+}

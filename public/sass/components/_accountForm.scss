@@ -1,0 +1,86 @@
+.account{
+    &-tittle{
+        position: relative;
+        left: 44%;
+        width: 12%;
+        padding-top: .5rem;
+        border: 1px solid $color-primary;
+        box-shadow: 3px 3px 0 0 $color-primary;
+        border-radius: 10px;
+        &--details{
+            color: #242424;
+            font-family: serif;
+            font-size: 2rem;
+            font-weight: 900;   
+            width: 100%;
+            text-align: center;
+            
+            
+        }
+    }
+    &-content{
+        margin: 2rem 30rem;
+        border: 1px solid rgba($color-divider,.2);
+        padding: 1rem;
+        background-color: rgba($color-divider,.05);
+        border-radius: 10px;
+        background-image: url(../../img/backgroundtech.png);
+        background-size: 35rem;
+        background-repeat: no-repeat;
+        background-position: 0rem 5rem;
+        &--forgetpassword{
+            display: flex;
+            margin: 0px 11rem;
+            padding: 1rem;
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url(../../img/bgbutton.png);
+            background-position-x: center;
+            justify-content: center;
+            &_link{
+                font-size: 1rem;
+                font-weight: bold;
+                font-style: italic;
+                color: $color-white;
+                &:active,&:visited,
+                &:focus{
+                    text-decoration: none;
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $color-textdark;
+                }
+            }
+        }
+    }
+    &-signup{
+        border-radius: 30px;
+        left: 0;
+    }
+    &-create{
+        
+        margin: 2rem 35rem;
+        border-top: 1px solid rgba($color-divider,.1);
+        &--slogan{
+            margin: 2rem 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+            &_tittle{
+                color: $color-textdark;
+                font-size: 1.2rem;
+                font-weight: 900;
+                font-family: serif;
+                
+            }
+            &_sub{
+                color: $color-divider;
+                font-size: .8rem;
+                font-weight: 900;
+                font-family: serif;
+                font-style: italic;
+            }
+        }
+    }
+}

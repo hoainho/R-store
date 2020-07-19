@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Notable&display=swap');
+.product-TOP{
+        position: relative;
+        &--category{
+            margin: 0 7rem;
+            height: 100%;
+            position: relative;
+            &_tittle{
+                border-bottom: 2px solid $color-primary;
+                width: 38%;
+                margin: -.1rem;
+                position: relative;
+                right: 1rem;
+                &__details{
+                    color: $color-textdark;
+                    font-family: cursive;
+                    font-weight: bold;
+                    font-size: 2rem;
+                }
+            }
+            &_content{
+                border-top: 2px solid rgba($color-divider,.3);
+                border-bottom: 1px solid rgba($color-divider,.2);
+                padding: 2rem 0;
+                &__container{
+                    padding: .5rem;
+                    background-image: url('../../img/HeadphoneAcer1A.png');
+                    background-size: 14rem;
+                    background-position-x: 2rem;
+                    background-position-y: -2rem;
+                    overflow: hidden;
+                    background-repeat: no-repeat;
+                    &:nth-child(-n +5){
+                        border-right: 1px solid rgba($color-divider,.3);
+                    }
+                    &-KB{
+                        background-image: url('../../img/keyboard2A.png');
+                        background-size: 12rem;
+                        background-position-x: 3rem;
+                        background-position-y: 1rem;
+                    }
+                    &-SC{
+                        background-image: url('../../img/SCAcer1A.png');
+                        background-size: 10rem;
+                        background-position-x: 3rem;
+                        background-position-y: 3rem;
+                    }
+                    &-MOUSE{
+                        background-image: url('../../img/mouse2A.png');
+                        background-size: 12rem;
+                        background-position-x: 2rem;
+                        background-position-y: 2.5rem;
+                    }
+                    &-SW{
+                        background-image: url('../../img/SW2.png');
+                        background-size: 10rem;
+                        background-position-x: 3rem;
+                        background-position-y: 4rem;
+                    }
+                    &-MORE{
+                        background-image: url('../../img/more2.png');
+                        background-size: 12rem;
+                        background-position-x: 3rem;
+                        background-position-y: 1rem;
+                    }
+                    &___tittle{
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        font-family: inherit;
+                        color: $color-textdark;
+                    }
+                    &___list{
+                        list-style-type: none;
+                        margin:.3rem 0 ;
+
+                    }
+                    &___item{
+                        
+                        
+                    }
+                    &___link{
+                        color: $color-divider;
+                        font-size: 1rem;
+                        font-family: inherit;
+                        font-weight: lighter;
+                        text-decoration: none;
+                        position: relative;
+                        &:active,
+                        &:hover
+                        {
+                            text-decoration: none;
+                            color: $color-primary;
+                            left: .5rem;
+                        }
+
+                    }
+                }
+            }
+        }
+    }

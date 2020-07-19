@@ -1,0 +1,559 @@
+.product-tab{
+    position: relative;
+    &--category{
+        margin-top: 3rem;
+    }
+    &--categoryKB{
+        margin-top: 0rem;
+    }
+    &--categorySC{
+        margin-top: 0rem;
+    }
+    &--container{
+        margin: 0 5rem;
+        background-image: url(../../img/bgproducttab1.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        &_hero{
+            background-image: url(../../img/freeship.png);
+            background-repeat: no-repeat;
+            background-size: 6rem;
+            background-position-x:right;
+        
+        }
+        &_tittle{
+            &__list{
+                position: relative;
+                list-style-type: none;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+            }
+            &__item{
+                margin: .5rem 2rem;
+                padding: .5rem;
+                cursor: pointer;
+                &:active,
+                &:visited{
+                    border-bottom: 2px solid $color-primary;
+                }
+            }
+            &__link{
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+                color: $color-divider;
+                &:link,
+                :visited{
+                    color: $color-divider;
+                }
+                &:active
+                {
+                    text-decoration: none;
+                    color: $color-textdark;
+                    font-weight: bolder;
+                    font-size: 1.5rem; 
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $color-primary !important;
+                }
+
+            }
+            
+
+        }
+        &_content{  
+            margin: 1rem 0;
+            
+            &__box{
+                padding: .5rem;
+                display: none;
+                &___product{
+                    display: flex !important;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-items: center;
+                    position: relative;
+                    &:hover &-pic--A{
+                        display: block !important;
+                    }
+                    &:hover &-pic--B{
+                        display: none !important;
+                    }
+                    &:hover &-details 
+                    {
+                        color: $color-white;
+                        opacity: 1;
+                        animation: zoomIn .5s ease-in-out .3s;
+                        visibility: visible;
+                        
+                    }
+                    &:hover &-button
+                    {
+                        visibility: visible;
+                        bottom: 7rem;
+                        opacity: 1;
+                    }
+                    &-pic{
+                        width: 100%;
+                        height: 20vh;
+                        &--A{
+                            display: none !important;
+                        }
+                    }
+                    &-name{
+                        font-size: 1rem;
+                        text-align: center;
+                        
+                    }
+                    &-vote{
+                        color: $color-primary;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    &-price{
+                        font-size: 1.2rem;
+                        font-weight: bold;
+                        text-align: center;
+                        &--present{
+                            color: $color-primary;
+                        }
+                        &--old{
+                            color: $color-divider;
+                            font-style: italic;
+                            font-weight: 300;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                border-top: 2px solid $color-divider;
+                                width: 6vw;
+                                top: 67%;
+                                height: 1vh;
+                            }
+                        }
+                    }
+                    &-sale{
+                        position: absolute;
+                        background-color: $color-primary;
+                        font-size: 1rem;
+                        padding: 0 1rem;
+                        top: 0;
+                        right: 0;
+                        color: $color-white;
+                    }
+                    &-details{
+                        opacity: 0;
+                        width: 3vw;
+                        height: 6vh;
+                        border-radius: 50%;
+                        background-color: $color-primary;
+                        color: transparent;
+                        position: relative;
+                        top: -5rem;
+                        left: 7rem;
+                        transition: all .3s ease-in-out .3s;
+                        cursor: pointer;
+                        visibility: hidden;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        
+                        &:active
+                        {
+                            transform: scale(.95);
+                        }
+                        &--icon{
+                            font-size: 1.5rem;
+                            position: relative;
+                            top: 25%;
+                            left: 25%;
+                        }
+                        &--link{
+                            &:hover,
+                            &:active,
+                            &:link,
+                            &:visited,
+                            &:focus{
+                                outline: none;
+                                border: none;
+                                color: $color-white !important;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                    &-button{
+                        opacity: 0;
+                        position: relative;
+                        width: 100%;
+                        height: 48%;
+                        background-color: $color-white;
+                        bottom: 6rem;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1rem;
+                        transition: all .3s ease-in-out .3s;
+                        visibility: hidden;
+                        &--card{
+                            position: relative;
+                            left: 15%;
+                            width: 70%;
+                            font-size: .8rem;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: $color-white;
+                            padding: .5rem .3rem;
+                            border-radius: 30px;
+                            background-color: $color-primary;
+                            cursor: pointer;
+                            outline: none;
+                            border: none;
+                            transition: .1s ease-in-out .1s;
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                            &:active,
+                            &:visited{
+                                transform: scale(.95);
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                        &--control{
+                            display: flex;
+                            justify-items: center;
+                            justify-content: center;
+                            &_heard{
+                                background-color: transparent;
+                                border: 1px solid rgba($color-divider, .2);
+                                border-radius: 50%;
+                                margin: .5rem;
+                                &:hover{
+                                    background-color: $color-primary;
+                                }
+                                &:hover &__icon{
+                                    color: $color-white;
+                                }
+                                &__icon{
+                                    cursor: pointer;
+                                    margin: .5rem;
+                                    color: $color-divider;
+                                }
+                            }
+                            &_compare{
+                                background-color: $color-divider;
+                                border: 1px solid rgba($color-divider, .2);
+                                border-radius: 50%;
+                                margin: .5rem;
+                                &:hover{
+                                    background-color: $color-primary;
+                                }
+                                &__icon{
+                                    cursor: pointer;
+                                    margin: .5rem;
+                                    color: $color-white;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+
+//CATEGORY
+
+        &_tittle-category{
+            width: 20%;
+            position: absolute;
+            background-color: $color-light;
+            background-image: url('/img/HeadphoneAsus1B.png');
+            background-size: contain ;
+            background-repeat: no-repeat;
+            background-position-x: 1rem;
+            &-KB{
+                background-image: url('/img/KBbg.png') !important;
+            }
+            &-SC{
+                background-position-y: 4rem;
+                background-image: url('/img/screenbg.png') !important;
+            }
+            &-mouse{
+                background-position-y: 4rem;
+                background-image: url('/img/mousebg.png') !important;
+            }
+            &__tittle{
+                
+                &-headphone{
+                    color: rgba($color-textdark,.7);
+                    font-family: fantasy;
+                    margin-left: 1.5rem;
+                    border-bottom:2px solid $color-primary ;
+                    padding: 1rem 0;
+                    width: 30%;
+                    cursor: pointer;
+                    &-mouse{
+                        font-family: fantasy;
+                    }
+                }
+                &-keyboard{
+                    color: rgba($color-textdark,.7);
+                    font-family: fantasy;
+                    margin-left: 1.5rem;
+                    border-bottom:2px solid $color-primary ;
+                    padding: 1rem 0;
+                    width: 35%;
+                    cursor: pointer;
+                }
+            }
+            &__list{
+                position: relative;
+                list-style-type: none;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                border-left: 20px solid orange;
+            }
+            &__item{
+                padding: .5rem 0;
+                cursor: pointer;
+                border: none !important;
+                width: 45%;
+                &-mouse{
+                    width: 30%;
+                }
+                &::before{
+                    content: "";
+                    position: relative;
+                    display: block;
+                    z-index: 1;
+                    -webkit-transition: all .5s ease-in-out;
+                    -o-transition: all .5s ease-in-out;
+                    transition: all .5s ease-in-out;
+                    height: 1px;
+                    top: 3rem;
+                    width: 0;
+                    left: 0%;
+                    background-color: $color-primary;
+                }
+                &:hover{
+                    &::before  {
+                        width: 100% ;
+                         }
+                }
+            }
+            &__link{
+                text-decoration: none;
+                font-size: 1rem;
+                font-weight: bold;
+                color: $color-divider ;
+                background-color: transparent !important;
+                border: none !important;
+                &:active
+                {
+                    text-decoration: none;
+                    color: $color-primary;
+                    font-weight: bolder;
+                    
+                }
+                &:hover{
+                    text-decoration: none;
+                    color: $color-primary !important;
+                }
+
+            }
+            
+
+        }
+        &_content{  
+            margin: 1rem 0;
+            &-category{
+                position: relative;
+                width: 75%;
+                left: 25%;
+                height: 39vh;
+            }
+            &__category{
+                display: none;
+                &___product{
+                    display: flex !important;
+                    flex-direction: column;
+                    justify-content: center;
+                    justify-items: center;
+                    position: relative;
+                    &:hover &-pic--A{
+                        display: block !important;
+                    }
+                    &:hover &-pic--B{
+                        display: none !important;
+                    }
+                    &:hover &-details 
+                    {
+                        color: $color-white;
+                        opacity: 1;
+                        animation: zoomIn .5s ease-in-out .3s;
+                        visibility: visible;
+                        
+                    }
+                    &:hover &-button
+                    {
+                        visibility: visible;
+                        bottom: 7rem;
+                        opacity: 1;
+                    }
+                    &-pic{
+                        width: 100%;
+                        height: 20vh;
+                        &--A{
+                            display: none !important;
+                        }
+                    }
+                    &-name{
+                        font-size: 1rem;
+                        text-align: center;
+                        
+                    }
+                    &-vote{
+                        color: $color-primary;
+                        width: 100%;
+                        text-align: center;
+                    }
+                    &-price{
+                        font-size: 1rem;
+                        font-weight: bold;
+                        text-align: center;
+                        &--present{
+                            color: $color-primary;
+                        }
+                        &--old{
+                            color: $color-divider;
+                            font-style: italic;
+                            font-weight: 300;
+                            &::before{
+                                content: '';
+                                position: absolute;
+                                border-top: 2px solid $color-divider;
+                                width: 6vw;
+                                top: 67%;
+                                height: 1vh;
+                            }
+                        }
+                    }
+                    &-sale{
+                        position: absolute;
+                        background-color: $color-primary;
+                        font-size: 1rem;
+                        padding: 0 1rem;
+                        top: 0;
+                        right: 0;
+                        color: $color-white;
+                    }
+                    &-details{
+                        opacity: 0;
+                        width: 3vw;
+                        height: 6vh;
+                        border-radius: 50%;
+                        background-color: $color-primary;
+                        color: transparent;
+                        position: relative;
+                        top: -4rem;
+                        left: 6rem;
+                        transition: all .2s ease-in-out .3s;
+                        cursor: pointer;
+                        visibility: hidden;
+                        &:hover{
+                            transform: scale(1.05);
+                        }
+                        
+                        &:active
+                        {
+                            transform: scale(.95);
+                        }
+                        &--icon{
+                            font-size: 1.5rem;
+                            position: relative;
+                            top: 25%;
+                            left: 25%;
+                        }
+                    }
+                    &-button{
+                        opacity: 0;
+                        position: relative;
+                        width: 100%;
+                        height: 48%;
+                        background-color: transparent;
+                        bottom: 6rem;
+                        display: flex;
+                        flex-direction: column;
+                        padding: 1rem;
+                        transition: all .2s ease-in-out .3s;
+                        visibility: hidden;
+                        &--card{
+                            position: relative;
+                            left: 15%;
+                            width: 70%;
+                            font-size: .8rem;
+                            text-transform: uppercase;
+                            font-weight: 500;
+                            color: $color-white;
+                            padding: .5rem .3rem;
+                            border-radius: 30px;
+                            background-color: $color-primary;
+                            cursor: pointer;
+                            outline: none;
+                            border: none;
+                            transition: .1s ease-in-out .1s;
+                            &:hover{
+                                transform: scale(1.05);
+                            }
+                            &:active,
+                            &:visited{
+                                transform: scale(.95);
+                                outline: none;
+                                border: none;
+                            }
+                        }
+                        &--control{
+                            display: flex;
+                            justify-items: center;
+                            justify-content: center;
+                            &_heard{
+                                background-color: $color-divider;
+                                border: 1px solid rgba($color-divider, .2);
+                                border-radius: 50%;
+                                margin: .5rem;
+                                &:hover{
+                                    background-color: $color-primary;
+                                }
+                                &:hover &__icon{
+                                    color: $color-white;
+                                }
+                                &__icon{
+                                    cursor: pointer;
+                                    margin: .5rem;
+                                    color: $color-white;
+                                }
+                            }
+                            &_compare{
+                                background-color: $color-divider;
+                                border: 1px solid rgba($color-divider, .2);
+                                border-radius: 50%;
+                                margin: .5rem;
+                                &:hover{
+                                    background-color: $color-primary;
+                                }
+                                &__icon{
+                                    cursor: pointer;
+                                    margin: .5rem;
+                                    color: $color-white;
+                                }
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+
+}

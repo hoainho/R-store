@@ -1,0 +1,25 @@
+.scrollTop{
+    position: fixed;
+    bottom: 2rem;
+    right: 2rem;
+    background: $color-primary;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    transition: .25s ease-in-out .3s;
+    z-index: 20;
+        &-box{
+
+        &--link{
+            position: relative;
+            text-decoration: none;
+            text-align: center;
+            top: 25%;
+            left: 25%;
+            &:hover,&:link,&:active,&:focus{
+                text-decoration: none;
+                color: $color-white;
+            }
+        }
+    }
+}
