@@ -6,6 +6,8 @@ import BannerTop from './BannerSpecail';
 import ProductHorizonHP from './productHorizonHP';
 import ProductHorizonKB from './ProductHorizonKB';
 import BannerMid from './BannerMid';
+import ProductHorizonMouse from './ProductHorizonMouse';
+import ProductHorizonSC from './ProductHorizonSC';
 class Home extends Component {
     render(){
         return (
@@ -17,6 +19,8 @@ class Home extends Component {
                 <ProductHorizonHP />
                 <ProductHorizonKB />
                 <BannerMid />
+                <ProductHorizonMouse />
+                <ProductHorizonSC />
             </div>
         );
     }
