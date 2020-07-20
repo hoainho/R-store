@@ -3,7 +3,8 @@ import Slider from './slider';
 import Ability from './ability';
 import ProductTop from './productTop';
 import BannerTop from './BannerSpecail';
-import ProductHorizon from './productHorizon';
+import ProductHorizonHP from './productHorizonHP';
+import ProductHorizonKB from './ProductHorizonKB';
 class Home extends Component {
     render(){
         return (
@@ -12,7 +13,8 @@ class Home extends Component {
                 <Ability />
                 <ProductTop />
                 <BannerTop />
-                <ProductHorizon />
+                <ProductHorizonHP />
+                <ProductHorizonKB />
             </div>
         );
     }
