@@ -999,3 +999,4 @@ class ProductHorizonSC extends Component {
         );
     }
 }
+export default ProductHorizonSC;
