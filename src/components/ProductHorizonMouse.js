@@ -1056,3 +1056,4 @@ class ProductHorizonMouse extends Component {
         );
     }
 }
+export default ProductHorizonMouse;
