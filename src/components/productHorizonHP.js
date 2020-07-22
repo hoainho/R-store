@@ -1,8 +1,25 @@
-import React , { Component } from "react"
+import React, { Component } from "react";
+import Slider from "react-slick";
 
-
-class ProductHorizon extends Component {
-    render () {
+export default class ProductHorizon extends Component {
+  render() {
+    const settings = {
+        dots: false,
+        accessibility:true,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        autoplay:true,
+        autoplaySpeed: 3000,
+        centerMode:true,  
+        initialSlide: 3,
+        lazyLoad:'ondemand',
+        pauseOnHover:true,
+        swipe:true,
+        touchMove:true,
+        useCSS:true,
+        useCSS3:true, 
+        useTransform:true,
+    };
         return (
             // <!-- PRODUCT-CATEGORY-TABS  -->
                 <div class="product-tab product-tab--category">
@@ -27,7 +44,7 @@ class ProductHorizon extends Component {
                                 </li>
                             </ul>
                         </div>
-                        <div id="nav-tabContent" class="product-tab--container_content product-tab--container_content-category tab-content">
+                        <Slider {...settings} id="nav-tabContent" class="product-tab--container_content product-tab--container_content-category tab-content">
                             <div id="tab_asus" role="tabpanel" aria-labelledby="nav-asus" class="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
                                 <div class="product-tab--container_content__category___product">
                                     <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
@@ -1053,11 +1070,9 @@ class ProductHorizon extends Component {
                                     </div>
                                 </div> 
                             </div>
-                        </div>
+                        </Slider>
                     </div>
                 </div>
         );
     }
 }
-
-export default ProductHorizon;
