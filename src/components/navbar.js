@@ -1,8 +1,5 @@
 import React,{Component} from 'react';
-import {
-
-  Link
-} from "react-router-dom";
+import { Link } from "react-router-dom";
 
 class navbar extends Component {
     render(){
@@ -242,13 +239,13 @@ class navbar extends Component {
                                         <div className="navbar-content--menu_menuNavbar__sticky ">
                                             <ul className="navbar-content--menu_menuNavbar__sticky___list nav nav-tabs " id="myTab" role="tablist">
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" data-toggle="tab" to="/" role="tab" aria-controls="home" aria-selected="true"> Trang Chủ</Link>
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active"  to="/" role="tab" aria-controls="home" aria-selected="true"> Trang Chủ</Link>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"        data-toggle="tab" to="/about" role="tab" aria-controls="store" aria-selected="false"> Cửa Hàng</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/about" role="tab" aria-controls="store" aria-selected="false"> Cửa Hàng</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item navbar-content--menu_menuNavbar__sticky___itemFeatures nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="featured-tab" data-toggle="tab" to="/featured" role="tab" aria-controls="featured" aria-selected="false"> Chức Năng</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/featured" role="tab" aria-controls="featured" aria-selected="false"> Chức Năng</Link> 
                                                     <ul className="navbar-content--menu_menuNavbar__sticky___item-features">
                                                         <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Loại</a>
                                                             <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype">
@@ -290,13 +287,13 @@ class navbar extends Component {
                                                     </ul>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="news-tab" data-toggle="tab" to="/news" role="tab" aria-controls="news" aria-selected="false"> Tin Tức</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/news" role="tab" aria-controls="news" aria-selected="false"> Tin Tức</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="guarantee-tab" data-toggle="tab" to="/infomation" role="tab" aria-controls="guarantee" aria-selected="false"> Thông tin</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/infomation" role="tab" aria-controls="guarantee" aria-selected="false"> Thông tin</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="contact-tab" data-toggle="tab" to="/contact" role="tab" aria-controls="contact" aria-selected="false"> Liên Hệ</Link>
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/contact" role="tab" aria-controls="contact" aria-selected="false"> Liên Hệ</Link>
                                                 </li>
                                             </ul>
                                         </div>
