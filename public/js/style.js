@@ -167,24 +167,24 @@ $(document).ready(function(){
       useCSS3:true, 
       useTransform:true,
 });
-// $('.product-tab--container_content__category').slick({
-//       dots: false,
-//       accessibility:true,
-//       slidesToShow: 4,
-//       slidesToScroll: 3,
-//       autoplay:true,
-//       autoplaySpeed: 3000,
-//       centerMode:true,  
-//       initialSlide: 3,
-//       lazyLoad:'ondemand',
-//       pauseOnHover:true,
-//       swipe:true,
-//       touchMove:true,
-//       useCSS:true,
-//       useCSS3:true, 
-//       useTransform:true,
+$('.product-tab--container_content__category').slick({
+      dots: false,
+      accessibility:true,
+      slidesToShow: 4,
+      slidesToScroll: 3,
+      autoplay:true,
+      autoplaySpeed: 3000,
+      centerMode:true,  
+      initialSlide: 3,
+      lazyLoad:'ondemand',
+      pauseOnHover:true,
+      swipe:true,
+      touchMove:true,
+      useCSS:true,
+      useCSS3:true, 
+      useTransform:true,
 
-// });
+});
 $('.product-tab--container_content__category-SC').slick({
   dots: false,
   accessibility:true,
