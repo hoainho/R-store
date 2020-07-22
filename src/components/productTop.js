@@ -1,8 +1,25 @@
 import React, {Component} from "react";
-
+import Slider from "react-slick";
 
 class productTop extends Component {
     render() {
+        const settings = {
+            dots: false,
+            accessibility:true,
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            autoplay:true,
+            autoplaySpeed: 2000,
+            centerMode:true,  
+            initialSlide: 1 ,
+            lazyLoad:'ondemand',
+            pauseOnHover:true,
+            swipe:true,
+            touchMove:true,
+            useCSS:true,
+            useCSS3:true, 
+            useTransform:true,
+        };
         return (
             // <!-- PRODUCT-TAB  -->
                 <div class="product-tab">
@@ -28,7 +45,7 @@ class productTop extends Component {
                         </div>
                         <div id="nav-tabContent" class="product-tab--container_content tab-content ">
                             
-                            <div id="tab_new-arrival"   role="tabpanel" aria-labelledby="nav-new-arrival"   class=" product-tab--container_content__box tab-pane fade show active">
+                            <Slider { ...settings } id="tab_new-arrival"   role="tabpanel" aria-labelledby="nav-new-arrival"   class=" product-tab--container_content__box tab-pane fade show active">
                                 <div class="product-tab--container_content__box___product">
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -296,8 +313,8 @@ class productTop extends Component {
                                     </div>
                                 </div> 
                                 
-                            </div>
-                            <div id="tab_best-seller"   role="tabpanel" aria-labelledby="nav-best-seller"   class=" product-tab--container_content__box tab-pane fade ">
+                            </Slider>
+                            <Slider { ...settings } id="tab_best-seller"   role="tabpanel" aria-labelledby="nav-best-seller"   class=" product-tab--container_content__box tab-pane fade ">
                                 <div class="product-tab--container_content__box___product">
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt=""/>
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt=""/>
@@ -561,8 +578,8 @@ class productTop extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
-                            <div id="tab_featured"      role="tabpanel" aria-labelledby="nav-featured"      class=" product-tab--container_content__box tab-pane fade  ">
+                            </Slider>
+                            <Slider { ...settings } id="tab_featured"      role="tabpanel" aria-labelledby="nav-featured"      class=" product-tab--container_content__box tab-pane fade  ">
                                 <div class="product-tab--container_content__box___product">
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard" />
@@ -824,8 +841,8 @@ class productTop extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="tab_hot-sell"      role="tabpanel" aria-labelledby="nav-hot-sell"      class=" product-tab--container_content__box tab-pane fade  ">
+                            </Slider>
+                            <Slider { ...settings } id="tab_hot-sell"      role="tabpanel" aria-labelledby="nav-hot-sell"      class=" product-tab--container_content__box tab-pane fade  ">
                                 <div class="product-tab--container_content__box___product">
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -1087,7 +1104,7 @@ class productTop extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
+                            </Slider>
                             
                         </div>
                     </div>

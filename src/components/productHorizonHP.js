@@ -4,6 +4,24 @@ import Slider from "react-slick";
 
 export default class ProductHorizon extends Component {
   render() {
+    const settings = 
+    {   
+        dots: false,
+        accessibility:true,
+        slidesToShow: 4,
+        slidesToScroll: 3,
+        autoplay:true,
+        autoplaySpeed: 3000,
+        centerMode:true,  
+        initialSlide: 3,
+        lazyLoad:'ondemand',
+        pauseOnHover:true,
+        swipe:true,
+        touchMove:true,
+        useCSS:true,
+        useCSS3:true, 
+        useTransform:true,
+    };
         return (
             // <!-- PRODUCT-CATEGORY-TABS  -->
                 <div class="product-tab product-tab--category">
@@ -29,7 +47,7 @@ export default class ProductHorizon extends Component {
                             </ul>
                         </div>
                         <div  id="nav-tabContent" class="product-tab--container_content product-tab--container_content-category tab-content">
-                                <div id="tab_asus" role="tabpanel" aria-labelledby="nav-asus" class="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
+                                <Slider { ...settings } id="tab_asus" role="tabpanel" aria-labelledby="nav-asus" class="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
                                     <div class="product-tab--container_content__category___product">
                                         <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                         <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -264,8 +282,8 @@ export default class ProductHorizon extends Component {
                                             </div>
                                         </div>
                                     </div> 
-                                </div>   
-                                <div id="tab_acer" role="tabpanel" aria-labelledby="nav-acer" class=" product-tab--container_content__category product-tab--container_content__category tab-pane fade">
+                                </Slider>   
+                                <Slider { ...settings } id="tab_acer" role="tabpanel" aria-labelledby="nav-acer" class=" product-tab--container_content__category product-tab--container_content__category tab-pane fade">
                                     <div class="product-tab--container_content__category___product">
                                         <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/mouse1A.png" alt=""/>
                                         <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/mouse1B.png" alt=""/>
@@ -527,8 +545,8 @@ export default class ProductHorizon extends Component {
                                             </div>
                                         </div>
                                     </div> 
-                                </div>
-                                <div id="tab_logitech" role="tabpanel" aria-labelledby="nav-logitech" class=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                                </Slider>
+                                <Slider { ...settings } id="tab_logitech" role="tabpanel" aria-labelledby="nav-logitech" class=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div class="product-tab--container_content__category___product">
                                     <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
                                     <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
@@ -790,8 +808,8 @@ export default class ProductHorizon extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                                <div id="tab_sony" role="tabpanel" aria-labelledby="nav-sony" class="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                                <Slider { ...settings } id="tab_sony" role="tabpanel" aria-labelledby="nav-sony" class="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div class="product-tab--container_content__category___product">
                                     <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img class="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -1053,7 +1071,7 @@ export default class ProductHorizon extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
+                            </Slider>
                             
 
                         </div>
