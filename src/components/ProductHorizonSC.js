@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import Slider from "react-slick";
 class ProductHorizonSC extends Component {
     
     render(){
@@ -44,7 +44,7 @@ class ProductHorizonSC extends Component {
                             </ul>
                         </div>
                         <div id="nav-tabContent" className="product-tab--container_content product-tab--container_content-category product-tab--container_content-category-SC tab-content">
-                            <div id="tab_screenasus" role="tabpanel" aria-labelledby="nav-screenasus" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
+                            <Slider {...settings} id="tab_screenasus" role="tabpanel" aria-labelledby="nav-screenasus" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/KBAsus1A.png" alt="ROG Strix Flar"/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/KBAsus1B.jpg" alt="ROG Strix Flar"/>
@@ -221,8 +221,8 @@ class ProductHorizonSC extends Component {
                                     </div>
                                 </div> 
                                 
-                            </div>
-                            <div id="tab_screenacer" role="tabpanel" aria-labelledby="nav-screenacer" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_screenacer" role="tabpanel" aria-labelledby="nav-screenacer" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/mouse1A.png" alt=""/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/mouse1B.png" alt=""/>
@@ -484,8 +484,8 @@ class ProductHorizonSC extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
-                            <div id="tab_screenlogitech" role="tabpanel" aria-labelledby="nav-screenlogitech" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_screenlogitech" role="tabpanel" aria-labelledby="nav-screenlogitech" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
@@ -747,8 +747,8 @@ class ProductHorizonSC extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="tab_screensony" role="tabpanel" aria-labelledby="nav-screensony" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_screensony" role="tabpanel" aria-labelledby="nav-screensony" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -1010,7 +1010,7 @@ class ProductHorizonSC extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
+                            </Slider>
                         </div>
                     </div>
                 </div>
