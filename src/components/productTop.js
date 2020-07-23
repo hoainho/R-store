@@ -317,7 +317,8 @@ class productTop extends Component {
                                 </div> 
                             </Slider>
                             </Tab.Pane>
-                            
+                            <Tab.Pane>
+
                             <Slider { ...settings } id="tab_featured"      role="tabpanel" aria-labelledby="nav-featured"      className=" product-tab--container_content__box tab-pane   ">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
@@ -581,6 +582,8 @@ class productTop extends Component {
                                     </div>
                                 </div>
                             </Slider>
+                            </Tab.Pane>
+                            
                             <Slider { ...settings } id="tab_hot-sell"      role="tabpanel" aria-labelledby="nav-hot-sell"      className=" product-tab--container_content__box tab-pane   ">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
