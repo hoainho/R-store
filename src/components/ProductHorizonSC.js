@@ -1,7 +1,25 @@
 import React, { Component } from "react";
 
 class ProductHorizonSC extends Component {
+    
     render(){
+        const settings = {
+            dots: false,
+            accessibility:true,
+            slidesToShow: 5,
+            slidesToScroll: 33,
+            autoplay:true,
+            autoplaySpeed: 1500,
+            centerMode:true,  
+            initialSlide: 2,
+            lazyLoad:'ondemand',
+            pauseOnHover:true,
+            swipe:true,
+            touchMove:true,
+            useCSS:true,
+            useCSS3:true, 
+            useTransform:true,
+        }
         return (
             <div className="product-tab product-tab--categorySC">
                     <div className="product-tab--container">
