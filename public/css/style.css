@@ -1178,7 +1178,8 @@ input[type="radio"] {
       background-image: url(../../img/freeship.png);
       background-repeat: no-repeat;
       background-size: 6rem;
-      background-position-x: right; }
+      background-position-x: right;
+      height: 65vh; }
     .product-tab--container_tittle__list {
       position: relative;
       list-style-type: none;
