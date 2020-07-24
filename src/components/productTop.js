@@ -34,7 +34,7 @@ class productTop extends Component {
                         <div className="product-tab--container_tittle">
                             <ul role="tablist" className="product-tab--container_tittle__list nav nav-tabs">
                                 <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <NavLink to="/" className="product-tab--container_tittle__link  nav-link active ">Hàng mới về</NavLink>
+                                    <NavLink to="/" className="product-tab--container_tittle__link  nav-link  ">Hàng mới về</NavLink>
                                 </li>
 
                                 <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">

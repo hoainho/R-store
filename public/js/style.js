@@ -167,8 +167,8 @@ $(document).ready(function(){
 $(document).ready(function(){
   $('.product-tab--container_tittle__link').click(
     function(){ 
-      $('.product-tab--container_tittle__link').removeClass('active-tab--link'),
-      $(this).addClass('active-tab--link')
+      $('.product-tab--container_tittle__link').removeClass('active'),
+      $(this).addClass('active')
     });
 });
 	$(document).ready(function() {

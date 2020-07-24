@@ -20,8 +20,7 @@ body {
 .active-tab--link {
   text-decoration: none !important;
   color: #242424;
-  font-weight: bolder !important;
-  font-size: 1.5rem !important; }
+  font-weight: bolder !important; }
 
 .high-light {
   color: #ff7e00;
@@ -1203,8 +1202,7 @@ input[type="radio"] {
       .product-tab--container_tittle__link:active {
         text-decoration: none;
         color: #242424;
-        font-weight: bolder;
-        font-size: 1.5rem; }
+        font-weight: bolder; }
       .product-tab--container_tittle__link:hover {
         text-decoration: none;
         color: #ff7e00 !important; }
