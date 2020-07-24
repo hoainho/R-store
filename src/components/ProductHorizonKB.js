@@ -1,8 +1,25 @@
 import React , { Component } from "react";
-
+import Slider from "react-slick";
 
 class ProductHorizonKB extends Component {
     render(){
+        const settings = {
+            dots: false,
+            accessibility: true,
+            slidesToShow: 5,
+            slidesToScroll: 3,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            centerMode: true,
+            initialSlide: 1,
+            lazyLoad: 'ondemand',
+            pauseOnHover: true,
+            swipe: true,
+            touchMove: true,
+            useCSS: true,
+            useCSS3: true,
+            useTransform: true,
+        };
         return (
             <div className="product-tab product-tab--categoryKB">
                     <div className="product-tab--container">
@@ -27,7 +44,7 @@ class ProductHorizonKB extends Component {
                             </ul>
                         </div>
                         <div id="nav-tabContent" className="product-tab--container_content product-tab--container_content-category product-tab--container_content-category-KB tab-content">
-                            <div id="tab_KBasus" role="tabpanel" aria-labelledby="nav-KBasus" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
+                            <Slider {...settings} id="tab_KBasus" role="tabpanel" aria-labelledby="nav-KBasus" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade show active">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/KBAsus1A.png" alt="ROG Strix Flar"/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/KBAsus1B.jpg" alt="ROG Strix Flar"/>
@@ -204,8 +221,8 @@ class ProductHorizonKB extends Component {
                                     </div>
                                 </div> 
                                 
-                            </div>
-                            <div id="tab_KBacer" role="tabpanel" aria-labelledby="nav-KBacer" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_KBacer" role="tabpanel" aria-labelledby="nav-KBacer" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/mouse1A.png" alt=""/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/mouse1B.png" alt=""/>
@@ -467,8 +484,8 @@ class ProductHorizonKB extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
-                            <div id="tab_KBlogitech" role="tabpanel" aria-labelledby="nav-KBlogitech" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_KBlogitech" role="tabpanel" aria-labelledby="nav-KBlogitech" className=" product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
@@ -730,8 +747,8 @@ class ProductHorizonKB extends Component {
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div id="tab_KBsony" role="tabpanel" aria-labelledby="nav-KBsony" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
+                            </Slider>
+                            <Slider {...settings} id="tab_KBsony" role="tabpanel" aria-labelledby="nav-KBsony" className="product-tab--container_content__category product-tab--container_content__category tab-pane fade ">
                                 <div className="product-tab--container_content__category___product">
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -993,7 +1010,7 @@ class ProductHorizonKB extends Component {
                                         </div>
                                     </div>
                                 </div> 
-                            </div>
+                            </Slider>
                         </div>
                     </div>
                 </div> 
