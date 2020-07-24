@@ -22,7 +22,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "sasstocss": "node-sass %PUBLIC_URL%/sass/main.scss %PUBLIC_URL%/css/style.css -w"
-  },
+  },  
   "eslintConfig": {
     "extends": "react-app"
   },
