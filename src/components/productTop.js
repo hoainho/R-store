@@ -1,60 +1,333 @@
-import React, {Component} from "react";
+import React, { Component } from "react";
 import Slider from "react-slick";
-import ProductArrival from './productTop/arrival';
-import {Tab,Nav} from 'react-bootstrap';
-import TabContent from 'react-bootstrap/TabContent';
-import TabPane from 'react-bootstrap/TabPane';
+import {
+    BrowserRouter as Router,
+    Switch,
+    Route,
+    NavLink,
+    useLocation
+} from "react-router-dom";
 class productTop extends Component {
     render() {
         const settings = {
             dots: false,
-            accessibility:true,
+            accessibility: true,
             slidesToShow: 5,
             slidesToScroll: 3,
-            autoplay:true,
+            autoplay: true,
             autoplaySpeed: 2000,
-            centerMode:true,  
-            initialSlide: 1 ,
-            lazyLoad:'ondemand',
-            pauseOnHover:true,
-            swipe:true,
-            touchMove:true,
-            useCSS:true,
-            useCSS3:true, 
-            useTransform:true,
+            centerMode: true,
+            initialSlide: 1,
+            lazyLoad: 'ondemand',
+            pauseOnHover: true,
+            swipe: true,
+            touchMove: true,
+            useCSS: true,
+            useCSS3: true,
+            useTransform: true,
         };
         return (
             // <!-- PRODUCT-TAB  -->
-                <div className="product-tab">
-                    <Tab.Container defaultActiveKey="first" className="product-tab--container product-tab--container_hero">
+            <div className="product-tab">
+                <Router >
+                    <div className="product-tab--container product-tab--container_hero">
                         <div className="product-tab--container_tittle">
-                            <Nav variant="tabs"  role="tablist"  className="product-tab--container_tittle__list nav nav-tabs">
-                                <Nav.Item   id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <Nav.Link eventKey="first" href="#tab_new-arrival" id="nav-new-arrival" role="tab" aria-controls="nav-new-arrival" aria-selected="true" data-toggle="pill" id="tab-link" className="product-tab--container_tittle__link  nav-link active">Hàng mới về</Nav.Link>
-                                </Nav.Item>
-                                
-                                <Nav.Item   id="tab-item "  className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <Nav.Link eventKey="second" href="#tab_best-seller" id="nav-best-seller" role="tab" aria-controls="nav-best-seller" aria-selected="true" data-toggle="tab" id="tab-link" className="product-tab--container_tittle__link  nav-link ">Bán chạy</Nav.Link>
-                                </Nav.Item>
-                                
-                                <Nav.Item  id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <Nav.Link eventKey="3" href="#tab_featured" id="nav-featured" role="tab" aria-controls="nav-featured" aria-selected="true" data-toggle="tab"id="tab-link" className="product-tab--container_tittle__link  nav-link ">Đề xuất</Nav.Link>
-                                </Nav.Item>
-                                
-                                <Nav.Item  id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <Nav.Link eventKey="4" href="#tab_hot-sell" id="nav-hot-sell" role="tab" aria-controls="nav-hot-sell" aria-selected="true" data-toggle="tab" id="tab-link" className="product-tab--container_tittle__link  nav-link ">Giảm giá</Nav.Link>
-                                </Nav.Item>
-                            </Nav>
+                            <ul role="tablist" className="product-tab--container_tittle__list nav nav-tabs">
+                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                    <NavLink to="/" className="product-tab--container_tittle__link  nav-link active ">Hàng mới về</NavLink>
+                                </li>
+
+                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                    <NavLink to="/tab_best-seller" className="product-tab--container_tittle__link  nav-link  ">Bán chạy</NavLink>
+                                </li>
+
+                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                    <NavLink to="/tab_featured" className="product-tab--container_tittle__link  nav-link ">Đề xuất</NavLink>
+                                </li>
+
+                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                    <NavLink to="/tab_hot-sell" className="product-tab--container_tittle__link  nav-link ">Giảm giá</NavLink>
+                                </li>
+                            </ul>
                         </div>
-                        <Tab.Content id="nav-tabContent" className="product-tab--container_content tab-content ">
-                            <Tab.Pane eventKey="first">
-                                <ProductArrival />
-                            </Tab.Pane>
-                            <Tab.Pane eventKey="second">
-                                <Slider { ...settings } id="tab_best-seller"   role="tabpanel" aria-labelledby="nav-best-seller"   className=" product-tab--container_content__box tab-pane  ">
+                        <div id="nav-tabContent" className="product-tab--container_content tab-content ">
+                            <Switch>
+                                <Route exact path="/">
+                                    <Slider { ...settings }    role="tabpanel" aria-labelledby="nav-new-arrival"   className=" product-tab--container_content__box tab-pane active">
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
+                                    <span  className="product-tab--container_content__box___product-details">
+                                        <a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a>
+                                    </span>
+                                    
+                                    <h4 className="product-tab--container_content__box___product-name">Tai nghe Asus AF298</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">405.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">450.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>  
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV"/>
+                                    <span className="product-tab--container_content__box___product-details">
+                                        <a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a>
+                                    </span>
+                                    <h4 className="product-tab--container_content__box___product-name"> Tai nghe Rapoo VH510 Gaming</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">410.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">900.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím MSI A2G</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">750.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">675.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B"/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím Luxury B2A93 </h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">405.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">450.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt=""/>
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt=""/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Chuột Gaming A2F66</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">405.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">450.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt=""/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Chuột Gaming 9SAK</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">1.080.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">1.200.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt=""/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Lót Chuột Razer</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">90.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">100.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A"/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Lót Chuột Gaming </h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">150.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">135.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb"/>
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                        </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">USB Gaming 128GB</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">450.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">500.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                    </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div> 
+                                
+            </Slider>
+                                </Route>
+                                <Route path="/tab_best-seller">
+                                    <Slider {...settings}   aria-labelledby="nav-best-seller" className=" product-tab--container_content__box tab-pane  ">
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt="" />
                                     <span className="product-tab--container_content__box___product-details">
                                         <a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
                                             <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
@@ -74,7 +347,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -82,13 +355,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Chuột Gaming 9SAK</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -103,7 +376,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -111,13 +384,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Lót Chuột Razer</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -132,7 +405,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -140,13 +413,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Lót Chuột Gaming </h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -161,7 +434,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -169,13 +442,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">USB Gaming 128GB</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -190,7 +463,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -198,13 +471,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Tai nghe Asus AF298</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -219,7 +492,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -227,13 +500,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name"> Tai nghe Rapoo VH510 Gaming</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -248,7 +521,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -256,76 +529,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
-                                <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
-                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
-                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím MSI A2G</h4>
-                                    <span className="product-tab--container_content__box___product-vote">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="far fa-star"></i>
-                                    </span>
-                                    <span className="product-tab--container_content__box___product-price">
-                                        <span className="product-tab--container_content__box___product-price--present">750.000vnd</span>
-                                        <span className="product-tab--container_content__box___product-price--old">675.000vnd</span>
-                                    </span>
-                                    <span className="product-tab--container_content__box___product-sale">
-                                        -10%
-                                    </span>
-                                    <div className="product-tab--container_content__box___product-button">
-                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
-                                        <div className="product-tab--container_content__box___product-button--control">
-                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
-                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
-                                        </div>
-                                    </div>
-                                </div> 
-                                <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B"/>
-                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
-                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím Luxury B2A93 </h4>
-                                    <span className="product-tab--container_content__box___product-vote">
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="fas fa-star"></i>
-                                        <i className="far fa-star"></i>
-                                    </span>
-                                    <span className="product-tab--container_content__box___product-price">
-                                        <span className="product-tab--container_content__box___product-price--present">405.000vnd</span>
-                                        <span className="product-tab--container_content__box___product-price--old">450.000vnd</span>
-                                    </span>
-                                    <span className="product-tab--container_content__box___product-sale">
-                                        -10%
-                                    </span>
-                                    <div className="product-tab--container_content__box___product-button">
-                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
-                                        <div className="product-tab--container_content__box___product-button--control">
-                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
-                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
-                                        </div>
-                                    </div>
-                                </div> 
-                            </Slider>
-                            </Tab.Pane>
-                            <Tab.Pane>
-
-                            <Slider { ...settings } id="tab_featured"      role="tabpanel" aria-labelledby="nav-featured"      className=" product-tab--container_content__box tab-pane   ">
+                                </div>
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Bàn Phím MSI A2G</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -340,7 +550,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -348,13 +558,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Bàn Phím Luxury B2A93 </h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -369,7 +579,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -377,13 +587,75 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
+                            </Slider>
+                                </Route>
+                                <Route path="/tab_featured">
+                                    <Slider {...settings}   aria-labelledby="nav-featured" className=" product-tab--container_content__box tab-pane   ">
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím MSI A2G</h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">750.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">675.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                        </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B" />
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
+                                    <h4 className="product-tab--container_content__box___product-name">Bàn Phím Luxury B2A93 </h4>
+                                    <span className="product-tab--container_content__box___product-vote">
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="fas fa-star"></i>
+                                        <i className="far fa-star"></i>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-price">
+                                        <span className="product-tab--container_content__box___product-price--present">405.000vnd</span>
+                                        <span className="product-tab--container_content__box___product-price--old">450.000vnd</span>
+                                    </span>
+                                    <span className="product-tab--container_content__box___product-sale">
+                                        -10%
+                                        </span>
+                                    <div className="product-tab--container_content__box___product-button">
+                                        <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
+                                        <div className="product-tab--container_content__box___product-button--control">
+                                            <span className="product-tab--container_content__box___product-button--control_heard"><i className="product-tab--container_content__box___product-button--control_heard__icon fas fa-heartbeat"></i></span>
+                                            <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt="" />
+                                    <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Chuột Gaming A2F66</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -398,7 +670,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -408,11 +680,11 @@ class productTop extends Component {
                                     </div>
                                 </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Tai nghe Asus AF298</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -427,7 +699,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -435,13 +707,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name"> Tai nghe Rapoo VH510 Gaming</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -456,7 +728,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -464,13 +736,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Chuột Gaming 9SAK</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -485,7 +757,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -493,13 +765,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Lót Chuột Razer</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -514,7 +786,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -522,13 +794,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Lót Chuột Gaming </h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -543,7 +815,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -551,13 +823,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">USB Gaming 128GB</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -572,7 +844,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -582,15 +854,15 @@ class productTop extends Component {
                                     </div>
                                 </div>
                             </Slider>
-                            </Tab.Pane>
-                            
-                            <Slider { ...settings } id="tab_hot-sell"      role="tabpanel" aria-labelledby="nav-hot-sell"      className=" product-tab--container_content__box tab-pane   ">
+                                </Route>
+                                <Route path="/tab_hot-sell">
+                                    <Slider {...settings}   aria-labelledby="nav-hot-sell" className=" product-tab--container_content__box tab-pane   ">
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt="" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt="" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Tai nghe Asus AF298</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -605,7 +877,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -613,13 +885,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div>  
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/headphone2A.png" alt="taingheV" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/headphone2B.jpg" alt="taingheV" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name"> Tai nghe Rapoo VH510 Gaming</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -634,7 +906,7 @@ class productTop extends Component {
                                     </span>
                                     <span className="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div className="product-tab--container_content__box___product-button">
                                         <button className="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div className="product-tab--container_content__box___product-button--control">
@@ -642,13 +914,13 @@ class productTop extends Component {
                                             <span className="product-tab--container_content__box___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard"/>
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard"/>
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard" />
                                     <span className="product-tab--container_content__box___product-details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i className="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 className="product-tab--container_content__box___product-name">Bàn Phím MSI A2G</h4>
                                     <span className="product-tab--container_content__box___product-vote">
                                         <i className="fas fa-star"></i>
@@ -663,7 +935,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -671,13 +943,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A"/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B"/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard2A.png" alt="keyboard2A" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard2B.png" alt="keyboard2B" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">Bàn Phím Luxury B2A93 </h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -692,7 +964,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -700,13 +972,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt=""/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt=""/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt="" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt="" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">Chuột Gaming A2F66</h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -721,7 +993,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -729,13 +1001,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt=""/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt=""/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse2A.png" alt="" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse2B.png" alt="" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">Chuột Gaming 9SAK</h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -750,7 +1022,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -758,13 +1030,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt=""/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt=""/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer1A.png" alt="" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer1B.png" alt="" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">Lót Chuột Razer</h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -779,7 +1051,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -787,13 +1059,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A"/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A"/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/Razer2A.png" alt="Razer2A" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/Razer2B.jpg" alt="Razer2A" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">Lót Chuột Gaming </h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -808,7 +1080,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -816,13 +1088,13 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                                 <div class="product-tab--container_content__box___product">
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb"/>
-                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb"/>
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/usb1A.png" alt="usb" />
+                                    <img class="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/usb1B.jpg" alt="usb" />
                                     <span class="product-tab--container_content__box___product-details"><a class="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
-                                            <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
-                                        </a></span>
+                                        <i class="fas fa-arrows-alt product-tab--container_content__box___product-details--icon"></i>
+                                    </a></span>
                                     <h4 class="product-tab--container_content__box___product-name">USB Gaming 128GB</h4>
                                     <span class="product-tab--container_content__box___product-vote">
                                         <i class="fas fa-star"></i>
@@ -837,7 +1109,7 @@ class productTop extends Component {
                                     </span>
                                     <span class="product-tab--container_content__box___product-sale">
                                         -10%
-                                    </span>
+                                        </span>
                                     <div class="product-tab--container_content__box___product-button">
                                         <button class="product-tab--container_content__box___product-button--card">Thêm Sản Phẩm</button>
                                         <div class="product-tab--container_content__box___product-button--control">
@@ -845,12 +1117,18 @@ class productTop extends Component {
                                             <span class="product-tab--container_content__box___product-button--control_compare"><i class="fas fa-balance-scale product-tab--container_content__box___product-button--control_compare__icon"></i></span>
                                         </div>
                                     </div>
-                                </div> 
+                                </div>
                             </Slider>
+                                </Route>
+                            </Switch>
                             
-                        </Tab.Content>
-                    </Tab.Container>
-                </div>
+                            
+                            
+                            
+                        </div>
+                    </div>
+                </Router>
+            </div>
         );
     }
 }
