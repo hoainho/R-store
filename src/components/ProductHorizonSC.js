@@ -6,8 +6,8 @@ class ProductHorizonSC extends Component {
         const settings = {
             dots: false,
             accessibility:true,
-            slidesToShow: 5,
-            slidesToScroll: 33,
+            slidesToShow: 4,
+            slidesToScroll: 3,
             autoplay:true,
             autoplaySpeed: 1500,
             centerMode:true,  
