@@ -146,14 +146,6 @@ window.onload = function(){
       }
     }
 }  
-//Slick Slider
-$('.product-tab--container_content__category').slick({
-  
-  prevArrow : '<button type="button" class=" slick-category--prev">Previous</button>',
-  nextArrow : '<button type="button" class=" slick-category--next">Next</button>'
-});
-
-
 
 // function event Click
 $(document).ready(function(){
