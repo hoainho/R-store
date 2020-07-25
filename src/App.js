@@ -9,6 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import Trademark from './components/trademark';
+import ProductDetails from './components/ProductDetails';
 
 function App() {
   return (
@@ -28,6 +29,9 @@ function App() {
           {/* ----- */}
           {/* Trademark */}
             <Trademark />
+          {/* ----- */}
+          {/* Product-Details */}
+          <ProductDetails />
           {/* ----- */}
           {/* Footer */}
           <Footer />
