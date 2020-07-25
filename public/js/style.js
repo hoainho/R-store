@@ -51,101 +51,34 @@ AOS.init({
 });
 //LoadPage follow to CrollY
 window.onload = function(){
-  //Menu
-  const ShowNavbar =document.querySelector(".navbar-content--menu");
+  const ShowNavbar =document.querySelector(".navbar-hidden");
   window.addEventListener('scroll',menuFixed);
-  //Logo box
-  const LGnavbar =document.querySelector(".navbar-content--header_main__features___logo ");
-  const LGsize = document.querySelector(".navbar-content--header_main__features___logo-box--logo");
-  window.addEventListener('scroll',logosize);
-  window.addEventListener('scroll',logofixed);
-  //Cart 
-  const CartN = document.querySelector(".navbar-content--header_main__features___control-cart--name");
-  const CartI = document.querySelector(".navbar-content--header_main__features___control-cart--icon");
-  const CartBox =document.querySelector(".navbar-content--header_main__features___control-cart");
-  window.addEventListener('scroll',Cart);
-  window.addEventListener('scroll',CartName);
-  window.addEventListener('scroll',CartIcon);
-
-
   
   function menuFixed(){
         if(window.scrollY >=200) {
             ShowNavbar.style.position= 'fixed';
             ShowNavbar.style.top = '0';
             ShowNavbar.style.width = '100%';
-            ShowNavbar.style.zIndex ='11';
+            ShowNavbar.style.zIndex ='99999';
+            ShowNavbar.style.opacity = '1';
+            ShowNavbar.style.dislay = 'block';
+            ShowNavbar.style.transition  = '.6s ease-in-out .15s';
+            ShowNavbar.style.height = '5rem';
           }
           else
           {
-            ShowNavbar.style.position = 'relative';
-            ShowNavbar.style.backgroundColor ='#232f3e';
+            ShowNavbar.style.position = 'absolute';
             ShowNavbar.style.zIndex ='1';
+            ShowNavbar.style.opacity = '0';
+            ShowNavbar.style.dislay = 'none';
+            ShowNavbar.style.transition  = '0s';
+            ShowNavbar.style.top = '-5rem';
+            ShowNavbar.style.height = '0rem';
           }
     };
-  function logofixed(){
-              if(window.scrollY >=200 ){
-                LGnavbar.style.position ='fixed';
-                LGnavbar.style.height ='18%';
-                LGnavbar.style.width ='13%';
-                LGnavbar.style.top = '-1.5rem';
-                LGnavbar.style.zIndex = '12';
-              }
-              else{
-                LGnavbar.style.position ='relative';
-                LGnavbar.style.top = '0rem';
-                LGnavbar.style.left = '0rem';
-                LGnavbar.style.bottom ='8%';
-                LGnavbar.style.width ='100%';
-                LGnavbar.style.height ='100%';
 
-              }
-      }
-  function logosize(){
-      if(window.scrollY >=200 ){
-        LGsize.style.fontSize = '4rem';
-      }
-      else{
-        LGsize.style.fontSize ='5rem';
-      }
-    }
-    //CART function
-    function Cart(){
-      if(window.scrollY >=200 ){
-        CartBox.style.position ='fixed';
-        CartBox.style.left ='80rem';
-        CartBox.style.top ='-2rem';
-        CartBox.style.width = '20%';
-        CartBox.style.height ='20%';
-        CartBox.style.zIndex ='12';
-      }
-      else{
-        CartBox.style.position ='relative';
-        CartBox.style.top ='0rem';
-        CartBox.style.height ='100%';
-        CartBox.style.left ='3rem';
-        
-      }
-    }
-    function CartName(){
-      if(window.scrollY >=200 ){
-        CartN.style.width = '31%';
-        CartN.style.height ='34%';
-      }
-      else{
-        CartN.style.width = '50%';
-        CartN.style.height ='100%';
-      }
-    }
-    function CartIcon(){
-      if(window.scrollY >=200 ){
-        CartI.style.margin = '0';
-      }
-      else{
-        CartI.style.margin = '0 1rem';
-      }
-    }
 }  
+
 
 // function event Click
 $(document).ready(function(){

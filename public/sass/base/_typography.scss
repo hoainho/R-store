@@ -60,6 +60,10 @@
 .left-0{
   left: 0 !important;
 }
+.animate_shakeX{
+  animation: jello 1s infinite; 
+
+}
 .selected{
   text-decoration: none !important;
   color: $color-primary !important;
