@@ -4,8 +4,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    NavLink,
-    useLocation
+    NavLink
 } from "react-router-dom";
 class productTop extends Component {
     render() {
@@ -32,20 +31,20 @@ class productTop extends Component {
                 <Router >
                     <div className="product-tab--container product-tab--container_hero">
                         <div className="product-tab--container_tittle">
-                            <ul role="tablist" className="product-tab--container_tittle__list nav nav-tabs">
-                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
-                                    <NavLink to="/" className="product-tab--container_tittle__link  nav-link  ">Hàng mới về</NavLink>
+                            <ul className="product-tab--container_tittle__list nav nav-tabs">
+                                <li id="tab-item " className="product-tab--container_tittle__item nav-item">
+                                    <NavLink exact  to="/" className="product-tab--container_tittle__link  nav-link" >Hàng mới về</NavLink>
                                 </li>
 
-                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                <li id="tab-item " className="product-tab--container_tittle__item nav-item">
                                     <NavLink to="/tab_best-seller" className="product-tab--container_tittle__link  nav-link  ">Bán chạy</NavLink>
                                 </li>
 
-                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                <li id="tab-item " className="product-tab--container_tittle__item nav-item">
                                     <NavLink to="/tab_featured" className="product-tab--container_tittle__link  nav-link ">Đề xuất</NavLink>
                                 </li>
 
-                                <li id="tab-item " className="product-tab--container_tittle__item active-tab--item nav-item">
+                                <li id="tab-item " className="product-tab--container_tittle__item nav-item">
                                     <NavLink to="/tab_hot-sell" className="product-tab--container_tittle__link  nav-link ">Giảm giá</NavLink>
                                 </li>
                             </ul>
@@ -53,7 +52,7 @@ class productTop extends Component {
                         <div id="nav-tabContent" className="product-tab--container_content tab-content ">
                             <Switch>
                                 <Route exact path="/">
-                                    <Slider { ...settings }    role="tabpanel" aria-labelledby="nav-new-arrival"   className=" product-tab--container_content__box tab-pane active">
+                                    <Slider { ...settings } aria-labelledby="nav-new-arrival"   className=" product-tab--container_content__box tab-pane active">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
@@ -324,7 +323,7 @@ class productTop extends Component {
             </Slider>
                                 </Route>
                                 <Route path="/tab_best-seller">
-                                    <Slider {...settings}   aria-labelledby="nav-best-seller" className=" product-tab--container_content__box tab-pane  ">
+                                    <Slider {...settings}   aria-labelledby="nav-best-seller" className=" product-tab--container_content__box tab-pane active ">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/mouse1A.png" alt="" />
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/mouse1B.png" alt="" />
@@ -591,7 +590,7 @@ class productTop extends Component {
                             </Slider>
                                 </Route>
                                 <Route path="/tab_featured">
-                                    <Slider {...settings}   aria-labelledby="nav-featured" className=" product-tab--container_content__box tab-pane   ">
+                                    <Slider {...settings}   aria-labelledby="nav-featured" className=" product-tab--container_content__box tab-pane  active ">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/keyboard1A.png" alt="keyboard" />
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/keyboard1B.png" alt="keyboard" />
@@ -856,7 +855,7 @@ class productTop extends Component {
                             </Slider>
                                 </Route>
                                 <Route path="/tab_hot-sell">
-                                    <Slider {...settings}   aria-labelledby="nav-hot-sell" className=" product-tab--container_content__box tab-pane   ">
+                                    <Slider {...settings}   aria-labelledby="nav-hot-sell" className=" product-tab--container_content__box tab-pane  active ">
                                 <div className="product-tab--container_content__box___product">
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt="" />
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt="" />

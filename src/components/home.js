@@ -2,7 +2,7 @@ import React,{Component} from 'react';
 import Slider from './slider';
 import Ability from './ability';
 import ProductTop from './productTop';
-import BannerTop from './BannerSpecail';
+import BannerTop from './BannerTop';
 import ProductHorizonHP from './productHorizonHP';
 import ProductHorizonKB from './ProductHorizonKB';
 import BannerMid from './BannerMid';
@@ -18,9 +18,9 @@ class Home extends Component {
                 <BannerTop />
                 <ProductHorizonHP />
                 <ProductHorizonKB />
-                <BannerMid />
+                {/* <BannerMid />
                 <ProductHorizonMouse />
-                <ProductHorizonSC />
+                <ProductHorizonSC /> */}
             </div>
         );
     }

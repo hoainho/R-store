@@ -60,8 +60,10 @@
 .left-0{
   left: 0 !important;
 }
-.active{
-    //color: $color-primary !important;
+.selected{
+  text-decoration: none !important;
+  color: $color-primary !important;
+  font-weight: bolder !important;
 }
 .bg-divider{
   background-color: rgba($color-primary, .2) !important;
@@ -151,11 +153,3 @@
       }
     }
   }
-.tab-content > .tab-pane, .pill-content > .pill-pane {
-display: block; 
-height: 0; 
-    
-}
-.tab-content > .active, .pill-content > .active {
-  height: auto !important;
-}

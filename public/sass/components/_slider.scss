@@ -1,5 +1,5 @@
 .slick-prev, .slick-next {
-    top: 38% !important;
+    top: 9rem !important;
 }
 button.slick-prev.slick-arrow {
     &::before{
@@ -8,9 +8,9 @@ button.slick-prev.slick-arrow {
         line-height: .5 !important;
     }
     
-    background-color: transparent;
-    width: 4%;
-    height: 14%;
+    background-color: $color-white;
+    width: 3%;
+    height: 5vh;
     border: 1px solid $color-divider;
     border-radius: 50%;
     z-index: 10;
@@ -30,9 +30,9 @@ button.slick-next.slick-arrow {
         color: $color-divider;
         line-height: .5 !important;
     }
-    background-color: transparent;
-    width: 4%;
-    height: 14%;
+    background-color: $color-white;
+    width: 3%;
+    height: 5vh;
     border: 1px solid $color-divider ;
     border-radius: 50%;
     z-index: 10;

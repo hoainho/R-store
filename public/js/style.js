@@ -146,15 +146,22 @@ window.onload = function(){
       }
     }
 }  
+//Slick Slider
+$('.product-tab--container_content__category').slick({
+  
+  prevArrow : '<button type="button" class=" slick-category--prev">Previous</button>',
+  nextArrow : '<button type="button" class=" slick-category--next">Next</button>'
+});
 
-//function event Click
+
+
+// function event Click
 $(document).ready(function(){
-$('.product-tab--container_tittle__item').click(
+$('.product-tab--container_tittle-category__link').click(
   function(){ 
-    $('.product-tab--container_tittle__item').removeClass('active-tab--item'),
-    $(this).addClass('active-tab--item')
+    $('.product-tab--container_tittle-category__link').removeClass('selected'),
+    $(this).addClass('selected')
   });
-
 });
 $(document).ready(function(){
   $('.store-main--container_menu-options--list_link').click(
