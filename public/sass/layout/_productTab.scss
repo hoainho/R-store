@@ -119,14 +119,7 @@
                             color: $color-divider;
                             font-style: italic;
                             font-weight: 300;
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                border-top: 2px solid $color-divider;
-                                width: 6vw;
-                                top: 67%;
-                                height: 1vh;
-                            }
+                            text-decoration: line-through ;
                         }
                     }
                     &-sale{
@@ -429,14 +422,7 @@
                             color: $color-divider;
                             font-style: italic;
                             font-weight: 300;
-                            &::before{
-                                content: '';
-                                position: absolute;
-                                border-top: 2px solid $color-divider;
-                                width: 6vw;
-                                top: 67%;
-                                height: 1vh;
-                            }
+                            text-decoration: line-through;
                         }
                     }
                     &-sale{
