@@ -18,9 +18,9 @@ class Home extends Component {
                 <BannerTop />
                 <ProductHorizonHP />
                 <ProductHorizonKB />
-                {/* <BannerMid />
+                <BannerMid />
                 <ProductHorizonMouse />
-                <ProductHorizonSC /> */}
+                <ProductHorizonSC />
             </div>
         );
     }

@@ -1248,14 +1248,8 @@ input[type="radio"] {
             .product-tab--container_content__box___product-price--old {
               color: #95989b;
               font-style: italic;
-              font-weight: 300; }
-              .product-tab--container_content__box___product-price--old::before {
-                content: '';
-                position: absolute;
-                border-top: 2px solid #95989b;
-                width: 6vw;
-                top: 67%;
-                height: 1vh; }
+              font-weight: 300;
+              text-decoration: line-through; }
           .product-tab--container_content__box___product-sale {
             position: absolute;
             background-color: #ff7e00;
@@ -1480,14 +1474,8 @@ input[type="radio"] {
             .product-tab--container_content__category___product-price--old {
               color: #95989b;
               font-style: italic;
-              font-weight: 300; }
-              .product-tab--container_content__category___product-price--old::before {
-                content: '';
-                position: absolute;
-                border-top: 2px solid #95989b;
-                width: 6vw;
-                top: 67%;
-                height: 1vh; }
+              font-weight: 300;
+              text-decoration: line-through; }
           .product-tab--container_content__category___product-sale {
             position: absolute;
             background-color: #ff7e00;

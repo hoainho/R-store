@@ -11,7 +11,7 @@ class ProductHorizonKB extends Component {
         const settings = {
             dots: false,
             accessibility: true,
-            slidesToShow: 5,
+            slidesToShow: 4,
             slidesToScroll: 3,
             autoplay: true,
             autoplaySpeed: 2000,
