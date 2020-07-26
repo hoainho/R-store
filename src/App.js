@@ -10,12 +10,11 @@ import {
 } from "react-router-dom";
 import Trademark from './components/trademark';
 import ProductDetails from './components/ProductDetails';
-
+import ScrollTop from './components/Scroll';
 function App() {
   return (
     <div className="App">
       <Router>
-        
         <div>
           {/* Narbar */}
             <Navbar />
@@ -32,6 +31,9 @@ function App() {
           {/* ----- */}
           {/* Product-Details */}
           <ProductDetails />
+          {/* ----- */}
+          {/* Scroll to Top */}
+          <ScrollTop scrollStepInPx="50" delayInMs="16.66"/>
           {/* ----- */}
           {/* Footer */}
           <Footer />
