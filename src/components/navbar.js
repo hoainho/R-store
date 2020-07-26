@@ -25,76 +25,76 @@ class navbar extends Component {
                                                 <input type="checkbox" className="navbar-content--menu_menutoggle__container-checkbox navbar-hidden--content_container__menu-box--toggle_checkbox"/>
         
                                                 <ul id="menutoggle" className="navbar-content--menu_menutoggle__container___list navbar-hidden--content_container__menu-box--toggle_list">
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Top 10</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Sản phẩm bán chạy</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Điện Thoại</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Máy Tính</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Chuột</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Bàn Phím</a> </li>
-                                                    <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Phụ Kiện Khác</a> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Top 10</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Sản phẩm bán chạy</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Điện Thoại</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Máy Tính</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Chuột</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Bàn Phím</Link> </li>
+                                                    <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Phụ Kiện Khác</Link> </li>
                                                 </ul>
                                             </div>
                                         </div>
                                         
                                         <div className="col-xs-6 col-sm-6 col-md-6 col-lg-6 navbar-hidden--content_container__menu-box--navbar">
                                             <div className="navbar-content--menu_menuNavbar__sticky navbar-hidden--content_container__menu-box--navbar_sticky">
-                                                <ul className="navbar-hidden--content_container__menu-box--navbar_list nav nav-tabs " id="myTab" >
+                                                <ul className="navbar-hidden--content_container__menu-box--navbar_list nav nav-tabs "  >
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link active" id="home-tab" data-toggle="tab" href="./index.html" role="tab" aria-controls="home" aria-selected="true"> Trang Chủ</a>
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" exact to="/" > Trang Chủ</Link>
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="store-tab" data-toggle="tab" href="./store.html" role="tab" aria-controls="store" aria-selected="false"> Cửa Hàng</a> 
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/store" > Cửa Hàng</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item navbar-content--menu_menuNavbar__sticky___itemFeatures ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="featured-tab" data-toggle="tab" href="#featured" role="tab" aria-controls="featured" aria-selected="false"> Chức Năng</a> 
+                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/featured" > Chức Năng</a> 
                                                         <ul className="navbar-content--menu_menuNavbar__sticky___item-features navbar-hidden--content_container__menu-box--navbar_item__features">
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Loại</a>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</a>
                                                                 <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype navbar-hidden--content_container__menu-box--navbar_item__features-type">
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                        <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                        <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                             Sản Phẩm Cấu Hình
-                                                                        </a>
+                                                                        </Link>
                                                                     </li>
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                        <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                        <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                             Sản Phẩm Combo
-                                                                        </a>
+                                                                        </Link>
                                                                     </li>
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                        <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                        <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                             Phần mềm
-                                                                        </a>
+                                                                        </Link>
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Sắp Xếp</a>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</a>
                                                                 <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct navbar-hidden--content_container__menu-box--navbar_item__features-sort">
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                        <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Đánh giá </a>
+                                                                        <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Đánh giá </Link>
                                                                     </li>
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                        <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Lượt mua </a>
+                                                                        <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Lượt mua </Link>
                                                                     </li>
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                        <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Giảm giá </a>
+                                                                        <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Giảm giá </Link>
                                                                     </li>
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                        <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Miễn Phí giao hàng </a>
+                                                                        <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Miễn Phí giao hàng </Link>
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Thương Hiệu </a></li>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </a></li>
         
                                                         </ul>
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="news-tab" data-toggle="tab" href="./news.html" role="tab" aria-controls="news" aria-selected="false"> Tin Tức</a> 
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/news" > Tin Tức</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="guarantee-tab" data-toggle="tab" href="/about.html" role="tab" aria-controls="guarantee" aria-selected="false"> Thông tin</a> 
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/about" > Thông tin</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"        id="contact-tab" data-toggle="tab" href="/contact.html" role="tab" aria-controls="contact" aria-selected="false"> Liên Hệ</a>
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/contact" > Liên Hệ</Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -205,24 +205,24 @@ class navbar extends Component {
                                             <div className="dropdown navbar-content--top_features__row___right-content--language" >
                                                 <div id="dropdownMenuButton" className="dropdown-toggle navbar-content--top_features__row___right-content--language_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngôn ngữ</div>
                                                 <ul  className="dropdown-menu navbar-content--top_features__row___right-content--language_list" aria-labelledby="dropdownMenuButton">
-                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" href="#"><strong>ENG</strong></a></li>
-                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" href="#"><strong>VN</strong></a></li>
+                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>ENG</strong></a></li>
+                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>VN</strong></a></li>
                                                 </ul>
                                             </div>
                                             <div className="navbar-content--top_features__row___right-content--info">
                                                 <ul className="navbar-content--top_features__row___right-content--info_list">
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a href="./account.html" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <a to="//account.html" className="navbar-content--top_features__row___right-content--info_link">
                                                             Tài khoản
                                                         </a>
                                                     </li>
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a href="#" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <a to="/" className="navbar-content--top_features__row___right-content--info_link">
                                                              Yêu Thích
                                                         </a>
                                                     </li>
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a href="#" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <a to="/" className="navbar-content--top_features__row___right-content--info_link">
                                                             So Sánh
                                                         </a>
                                                     </li>
@@ -405,18 +405,18 @@ class navbar extends Component {
                             <div className="row navbar-content--menu__container">
                                     <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 navbar-content--menu_menutoggle">
                                         <div className="navbar-content--menu_menutoggle__container">
-                                            <h4 id="btnmenutoggle" className="navbar-content--menu_menutoggle__container-button">Nổi Bật <i className="navbar-content--menu_menutoggle__container-button--icon far fa-list-alt"></i></h4>
+                                            <h4 className="navbar-content--menu_menutoggle__container-button">Nổi Bật <i className="navbar-content--menu_menutoggle__container-button--icon far fa-list-alt"></i></h4>
                                             
                                             <input type="checkbox" className="navbar-content--menu_menutoggle__container-checkbox"/>
     
                                             <ul id="menutoggle" className="navbar-content--menu_menutoggle__container___list">
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Top 10</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Sản phẩm bán chạy</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Điện Thoại</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Máy Tính</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Chuột</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Bàn Phím</a> </li>
-                                                <li className="navbar-content--menu_menutoggle__container___item"><a className="navbar-content--menu_menutoggle__container___link" href="#">Phụ Kiện Khác</a> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Top 10</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Sản phẩm bán chạy</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Điện Thoại</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Máy Tính</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Chuột</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Bàn Phím</Link> </li>
+                                                <li className="navbar-content--menu_menutoggle__container___item"><Link className="navbar-content--menu_menutoggle__container___link" to="/">Phụ Kiện Khác</Link> </li>
                                             </ul>
                                         </div>
                                     </div>
@@ -426,61 +426,61 @@ class navbar extends Component {
                                         <div className="navbar-content--menu_menuNavbar__sticky ">
                                             <ul className="navbar-content--menu_menuNavbar__sticky___list nav nav-tabs " id="myTab" role="tablist">
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active"  to="/" role="tab" aria-controls="home" aria-selected="true"> Trang Chủ</Link>
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" exact to="/" > Trang Chủ</Link>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/about" role="tab" aria-controls="store" aria-selected="false"> Cửa Hàng</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/about" > Cửa Hàng</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item navbar-content--menu_menuNavbar__sticky___itemFeatures nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/featured" role="tab" aria-controls="featured" aria-selected="false"> Chức Năng</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/featured" > Chức Năng</Link> 
                                                     <ul className="navbar-content--menu_menuNavbar__sticky___item-features">
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Loại</a>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</a>
                                                             <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype">
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                    <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                    <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                         Sản Phẩm Cấu Hình
-                                                                    </a>
+                                                                    </Link>
                                                                 </li>
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                    <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                    <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                         Sản Phẩm Combo
-                                                                    </a>
+                                                                    </Link>
                                                                 </li>
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
-                                                                    <a href="" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
+                                                                    <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
                                                                         Phần mềm
-                                                                    </a>
+                                                                    </Link>
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Sắp Xếp</a>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</a>
                                                             <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct">
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                    <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Đánh giá </a>
+                                                                    <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Đánh giá </Link>
                                                                 </li>
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                    <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Lượt mua </a>
+                                                                    <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Lượt mua </Link>
                                                                 </li>
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                    <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Giảm giá </a>
+                                                                    <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Giảm giá </Link>
                                                                 </li>
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
-                                                                    <a className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" href="#"> Miễn Phí giao hàng </a>
+                                                                    <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Miễn Phí giao hàng </Link>
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" href="#">Thương Hiệu </a></li>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </a></li>
     
                                                     </ul>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/news" role="tab" aria-controls="news" aria-selected="false"> Tin Tức</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/news" > Tin Tức</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/infomation" role="tab" aria-controls="guarantee" aria-selected="false"> Thông tin</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/infomation"> Thông tin</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/contact" role="tab" aria-controls="contact" aria-selected="false"> Liên Hệ</Link>
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/contact" > Liên Hệ</Link>
                                                 </li>
                                             </ul>
                                         </div>
