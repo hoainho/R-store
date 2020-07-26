@@ -5,9 +5,9 @@
         background: $color-background;
         height:0rem;
         opacity: 0;
-        width: 100%;
+        width: 99%;
         transition: .6s ease-in-out  .15s;
-        overflow: unset;
+        overflow: visible;
         &--content{
             margin: 0 !important;
             &_container{
