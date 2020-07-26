@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Link } from 'react-router-dom';
  
 export default class Scroll extends Component {
     constructor() {
@@ -25,7 +24,7 @@ export default class Scroll extends Component {
     render () {
         return (
             <button className="scrollTop" onClick={ () => { this.scrollToTop(); }  }>
-                <span className="scrollTop-box"><Link className="scrollTop-box--link" >Top</Link></span>
+                <span className="scrollTop-box">Top</span>
             </button>
         );
     }

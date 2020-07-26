@@ -3833,17 +3833,29 @@ html * {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  transition: .25s ease-in-out .3s;
-  z-index: 20; }
-  .scrollTop-box--link {
+  outline: none;
+  border: none;
+  transition: .15s ease-in-out .1s;
+  z-index: 20;
+  cursor: pointer; }
+  .scrollTop:hover, .scrollTop:link, .scrollTop:active, .scrollTop:focus {
+    text-decoration: none;
+    color: #fff;
+    outline: none;
+    border: none; }
+  .scrollTop-box {
+    font-family: fantasy;
+    font-weight: 100;
     position: relative;
     text-decoration: none;
     text-align: center;
-    top: 25%;
-    left: 25%; }
-    .scrollTop-box--link:hover, .scrollTop-box--link:link, .scrollTop-box--link:active, .scrollTop-box--link:focus {
+    outline: none;
+    border: none; }
+    .scrollTop-box:hover, .scrollTop-box:link, .scrollTop-box:active, .scrollTop-box:focus {
       text-decoration: none;
-      color: #fff; }
+      color: #fff;
+      outline: none;
+      border: none; }
 
 .about-story {
   background-image: url(../../img/backgroundtech3.png);

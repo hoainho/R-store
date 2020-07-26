@@ -52,8 +52,9 @@ AOS.init({
 //LoadPage follow to CrollY
 window.onload = function(){
   const ShowNavbar =document.querySelector(".navbar-hidden");
+  const ShowScroll =document.querySelector(".scrollTop");
   window.addEventListener('scroll',menuFixed);
-  
+  window.addEventListener('scroll',scrolltoTop);
   function menuFixed(){
         if(window.scrollY >=200) {
             ShowNavbar.style.position= 'fixed';
@@ -73,11 +74,28 @@ window.onload = function(){
             ShowNavbar.style.dislay = 'none';
             ShowNavbar.style.transition  = '0s';
             ShowNavbar.style.top = '-5rem';
+            ShowNavbar.style.width = '99%';
             ShowNavbar.style.height = '0rem';
           }
     };
-
+  function scrolltoTop(){
+      if(window.scrollY >=200) {
+          ShowScroll.style.position= 'fixed';
+          ShowScroll.style.zIndex ='99999';
+          ShowScroll.style.opacity = '1';
+          ShowScroll.style.bottom = '2rem';
+          ShowScroll.style.display = 'block';
+        }
+        else
+        {
+          ShowScroll.style.zIndex ='1';
+          ShowScroll.style.opacity = '0';
+          ShowScroll.style.bottom = '-5rem';
+          ShowScroll.style.display = '-none';
+        }
+  };
 }  
+
 
 
 // function event Click
@@ -183,25 +201,6 @@ $(document).ready(function() {
       values[1]);
   });
 });
-//ScrollTop
-// var scrollTop = $(".scrollTop");
-// $(window).scroll(function() {
-//   var topPos = $(this).scrollTop();
-//   if (topPos > 100) {
-//     $(scrollTop).css("opacity", "1");
-
-//   } else {
-//     $(scrollTop).css("opacity", "0");
-//   }
-// });
-
-$(scrollTop).click(function(){
-  $('html,body').animate({
-    scrollTop: 0
-  },800);
-  return false;
-});
-
 
 // https://refreshless.com/nouislider/
 /*! nouislider - 8.3.0 - 2016-02-14 17:37:19 */
