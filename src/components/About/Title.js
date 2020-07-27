@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import {
-    BrowserRouter as Router,
-    Link
+    BrowserRouter as Link
 } from 'react-router-dom';
 
 export default class Title extends Component {
