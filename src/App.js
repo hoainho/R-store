@@ -11,6 +11,7 @@ import {
 import Trademark from './components/trademark';
 import ProductDetails from './components/ProductDetails';
 import ScrollTop from './components/Scroll';
+import Store from './components/Store/Main';
 function App() {
   return (
     <div className="App">
@@ -23,6 +24,9 @@ function App() {
             <Switch>
               <Route exact path="/">
                 <Home />
+              </Route>
+              <Route  path="/Store">
+                <Store />
               </Route>
             </Switch>
           {/* ----- */}
