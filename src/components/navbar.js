@@ -426,7 +426,7 @@ class navbar extends Component {
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" exact to="/" > Trang Chủ</Link>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/about" > Cửa Hàng</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/Store" > Cửa Hàng</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item navbar-content--menu_menuNavbar__sticky___itemFeatures nav-item">
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/featured" > Chức Năng</Link> 
