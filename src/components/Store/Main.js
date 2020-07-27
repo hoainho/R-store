@@ -220,7 +220,7 @@ export default class Main extends Component {
                             <div className="store-main--container_menu">
                                 <div className="store-main--container_menu-options">
                                     <ul className="nav store-main--container_menu-options--list" >
-                                        <li id="tab-item " className="nav-item store-main--container_menu-options--list_item">
+                                        <li id="tab-item " className="nav-item store-main--container_menu-options--list_item active">
                                           <Link exact to="/Product-Multi" className="nav-link active  store-main--container_menu-options--list_link store-main--container_menu-options--list_multi "></Link>
                                            
                                         </li>

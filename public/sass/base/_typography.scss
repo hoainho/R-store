@@ -64,11 +64,11 @@
   animation: jello 1s infinite; 
 
 }
-.selected{
-  text-decoration: none !important;
-  color: $color-primary !important;
-  font-weight: bolder !important;
-}
+// .selected{
+//   text-decoration: none !important;
+//   color: $color-primary !important;
+//   font-weight: bolder !important;
+// }
 .bg-divider{
   background-color: rgba($color-primary, .2) !important;
   color: $color-white;
@@ -85,7 +85,7 @@
     visibility: hidden;
     padding-right: 10px;
   }
-  .select {
+  select {
     cursor: pointer;
     display: inline-block;
     position: relative;
