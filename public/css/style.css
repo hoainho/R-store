@@ -71,11 +71,6 @@ body {
 .animate_shakeX {
   animation: jello 1s infinite; }
 
-.selected {
-  text-decoration: none !important;
-  color: #ff7e00 !important;
-  font-weight: bolder !important; }
-
 .bg-divider {
   background-color: rgba(255, 126, 0, 0.2) !important;
   color: #fff; }
@@ -91,7 +86,7 @@ body {
   visibility: hidden;
   padding-right: 10px; }
 
-.select {
+select {
   cursor: pointer;
   display: inline-block;
   position: relative;
@@ -3827,7 +3822,7 @@ html * {
 
 .scrollTop {
   position: fixed;
-  bottom: 2rem;
+  bottom: -5rem;
   right: 2rem;
   background: #ff7e00;
   width: 3rem;
@@ -3835,8 +3830,10 @@ html * {
   border-radius: 50%;
   outline: none;
   border: none;
-  transition: .15s ease-in-out .1s;
+  transition: .6s ease-in-out .15s;
   z-index: 20;
+  opacity: 0;
+  display: none;
   cursor: pointer; }
   .scrollTop:hover, .scrollTop:link, .scrollTop:active, .scrollTop:focus {
     text-decoration: none;
