@@ -14,6 +14,7 @@ import ScrollTop from './components/Scroll';
 import Store from './components/Store/Main';
 import News from './components/news/main';
 import About from './components/About/Main';
+import Contact from './components/contact/main';
 function App() {
   return (
     <div className="App">
@@ -35,6 +36,9 @@ function App() {
               </Route>
               <Route  path="/About">
                 <About />
+              </Route>
+              <Route  path="/Contact">
+                <Contact />
               </Route>
             </Switch>
           {/* ----- */}
