@@ -12,6 +12,7 @@ import Trademark from './components/trademark';
 import ProductDetails from './components/ProductDetails';
 import ScrollTop from './components/Scroll';
 import Store from './components/Store/Main';
+import News from './components/news/main';
 function App() {
   return (
     <div className="App">
@@ -27,6 +28,9 @@ function App() {
               </Route>
               <Route  path="/Store">
                 <Store />
+              </Route>
+              <Route  path="/News">
+                <News />
               </Route>
             </Switch>
           {/* ----- */}
