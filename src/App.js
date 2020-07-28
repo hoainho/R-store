@@ -13,6 +13,7 @@ import ProductDetails from './components/ProductDetails';
 import ScrollTop from './components/Scroll';
 import Store from './components/Store/Main';
 import News from './components/news/main';
+import About from './components/About/Main';
 function App() {
   return (
     <div className="App">
@@ -31,6 +32,9 @@ function App() {
               </Route>
               <Route  path="/News">
                 <News />
+              </Route>
+              <Route  path="/About">
+                <About />
               </Route>
             </Switch>
           {/* ----- */}
