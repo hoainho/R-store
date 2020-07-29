@@ -16,6 +16,8 @@ import News from './components/news/main';
 import About from './components/About/Main';
 import Contact from './components/contact/main';
 import Login from './components/Customer/login';
+import Logout from './components/Customer/logout';
+
 function App() {
   return (
     <div className="App">
@@ -26,9 +28,6 @@ function App() {
           {/* ----- */}
           {/* Content */}
             <Switch>
-              <Route exact path="/">
-                <Home />
-              </Route>
               <Route  path="/Store">
                 <Store />
               </Route>
@@ -43,6 +42,12 @@ function App() {
               </Route>
               <Route  path="/Login">
                 <Login />
+              </Route>
+              <Route  path="/Logout">
+                <Logout />
+              </Route>
+              <Route exact path="/">
+                <Home />
               </Route>
             </Switch>
           {/* ----- */}
@@ -61,6 +66,7 @@ function App() {
         </div>
       </Router>
     </div>
+   
   );
 }
 
