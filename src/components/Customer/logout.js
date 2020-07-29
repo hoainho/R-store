@@ -19,7 +19,7 @@ export default class logout extends Component {
                         <h3 className=" account-tittle--details"> Tài khoản </h3>
                     </div>
                     <div>
-                        <form action="" method="POST" className="form-horizontal contact-container account-content" role="form">
+                        <form action="" method="POST" className="form-horizontal contact-container account-content account-Create" role="form">
                             <div className="form-group contact-container--tittle">
                                 <legend className="contact-container--tittle_details">Đăng kí</legend>
                             </div>
@@ -37,7 +37,7 @@ export default class logout extends Component {
                             </div> 
                             <div className="form-group contact-container--input">
                                 <label className="contact-container--input_tittle" >Số điện thoại <span className="input-special">*</span></label>
-                                <input type="number" className="form-control contact-container--input_place" id="" placeholder="0912521560... "/>
+                                <input type="text" className="form-control contact-container--input_place" id="" placeholder="0912521560... "/>
                             </div>
                             <div className="form-group contact-container--input">
                                 <label className="contact-container--input_tittle" >Email <span className="input-special">*</span></label>
@@ -70,7 +70,7 @@ export default class logout extends Component {
                         {/* <!-- Submit-Create--> */}
                         <div className="form-group contact-container--submit">
                             <div className=" contact-container--submit_box">
-                            <button type="submit" className="btn btn-primary contact-container--submit_box__details account-signup"> Đăng Nhập</button>
+                            <Link to="/login" type="submit" className="btn btn-primary contact-container--submit_box__details account-signup"> Đăng Nhập</Link>
                             </div>
                         </div>
                     </div>
