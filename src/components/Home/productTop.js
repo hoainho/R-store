@@ -30,7 +30,7 @@ class productTop extends Component {
             <div className="product-tab">
                 <Router >
                     <div className="product-tab--container product-tab--container_hero">
-                        <div className="product-tab--container_tittle">
+                        <div className="product-tab--container_tittle ">
                             <ul className="product-tab--container_tittle__list nav nav-tabs">
                                 <li id="tab-item " className="product-tab--container_tittle__item nav-item">
                                     <NavLink exact  to="/" className="product-tab--container_tittle__link  nav-link" >Hàng mới về</NavLink>
@@ -53,8 +53,8 @@ class productTop extends Component {
                             <Switch>
                                 <Route exact path="/">
                                     <Slider { ...settings } aria-labelledby="nav-new-arrival"   className=" product-tab--container_content__box tab-pane active">
-                                <div className="product-tab--container_content__box___product">
-                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="/img/product-headphoneB.png" alt=""/>
+                                <div  className="product-tab--container_content__box___product">
+                                    <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--B" src="product.imageUrl" alt=""/>
                                     <img className="product-tab--container_content__box___product-pic product-tab--container_content__box___product-pic--A" src="/img/product-headphoneA.jpg" alt=""/>
                                     <span  className="product-tab--container_content__box___product-details">
                                         <a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">

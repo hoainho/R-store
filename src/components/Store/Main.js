@@ -221,7 +221,7 @@ export default class Main extends Component {
                                 <div className="store-main--container_menu-options">
                                     <ul className="nav store-main--container_menu-options--list" >
                                         <li id="tab-item " className="nav-item store-main--container_menu-options--list_item active">
-                                          <Link exact to="/Product-Multi" className="nav-link active  store-main--container_menu-options--list_link store-main--container_menu-options--list_multi "></Link>
+                                          <Link exact to="/Store" className="nav-link active  store-main--container_menu-options--list_link store-main--container_menu-options--list_multi "></Link>
                                            
                                         </li>
                                         <li id="tab-item " className="nav-item store-main--container_menu-options--list_item">
@@ -259,7 +259,7 @@ export default class Main extends Component {
                             </div>
                             <div className="tab-content store-main--container_storage">
                                 <Switch>
-                                    <Route exact path="/Product-Multi">
+                                    <Route exact path="/store">
                                         <div id="tab_multi" className="store-main--container_content tab-pane active ">
                                     <div className="row store-main--container_content__box">
                                         <div className="col-lg-2 col-md-3 col-sm-6 col-xs-12 store-main--container_content__box-self">
