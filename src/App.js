@@ -15,6 +15,7 @@ import Store from './components/Store/Main';
 import News from './components/news/main';
 import About from './components/About/Main';
 import Contact from './components/contact/main';
+import Login from './components/Customer/login';
 function App() {
   return (
     <div className="App">
@@ -39,6 +40,9 @@ function App() {
               </Route>
               <Route  path="/Contact">
                 <Contact />
+              </Route>
+              <Route  path="/Login">
+                <Login />
               </Route>
             </Switch>
           {/* ----- */}
