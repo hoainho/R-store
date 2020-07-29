@@ -91,7 +91,7 @@ class navbar extends Component {
                                                         <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/news" > Tin Tức</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
-                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/about" > Thông tin</Link> 
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/About" > Thông tin</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
                                                         <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/contact" > Liên Hệ</Link>
@@ -209,9 +209,9 @@ class navbar extends Component {
                                             <div className="navbar-content--top_features__row___right-content--info">
                                                 <ul className="navbar-content--top_features__row___right-content--info_list">
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a to="//account.html" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <Link to="/Login" className="navbar-content--top_features__row___right-content--info_link">
                                                             Tài khoản
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
                                                         <a to="/" className="navbar-content--top_features__row___right-content--info_link">
@@ -474,7 +474,7 @@ class navbar extends Component {
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/news" > Tin Tức</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/infomation"> Thông tin</Link> 
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/About"> Thông tin</Link> 
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/contact" > Liên Hệ</Link>
