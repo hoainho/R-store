@@ -1,42 +1,104 @@
 .cart{
-    margin: 0 1rem;
+    margin: 0 2rem;
     width: 100%;
     &-container{
+        position: relative;
         width: 100%;
         &--storage{
+            width: 100%;
             &_title{
+                margin: 1rem 0;
+                display: flex;
+                flex-direction: row;
+                text-align:center;
+                align-items: center;
+                color: $color-textdark;
+                font-weight: bold;
+                font-family: serif;
+                border-bottom: 1px solid rgba($color-divider, .3);
                 &__name{
-
+                    
+                    flex-grow: 3;
                 }
                 &__price{
+                    flex-grow: 1;
 
                 }
                 &__quanlity{
+                    flex-grow: 1;
 
                 }
                 &__total{
+                    flex-grow: 1;
 
                 }
             }
             &_products{
+                padding-bottom:1rem;
+                margin-bottom:1rem;
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                text-align:center;
+                align-items: center;
+                border-bottom: 1px solid rgba($color-divider, .3);
                 &__name{
-
+                    position: relative;
+                    flex-grow: 3;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    justify-content: space-evenly;
+                    &___picture{
+                        width: 6rem;
+                    }
+                    &___text{
+                    }
                 }
                 &__price{
+                    flex-grow: 1;
+                    text-align: left;
 
                 }
                 &__quanlity{
+                    flex-grow: 1;
+                    text-align: left;
 
                 }
                 &__total{
-                    
+                    flex-grow: 1;
+
                 }
             }
             &_edit{
-
+                padding-bottom:1rem;
+                margin-bottom:1rem;
+                display: flex;
+                flex-direction: row;
+                width: 100%;
+                border-bottom: 1px solid rgba($color-divider, .3);
+                flex-flow: row-reverse;
             }
             &_control{
+                padding-bottom:1rem;
+                margin-bottom:1rem;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                border-bottom: 1px solid rgba($color-divider, .3);
+                justify-content: space-between;
                 
+                &__home{
+                    margin:0 5rem;
+                    color: $color-white !important;
+                }
+                &__box{
+                    &___reaction{
+                        margin-right: 1rem ;
+                        color: $color-white !important;
+
+                    }
+                }
             }
         }
         &--payment{

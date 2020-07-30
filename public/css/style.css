@@ -4184,7 +4184,76 @@ html * {
   background-position: 0 28rem; }
 
 .cart {
-  margin: 0 1rem;
+  margin: 0 2rem;
   width: 100%; }
   .cart-container {
+    position: relative;
     width: 100%; }
+    .cart-container--storage {
+      width: 100%; }
+      .cart-container--storage_title {
+        margin: 1rem 0;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        color: #242424;
+        font-weight: bold;
+        font-family: serif;
+        border-bottom: 1px solid rgba(149, 152, 155, 0.3); }
+        .cart-container--storage_title__name {
+          flex-grow: 3; }
+        .cart-container--storage_title__price {
+          flex-grow: 1; }
+        .cart-container--storage_title__quanlity {
+          flex-grow: 1; }
+        .cart-container--storage_title__total {
+          flex-grow: 1; }
+      .cart-container--storage_products {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        text-align: center;
+        align-items: center;
+        border-bottom: 1px solid rgba(149, 152, 155, 0.3); }
+        .cart-container--storage_products__name {
+          position: relative;
+          flex-grow: 3;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-evenly; }
+          .cart-container--storage_products__name___picture {
+            width: 6rem; }
+        .cart-container--storage_products__price {
+          flex-grow: 1;
+          text-align: left; }
+        .cart-container--storage_products__quanlity {
+          flex-grow: 1;
+          text-align: left; }
+        .cart-container--storage_products__total {
+          flex-grow: 1; }
+      .cart-container--storage_edit {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        border-bottom: 1px solid rgba(149, 152, 155, 0.3);
+        flex-flow: row-reverse; }
+      .cart-container--storage_control {
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        border-bottom: 1px solid rgba(149, 152, 155, 0.3);
+        justify-content: space-between; }
+        .cart-container--storage_control__home {
+          margin: 0 5rem;
+          color: #fff !important; }
+        .cart-container--storage_control__box___reaction {
+          margin-right: 1rem;
+          color: #fff !important; }
