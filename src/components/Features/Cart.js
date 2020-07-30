@@ -20,16 +20,16 @@ export default class Cart extends Component {
                         <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 cart-container--storage">
                              <div className="cart-container--storage_title">
                                 <div className="cart-container--storage_title__name">
-                                    San Pham
+                                    Sản phẩm
                                 </div>
                                 <div className="cart-container--storage_title__price">
-                                    Gia
+                                    Giá
                                 </div>
                                 <div className="cart-container--storage_title__quanlity">
-                                    So Luong
+                                    Số Lượng
                                 </div>
                                 <div className="cart-container--storage_title__total">
-                                    Tong cong
+                                    Tổng cộng
                                 </div>
                              </div>
                              <div className="cart-container--storage_products">
@@ -48,13 +48,15 @@ export default class Cart extends Component {
                                 </div>
                              </div>
                              <div className="cart-container--storage_edit">
-                                 <a className="btn btn-primary contact-container--submit_box__details  mr-1"> Sua </a>
-                                 <a className="btn btn-primary contact-container--submit_box__details  mr-1"> Xoa </a>
+                                 <a className="btn btn-primary contact-container--submit_box__details  mr-2"> Sửa </a>
+                                 <a className="btn btn-primary contact-container--submit_box__details  mr-2"> Xóa </a>
                              </div>
                              <div className="cart-container--storage_control">
-                                <a className="btn btn-primary contact-container--submit_box__details circle"> Trang Chu </a>
-                                <a className="btn btn-primary contact-container--submit_box__details circle"> Xoa Tat Ca</a>
-                                <a className="btn btn-primary contact-container--submit_box__details circle"> Cap Nhat </a>
+                                <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__home"> Trang Chủ </a>
+                                <div className="cart-container--storage_control__box">
+                                    <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Xóa Tất Cả</a>
+                                    <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Cập Nhật </a>
+                                </div>
                              </div>
                         </div>  
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 cart-container--payment">
