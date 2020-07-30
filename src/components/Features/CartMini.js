@@ -54,7 +54,7 @@ export default class CartMini extends Component {
                          </span>
                      </div>
                      <button className="product-tab--container_content__category___product-button--card left-0 mb-2">Thanh Toán</button>
-                     <button className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</button>
+                     <Link to="/Cart" className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</Link>
                  </div>
              </div>
              </div>

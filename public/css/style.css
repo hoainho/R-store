@@ -1656,6 +1656,8 @@ input[type="radio"] {
               width: 70%;
               font-size: .8rem;
               text-transform: uppercase;
+              text-decoration: none;
+              text-align: center;
               font-weight: 500;
               color: #fff;
               padding: .5rem .3rem;
@@ -1666,11 +1668,13 @@ input[type="radio"] {
               border: none;
               transition: .1s ease-in-out .1s; }
               .product-tab--container_content__category___product-button--card:hover {
-                transform: scale(1.05); }
+                transform: scale(1.05);
+                text-decoration: none; }
               .product-tab--container_content__category___product-button--card:active, .product-tab--container_content__category___product-button--card:visited {
                 transform: scale(0.95);
                 outline: none;
-                border: none; }
+                border: none;
+                text-decoration: none; }
             .product-tab--container_content__category___product-button--control {
               display: flex;
               justify-items: center;
