@@ -478,6 +478,7 @@
                             position: relative;
                             left: 15%;
                             width: 70%;
+                            margin-bottom: 1rem;
                             font-size: .8rem;
                             text-transform: uppercase;
                             text-decoration: none;
@@ -493,7 +494,8 @@
                             transition: .1s ease-in-out .1s;
                             &:hover{
                                 transform: scale(1.05);
-                                text-decoration: none;
+                                text-decoration: none !important;
+                                color: $color-background;
                             }
                             &:active,
                             &:visited{

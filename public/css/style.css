@@ -1657,6 +1657,7 @@ input[type="radio"] {
               position: relative;
               left: 15%;
               width: 70%;
+              margin-bottom: 1rem;
               font-size: .8rem;
               text-transform: uppercase;
               text-decoration: none;
@@ -1672,7 +1673,8 @@ input[type="radio"] {
               transition: .1s ease-in-out .1s; }
               .product-tab--container_content__category___product-button--card:hover {
                 transform: scale(1.05);
-                text-decoration: none; }
+                text-decoration: none !important;
+                color: #232f3e; }
               .product-tab--container_content__category___product-button--card:active, .product-tab--container_content__category___product-button--card:visited {
                 transform: scale(0.95);
                 outline: none;
