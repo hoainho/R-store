@@ -1,0 +1,46 @@
+.cart{
+    margin: 0 1rem;
+    width: 100%;
+    &-container{
+        width: 100%;
+        &--storage{
+            &_title{
+                &__name{
+
+                }
+                &__price{
+
+                }
+                &__quanlity{
+
+                }
+                &__total{
+
+                }
+            }
+            &_products{
+                &__name{
+
+                }
+                &__price{
+
+                }
+                &__quanlity{
+
+                }
+                &__total{
+                    
+                }
+            }
+            &_edit{
+
+            }
+            &_control{
+                
+            }
+        }
+        &--payment{
+
+        }
+    }
+}

@@ -47,15 +47,14 @@ export default class Cart extends Component {
                                     $1.800.000Vnd
                                 </div>
                              </div>
-
                              <div className="cart-container--storage_edit">
-                                 <a className="btn btn-primary contact-container--submit_box__details"> Sua </a>
-                                 <a className="btn btn-primary contact-container--submit_box__details"> Xoa </a>
+                                 <a className="btn btn-primary contact-container--submit_box__details  mr-1"> Sua </a>
+                                 <a className="btn btn-primary contact-container--submit_box__details  mr-1"> Xoa </a>
                              </div>
                              <div className="cart-container--storage_control">
-                                <a className="btn btn-primary contact-container--submit_box__details"> Trang Chu </a>
-                                <a className="btn btn-primary contact-container--submit_box__details"> Xoa Tat Ca</a>
-                                <a className="btn btn-primary contact-container--submit_box__details"> Cap Nhat </a>
+                                <a className="btn btn-primary contact-container--submit_box__details circle"> Trang Chu </a>
+                                <a className="btn btn-primary contact-container--submit_box__details circle"> Xoa Tat Ca</a>
+                                <a className="btn btn-primary contact-container--submit_box__details circle"> Cap Nhat </a>
                              </div>
                         </div>  
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 cart-container--payment">
