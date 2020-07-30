@@ -465,88 +465,90 @@ select {
                   margin-bottom: .1rem; }
                 .navbar-content--header_main__features___control-cart--name_total {
                   color: #95989b; }
-              .navbar-content--header_main__features___control-cart--storage_container__header-box {
-                display: flex;
-                flex-direction: row; }
-                .navbar-content--header_main__features___control-cart--storage_container__header-box--details {
-                  font-size: 1.5rem;
-                  font-weight: 900;
-                  font-family: serif;
-                  color: #242424;
-                  -webkit-text-stroke: 1px #242424; }
-                .navbar-content--header_main__features___control-cart--storage_container__header-box--numbers {
-                  position: relative;
-                  top: 0.5rem;
-                  color: rgba(149, 152, 155, 0.3);
-                  font-family: serif;
-                  font-style: italic; }
-              .navbar-content--header_main__features___control-cart--storage_container__content-box {
-                display: flex;
-                flex-direction: row; }
-                .navbar-content--header_main__features___control-cart--storage_container__content-box--pic {
-                  width: 25%; }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--pic_details {
+              .navbar-content--header_main__features___control-cart--storage {
+                top: 7% !important; }
+                .navbar-content--header_main__features___control-cart--storage_container__header-box {
+                  display: flex;
+                  flex-direction: row; }
+                  .navbar-content--header_main__features___control-cart--storage_container__header-box--details {
+                    font-size: 1.5rem;
+                    font-weight: 900;
+                    font-family: serif;
+                    color: #242424;
+                    -webkit-text-stroke: 1px #242424; }
+                  .navbar-content--header_main__features___control-cart--storage_container__header-box--numbers {
                     position: relative;
-                    width: 100%; }
-                .navbar-content--header_main__features___control-cart--storage_container__content-box--description {
+                    top: 0.5rem;
+                    color: rgba(149, 152, 155, 0.3);
+                    font-family: serif;
+                    font-style: italic; }
+                .navbar-content--header_main__features___control-cart--storage_container__content-box {
+                  display: flex;
+                  flex-direction: row; }
+                  .navbar-content--header_main__features___control-cart--storage_container__content-box--pic {
+                    width: 25%; }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--pic_details {
+                      position: relative;
+                      width: 100%; }
+                  .navbar-content--header_main__features___control-cart--storage_container__content-box--description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    width: 70%; }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--description_name {
+                      font-size: 1rem;
+                      font-weight: 900;
+                      font-family: fantasy;
+                      padding-left: 1rem;
+                      border-left: 0.4rem solid #ff7e00;
+                      text-align: left;
+                      color: rgba(36, 36, 36, 0.8); }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--description_price {
+                      padding-left: 1rem;
+                      border-left: 0.4rem solid #ff7e00;
+                      text-align: left;
+                      color: rgba(255, 126, 0, 0.8);
+                      margin-bottom: .5rem;
+                      font-style: italic; }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers {
+                      padding-left: 1rem;
+                      border-left: 0.4rem solid #ff7e00;
+                      text-align: left;
+                      color: rgba(36, 36, 36, 0.8); }
+                      .navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers__details {
+                        color: #232f3e; }
+                  .navbar-content--header_main__features___control-cart--storage_container__content-box--control {
+                    display: flex;
+                    flex-direction: column; }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting {
+                      color: rgba(36, 36, 36, 0.8); }
+                      .navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting:hover {
+                        color: #ff7e00;
+                        transform: scale(1.1); }
+                    .navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete {
+                      color: rgba(36, 36, 36, 0.8); }
+                      .navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete:hover {
+                        color: #ff7e00;
+                        transform: scale(1.1); }
+                .navbar-content--header_main__features___control-cart--storage_container__control {
                   display: flex;
                   flex-direction: column;
-                  justify-content: flex-start;
-                  width: 70%; }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--description_name {
-                    font-size: 1rem;
-                    font-weight: 900;
-                    font-family: fantasy;
-                    padding-left: 1rem;
-                    border-left: 0.4rem solid #ff7e00;
-                    text-align: left;
-                    color: rgba(36, 36, 36, 0.8); }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--description_price {
-                    padding-left: 1rem;
-                    border-left: 0.4rem solid #ff7e00;
-                    text-align: left;
-                    color: rgba(255, 126, 0, 0.8);
-                    margin-bottom: .5rem;
-                    font-style: italic; }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers {
-                    padding-left: 1rem;
-                    border-left: 0.4rem solid #ff7e00;
-                    text-align: left;
-                    color: rgba(36, 36, 36, 0.8); }
-                    .navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers__details {
-                      color: #232f3e; }
-                .navbar-content--header_main__features___control-cart--storage_container__content-box--control {
-                  display: flex;
-                  flex-direction: column; }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting {
-                    color: rgba(36, 36, 36, 0.8); }
-                    .navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting:hover {
+                  justify-content: center; }
+                  .navbar-content--header_main__features___control-cart--storage_container__control-price {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between; }
+                    .navbar-content--header_main__features___control-cart--storage_container__control-price--tittle {
+                      color: #242424;
+                      font-size: 1rem;
+                      font-weight: 900;
+                      font-family: serif; }
+                    .navbar-content--header_main__features___control-cart--storage_container__control-price--value {
                       color: #ff7e00;
-                      transform: scale(1.1); }
-                  .navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete {
-                    color: rgba(36, 36, 36, 0.8); }
-                    .navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete:hover {
-                      color: #ff7e00;
-                      transform: scale(1.1); }
-              .navbar-content--header_main__features___control-cart--storage_container__control {
-                display: flex;
-                flex-direction: column;
-                justify-content: center; }
-                .navbar-content--header_main__features___control-cart--storage_container__control-price {
-                  width: 100%;
-                  display: flex;
-                  flex-direction: row;
-                  justify-content: space-between; }
-                  .navbar-content--header_main__features___control-cart--storage_container__control-price--tittle {
-                    color: #242424;
-                    font-size: 1rem;
-                    font-weight: 900;
-                    font-family: serif; }
-                  .navbar-content--header_main__features___control-cart--storage_container__control-price--value {
-                    color: #ff7e00;
-                    font-size: 1rem;
-                    font-weight: bold;
-                    font-family: serif; }
+                      font-size: 1rem;
+                      font-weight: bold;
+                      font-family: serif; }
             .navbar-content--header_main__features___control-search {
               position: relative;
               left: 0;
@@ -2213,6 +2215,11 @@ svg {
 @keyframes wave {
   to {
     transform: translateX(-100%); } }
+
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+  opacity: .75;
+  border: none;
+  outline: none; }
 
 html * {
   -webkit-font-smoothing: antialiased;

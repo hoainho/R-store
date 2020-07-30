@@ -28,6 +28,9 @@ function App() {
           {/* ----- */}
           {/* Content */}
             <Switch>
+            <Route exact path="/">
+                <Home />
+              </Route>
               <Route  path="/Store">
                 <Store />
               </Route>
@@ -46,9 +49,7 @@ function App() {
               <Route  path="/Logout">
                 <Logout />
               </Route>
-              <Route exact path="/">
-                <Home />
-              </Route>
+              
             </Switch>
           {/* ----- */}
           {/* Trademark */}
