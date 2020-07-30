@@ -53,8 +53,8 @@ export default class CartMini extends Component {
                              $1.800.000VND
                          </span>
                      </div>
-                     <button className="product-tab--container_content__category___product-button--card left-0 mb-2">Thanh Toán</button>
-                     <Link to="/Cart" className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</Link>
+                     <Link to="/Cart" className="product-tab--container_content__category___product-button--card left-0 ">Thanh Toán</Link>
+                     <button  className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</button>
                  </div>
              </div>
              </div>
