@@ -12,7 +12,7 @@ export default class Main extends Component {
                 <Router>
                     <div className="store-tittle">
                         <div className="store-tittle--container">
-                            <Link to="/Home" className="store-tittle--container_home">Trang Chủ</Link>
+                            <Link to="/" className="store-tittle--container_home">Trang Chủ</Link>
                             <span className="store-tittle--container_iconpresent special">
                                 {'>'}
                             </span>

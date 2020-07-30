@@ -1,6 +1,6 @@
 import React,{Component} from 'react';
 import { Link } from "react-router-dom";
-
+import CartMini from './Features/CartMini';
 class navbar extends Component {
     render(){
         return (
@@ -110,14 +110,13 @@ class navbar extends Component {
                                 </div>
                                 {/* <!-- CART --> */}
                                 <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 navbar-hidden--content_container__cart">
-                                    <div  className="navbar-content--header_main__features___control-cart  navbar-hidden--content_container__cart___box">
-                                        <div data-toggle="modal" data-target="#exampleModalScrollable" className="navbar-content--header_main__features___control-cart--icon navbar-hidden--content_container__cart___box-icon">
+                                    <div data-toggle="modal" data-target="#exampleModalScrollable"   className="navbar-content--header_main__features___control-cart  navbar-hidden--content_container__cart___box">
+                                        <div className="navbar-content--header_main__features___control-cart--icon navbar-hidden--content_container__cart___box-icon">
                                             <i className="fas fa-cart-plus navbar-content--header_main__features___control-cart--icon_details"></i>
                                             <span className="navbar-content--header_main__features___control-cart--icon_numbers">
                                                 1
                                             </span>
                                         </div>
-                                        
                                         <span className="navbar-content--header_main__features___control-cart--name navbar-hidden--content_container__cart___box-name">
                                             <span className="navbar-content--header_main__features___control-cart--name_details navbar-hidden--content_container__cart___box-name--details">
                                                 Giỏ hàng:
@@ -126,62 +125,6 @@ class navbar extends Component {
                                                 1.800.000VND
                                             </span>
                                         </span>
-
-                                        {/* <!-- Modal --> */}
-                                        <div className="modal fade navbar-content--header_main__features___control-cart--storage" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                                            <div className="modal-dialog modal-dialog-scrollable" role="document">
-                                            <div className="modal-content navbar-content--header_main__features___control-cart--storage_container">
-                                                <div className="modal-header navbar-content--header_main__features___control-cart--storage_container__header">
-                                                    <div className="navbar-content--header_main__features___control-cart--storage_container__header-box">
-                                                        <h5 className="modal-title navbar-content--header_main__features___control-cart--storage_container__header-box--details" id="exampleModalScrollableTitle ">Giỏ Hàng</h5>
-                                                        <span className="navbar-content--header_main__features___control-cart--storage_container__header-box--numbers">(1 sản phẩm )</span>
-                                                    </div>
-                                                    <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                                        <span aria-hidden="true">&times;</span>
-                                                    </button>
-                                                </div>
-                                                <div className="modal-body navbar-content--header_main__features___control-cart--storage_container__content">
-                                                    <div className="navbar-content--header_main__features___control-cart--storage_container__content-box">
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--pic">
-                                                            <img src="img/mouse2A.png" alt="" className="navbar-content--header_main__features___control-cart--storage_container__content-box--pic_details"/>
-                                                        </div>
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--description">
-                                                            <h6 className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_name">
-                                                                Axtrix 2.0
-                                                            </h6>
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_price">
-                                                                $1.800.000VND
-                                                            </span>
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers">
-                                                                SL : <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers__details ">1</span>
-                                                            </span>
-                                                        </div>
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--control">
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting">
-                                                                <i className="fas fa-cog avbar-content--header_main__features___control-cart--storage_container__content-box--control_setting__details"></i>
-                                                            </span>
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete">
-                                                                <i className="far fa-trash-alt avbar-content--header_main__features___control-cart--storage_container__content-box--control_delete__details"></i>
-                                                            </span>
-                                                            
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div className="modal-footer navbar-content--header_main__features___control-cart--storage_container__control">
-                                                    <div className="navbar-content--header_main__features___control-cart--storage_container__control-price">
-                                                        <h5 className="navbar-content--header_main__features___control-cart--storage_container__control-price--tittle">
-                                                            Total :
-                                                        </h5>
-                                                        <span className="navbar-content--header_main__features___control-cart--storage_container__control-price--value">
-                                                            $1.800.000VND
-                                                        </span>
-                                                    </div>
-                                                    <button className="product-tab--container_content__category___product-button--card left-0 mb-2">Thanh Toán</button>
-                                                    <button className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</button>
-                                                </div>
-                                            </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                                 
@@ -320,8 +263,8 @@ class navbar extends Component {
                                                 </div>
                                             </form>
                                         </div>
-                                        <div  className="navbar-content--header_main__features___control-cart">
-                                            <div data-toggle="modal" data-target="#exampleModalScrollable" className="navbar-content--header_main__features___control-cart--icon ">
+                                        <div  data-toggle="modal" data-target="#exampleModalScrollable"  className="navbar-content--header_main__features___control-cart">
+                                            <div className="navbar-content--header_main__features___control-cart--icon ">
                                                 <i className="fas fa-cart-plus navbar-content--header_main__features___control-cart--icon_details"></i>
                                                 <span className="navbar-content--header_main__features___control-cart--icon_numbers">
                                                     1
@@ -337,62 +280,9 @@ class navbar extends Component {
                                                 </span>
                                             </span>
       
-                                            {/* <!-- Modal --> */}
-                                            <div className="modal fade navbar-content--header_main__features___control-cart--storage" id="exampleModalScrollable" tabindex="-1" role="dialog" aria-labelledby="exampleModalScrollableTitle" aria-hidden="true">
-                                                <div className="modal-dialog modal-dialog-scrollable" role="document">
-                                                <div className="modal-content navbar-content--header_main__features___control-cart--storage_container">
-                                                    <div className="modal-header navbar-content--header_main__features___control-cart--storage_container__header">
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__header-box">
-                                                            <h5 className="modal-title navbar-content--header_main__features___control-cart--storage_container__header-box--details" id="exampleModalScrollableTitle ">Giỏ Hàng</h5>
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__header-box--numbers">(1 sản phẩm )</span>
-                                                        </div>
-                                                        <button type="button" className="close" data-dismiss="modal" aria-label="Close">
-                                                            <span aria-hidden="true">&times;</span>
-                                                        </button>
-                                                    </div>
-                                                    <div className="modal-body navbar-content--header_main__features___control-cart--storage_container__content">
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__content-box">
-                                                            <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--pic">
-                                                                <img src="img/mouse2A.png" alt="" className="navbar-content--header_main__features___control-cart--storage_container__content-box--pic_details"/>
-                                                            </div>
-                                                            <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--description">
-                                                                <h6 className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_name">
-                                                                    Axtrix 2.0
-                                                                </h6>
-                                                                <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_price">
-                                                                    $1.800.000VND
-                                                                </span>
-                                                                <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers">
-                                                                    SL : <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--description_numbers__details ">1</span>
-                                                                </span>
-                                                            </div>
-                                                            <div className="navbar-content--header_main__features___control-cart--storage_container__content-box--control">
-                                                                <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--control_setting">
-                                                                    <i className="fas fa-cog avbar-content--header_main__features___control-cart--storage_container__content-box--control_setting__details"></i>
-                                                                </span>
-                                                                <span className="navbar-content--header_main__features___control-cart--storage_container__content-box--control_delete">
-                                                                    <i className="far fa-trash-alt avbar-content--header_main__features___control-cart--storage_container__content-box--control_delete__details"></i>
-                                                                </span>
-                                                                
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div className="modal-footer navbar-content--header_main__features___control-cart--storage_container__control">
-                                                        <div className="navbar-content--header_main__features___control-cart--storage_container__control-price">
-                                                            <h5 className="navbar-content--header_main__features___control-cart--storage_container__control-price--tittle">
-                                                                Total :
-                                                            </h5>
-                                                            <span className="navbar-content--header_main__features___control-cart--storage_container__control-price--value">
-                                                                $1.800.000VND
-                                                            </span>
-                                                        </div>
-                                                        <button className="product-tab--container_content__category___product-button--card left-0 mb-2">Thanh Toán</button>
-                                                        <button className="product-tab--container_content__category___product-button--card bg-divider left-0 "> Chỉnh sửa</button>
-                                                    </div>
-                                                </div>
-                                                </div>
-                                            </div>
+                                           
                                         </div>
+                                        <CartMini />
                                     </div>
                                     
                                 </div>

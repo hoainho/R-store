@@ -332,7 +332,11 @@ $green: #a9cd99;
 
 
 
-
+.close:not(:disabled):not(.disabled):focus, .close:not(:disabled):not(.disabled):hover {
+    opacity: .75;
+    border: none;
+    outline: none;
+}
 html * {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
