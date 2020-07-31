@@ -75,7 +75,9 @@ export default class Cart extends Component {
                                             <input type="tel" placeholder="Chúng tôi sẽ liên lạc sau vài phút..."/>
                                         </div>
                                     </div>
-                                    <div className="cart-container--payment_box__bill">
+                                    
+                                </div>
+                                <div className="cart-container--payment_box__bill">
                                         <div className="cart-container--payment_box__bill___subtotal" >
                                             <span className="basic-text">Giá sản phẩm</span>
                                             <span className="basic-text">$1.800.000vnd</span>
@@ -89,6 +91,15 @@ export default class Cart extends Component {
                                             <span className="special-text">$1.800.000vnd</span>
                                         </div>
                                     </div>
+                                
+                                <div className="cart-container--payment_box__code">
+                                    <input type="checkbox" className="cart-container--payment_box__code___checkbox" />
+                                    <button className="account-create--slogan_sub">Mã giảm giá</button>
+                                        <div className="cart-container--payment_box__information___placeholder">
+                                            <h5 className="cart-container--payment_box__information___placeholder-title">Nhập giảm giá</h5>
+                                            <input type="text" placeholder="Nhập mã ở đây"/>
+                                        </div>
+                                    
                                 </div>
                             </div>
                         </div>
