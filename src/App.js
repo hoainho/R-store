@@ -17,7 +17,7 @@ import About from './components/About/Main';
 import Contact from './components/contact/main';
 import Login from './components/Customer/login';
 import Logout from './components/Customer/logout';
-import Cart from './components/Features/Cart';
+import Storage from './components/Features/Cart';
 function App() {
   return (
     <div className="App">
@@ -49,8 +49,8 @@ function App() {
               <Route  path="/Logout">
                 <Logout />
               </Route>
-              <Route  path="/Cart">
-                <Cart />
+              <Route  path="/Storage">
+                <Storage/>
               </Route>
               
             </Switch>

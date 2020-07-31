@@ -374,6 +374,10 @@
                                 flex-direction: column;
                                 position: relative;
                                 top: 25%;
+                                &:hover,&:focus,&:active,&:visited{
+                                    text-decoration: none;
+                                    
+                                }
                                 &_details{
                                     color: $color-white;
                                     letter-spacing: 2px;
