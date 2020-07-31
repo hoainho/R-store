@@ -4288,7 +4288,7 @@ html * {
     .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___toggle {
       display: block; }
     .cart-container--payment_box__information___toggle {
-      position: relative;
+      position: static;
       display: none;
       list-style-type: none;
       top: 1rem; }
