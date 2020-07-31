@@ -102,7 +102,42 @@
             }
         }
         &--payment{
+            &_box{
+                &__title{
+                    font-family:serif;
+                    font-size: 1.2rem;
+                    font-weight: bold;
+                    margin: .5rem;
+                }   
+                &__information{
+                    &___checkbox{
+                        position: absolute;
+                        width: 30%;
+                        left: 0.9rem;
+                        height: 3vh;
+                        opacity: 0;
+                        cursor: pointer;
+                    }
+                    &___checkbox:checked ~ &___toggle{
+                        display: block;
+                    }
+                    &___toggle{
+                        position: relative;
+                        display: none;
+                        list-style-type: none;
+                        top: 1rem;
+                    }
+                    &___placeholder{
+                        
+                        &-title{
 
+                        }
+                    }
+                }  
+                
+                
+            }
+            
         }
     }
 }
