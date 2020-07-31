@@ -63,7 +63,10 @@ export default class Cart extends Component {
                              <div className="cart-container--payment_box">
                                 <div className="cart-container--payment_box__title">Tổng cộng</div>
                                 <div className="cart-container--payment_box__information">
-                                    <button className="account-create--slogan_sub">Thông tin giao hàng</button>
+                                    <button className=" cart-container--payment_box__information___button">Thông tin giao hàng 
+                                        <span className="cart-container--payment_box__information___button-iconOn">&#11033;</span>
+                                        <span className="cart-container--payment_box__information___button-iconOff">&#11032;</span>
+                                    </button>
                                     <input type="checkbox" className="cart-container--payment_box__information___checkbox" />
                                     <div className="cart-container--payment_box__information___toggle">
                                         <div className="cart-container--payment_box__information___placeholder">
@@ -91,7 +94,6 @@ export default class Cart extends Component {
                                             <span className="special-text">$1.800.000vnd</span>
                                         </div>
                                     </div>
-                                
                                 <div className="cart-container--payment_box__code">
                                     <input type="checkbox" className="cart-container--payment_box__code___checkbox" />
                                     <button className="account-create--slogan_sub">Mã giảm giá</button>
@@ -101,6 +103,7 @@ export default class Cart extends Component {
                                         </div>
                                     
                                 </div>
+                                <button className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Thanh Toán </button>
                             </div>
                         </div>
                     </div>
