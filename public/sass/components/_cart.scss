@@ -102,14 +102,38 @@
             }
         }
         &--payment{
+            background-color: rgba($color-divider, .1);
+            padding: .2rem .5rem;
             &_box{
                 &__title{
                     font-family:serif;
                     font-size: 1.2rem;
                     font-weight: bold;
                     margin: .5rem;
+                    color: $color-divider;
+                    text-align: center;
+                    padding: 1rem;
+                    border-bottom: 1px solid rgba($color-divider, .5);
                 }   
                 &__information{
+                    &___button{
+                        text-decoration:none;
+                        border: none;
+                        outline: none;
+                        padding: .5rem;
+                        font-size: 1rem;
+                        font-weight: 900;
+                        &-iconOn{
+                            position: absolute;
+                            right: 2rem;
+                            display: none;
+                        }
+                        &-iconOff{
+                            right: 2rem;
+                            position: absolute;
+                            display: block;
+                        }
+                    }
                     &___checkbox{
                         position: absolute;
                         width: 30%;
@@ -120,6 +144,12 @@
                     }
                     &___checkbox:checked ~ &___toggle{
                         display: block;
+                    }
+                    &___checkbox:checked + &___button-iconOn{
+                        display: block; 
+                    }
+                    &___checkbox:checked + &___button-iconOff{
+                        display: none;
                     }
                     &___toggle{
                         position: static;

@@ -4273,22 +4273,48 @@ html * {
         .cart-container--storage_control__box___reaction {
           margin-right: 1rem;
           color: #fff !important; }
-    .cart-container--payment_box__title {
-      font-family: serif;
-      font-size: 1.2rem;
-      font-weight: bold;
-      margin: .5rem; }
-    .cart-container--payment_box__information___checkbox {
-      position: absolute;
-      width: 30%;
-      left: 0.9rem;
-      height: 3vh;
-      opacity: 0;
-      cursor: pointer; }
-    .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___toggle {
-      display: block; }
-    .cart-container--payment_box__information___toggle {
-      position: static;
-      display: none;
-      list-style-type: none;
-      top: 1rem; }
+    .cart-container--payment {
+      background-color: rgba(149, 152, 155, 0.1);
+      padding: .2rem .5rem; }
+      .cart-container--payment_box__title {
+        font-family: serif;
+        font-size: 1.2rem;
+        font-weight: bold;
+        margin: .5rem;
+        color: #95989b;
+        text-align: center;
+        padding: 1rem;
+        border-bottom: 1px solid rgba(149, 152, 155, 0.5); }
+      .cart-container--payment_box__information___button {
+        text-decoration: none;
+        border: none;
+        outline: none;
+        padding: .5rem;
+        font-size: 1rem;
+        font-weight: 900; }
+        .cart-container--payment_box__information___button-iconOn {
+          position: absolute;
+          right: 2rem;
+          display: none; }
+        .cart-container--payment_box__information___button-iconOff {
+          right: 2rem;
+          position: absolute;
+          display: block; }
+      .cart-container--payment_box__information___checkbox {
+        position: absolute;
+        width: 30%;
+        left: 0.9rem;
+        height: 3vh;
+        opacity: 0;
+        cursor: pointer; }
+      .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___toggle {
+        display: block; }
+      .cart-container--payment_box__information___checkbox:checked + .cart-container--payment_box__information___button-iconOn {
+        display: block; }
+      .cart-container--payment_box__information___checkbox:checked + .cart-container--payment_box__information___button-iconOff {
+        display: none; }
+      .cart-container--payment_box__information___toggle {
+        position: static;
+        display: none;
+        list-style-type: none;
+        top: 1rem; }
