@@ -13,6 +13,18 @@
 .circle{
   border-radius: 30px;
 }
+.base-text{
+  text-decoration: none;
+  color: rgba($color-divider, .5);
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: serif;
+}
+.special-text{
+  font-family: serif;
+  font-weight: 900;
+  color: $color-textdark;
+}
 .high-light{
     color: $color-primary;
     font-weight: bold;

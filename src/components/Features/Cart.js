@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-
+import React, { Component,useState }from 'react';
+import { Collapse, Button, CardBody, Card } from 'reactstrap';
 export default class Cart extends Component {
     render(){
         return (
@@ -60,7 +60,37 @@ export default class Cart extends Component {
                              </div>
                         </div>  
                         <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 cart-container--payment">
-                             
+                             <div className="cart-container--payment_box">
+                                <div className="cart-container--payment_box__title">Tổng cộng</div>
+                                <div className="cart-container--payment_box__information">
+                                    <button className="account-create--slogan_sub">Thông tin giao hàng</button>
+                                    <input type="checkbox" className="cart-container--payment_box__information___checkbox" />
+                                    <div className="cart-container--payment_box__information___toggle">
+                                        <div className="cart-container--payment_box__information___placeholder">
+                                            <h5 className="cart-container--payment_box__information___placeholder-title">Địa chỉ</h5>
+                                            <input type="text" placeholder="Địa chỉ nhận hàng..."/>
+                                        </div>
+                                        <div className="cart-container--payment_box__information___placeholder">
+                                            <h5 className="cart-container--payment_box__information___placeholder-title">Số điện thoại</h5>
+                                            <input type="tel" placeholder="Chúng tôi sẽ liên lạc sau vài phút..."/>
+                                        </div>
+                                    </div>
+                                    <div className="cart-container--payment_box__bill">
+                                        <div className="cart-container--payment_box__bill___subtotal" >
+                                            <span className="basic-text">Giá sản phẩm</span>
+                                            <span className="basic-text">$1.800.000vnd</span>
+                                        </div>
+                                        <div className="cart-container--payment_box__bill___tax" >
+                                            <span className="basic-text">Phụ Phí</span>
+                                            <span className="basic-text">$0</span>
+                                        </div>
+                                        <div className="cart-container--payment_box__bill___total" >
+                                            <span className="basic-text">Tổng hóa đơn</span>
+                                            <span className="special-text">$1.800.000vnd</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

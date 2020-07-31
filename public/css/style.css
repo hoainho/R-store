@@ -25,6 +25,18 @@ body {
 .circle {
   border-radius: 30px; }
 
+.base-text {
+  text-decoration: none;
+  color: rgba(149, 152, 155, 0.5);
+  font-size: 1rem;
+  font-weight: 100;
+  font-family: serif; }
+
+.special-text {
+  font-family: serif;
+  font-weight: 900;
+  color: #242424; }
+
 .high-light {
   color: #ff7e00;
   font-weight: bold;
@@ -4261,3 +4273,22 @@ html * {
         .cart-container--storage_control__box___reaction {
           margin-right: 1rem;
           color: #fff !important; }
+    .cart-container--payment_box__title {
+      font-family: serif;
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin: .5rem; }
+    .cart-container--payment_box__information___checkbox {
+      position: absolute;
+      width: 30%;
+      left: 0.9rem;
+      height: 3vh;
+      opacity: 0;
+      cursor: pointer; }
+    .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___toggle {
+      display: block; }
+    .cart-container--payment_box__information___toggle {
+      position: relative;
+      display: none;
+      list-style-type: none;
+      top: 1rem; }
