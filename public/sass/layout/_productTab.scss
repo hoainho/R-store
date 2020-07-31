@@ -498,7 +498,8 @@
                                 color: $color-background;
                             }
                             &:active,
-                            &:visited{
+                            &:visited,
+                            &:focus{
                                 transform: scale(.95);
                                 outline: none;
                                 border: none;

@@ -110,21 +110,21 @@ class navbar extends Component {
                                 </div>
                                 {/* <!-- CART --> */}
                                 <div className="col-xs-2 col-sm-2 col-md-2 col-lg-2 navbar-hidden--content_container__cart">
-                                    <div data-toggle="modal" data-target="#exampleModalScrollable"   className="navbar-content--header_main__features___control-cart  navbar-hidden--content_container__cart___box">
-                                        <div className="navbar-content--header_main__features___control-cart--icon navbar-hidden--content_container__cart___box-icon">
+                                    <div  className="navbar-content--header_main__features___control-cart  navbar-hidden--content_container__cart___box">
+                                        <div data-toggle="modal" data-target="#exampleModalScrollable"   className="navbar-content--header_main__features___control-cart--icon navbar-hidden--content_container__cart___box-icon">
                                             <i className="fas fa-cart-plus navbar-content--header_main__features___control-cart--icon_details"></i>
                                             <span className="navbar-content--header_main__features___control-cart--icon_numbers">
                                                 1
                                             </span>
                                         </div>
-                                        <span className="navbar-content--header_main__features___control-cart--name navbar-hidden--content_container__cart___box-name">
+                                        <Link to="/Storage" className="navbar-content--header_main__features___control-cart--name navbar-hidden--content_container__cart___box-name">
                                             <span className="navbar-content--header_main__features___control-cart--name_details navbar-hidden--content_container__cart___box-name--details">
                                                 Giỏ hàng:
                                             </span>
                                             <span className="navbar-content--header_main__features___control-cart--name_total navbar-hidden--content_container__cart___box-name--total">
                                                 1.800.000VND
                                             </span>
-                                        </span>
+                                        </Link>
                                     </div>
                                 </div>
                                 
@@ -263,22 +263,22 @@ class navbar extends Component {
                                                 </div>
                                             </form>
                                         </div>
-                                        <div  data-toggle="modal" data-target="#exampleModalScrollable"  className="navbar-content--header_main__features___control-cart">
-                                            <div className="navbar-content--header_main__features___control-cart--icon ">
+                                        <div   className="navbar-content--header_main__features___control-cart">
+                                            <div data-toggle="modal" data-target="#exampleModalScrollable" className="navbar-content--header_main__features___control-cart--icon">
                                                 <i className="fas fa-cart-plus navbar-content--header_main__features___control-cart--icon_details"></i>
                                                 <span className="navbar-content--header_main__features___control-cart--icon_numbers">
                                                     1
                                                 </span>
                                             </div>
                                             
-                                            <span className="navbar-content--header_main__features___control-cart--name">
-                                                <span className="navbar-content--header_main__features___control-cart--name_details">
+                                            <Link to="/Storage" className="navbar-content--header_main__features___control-cart--name">
+                                                <span  className="navbar-content--header_main__features___control-cart--name_details">
                                                     Giỏ hàng:
                                                 </span>
                                                 <span className="navbar-content--header_main__features___control-cart--name_total">
                                                     1.800.000VND
                                                 </span>
-                                            </span>
+                                            </Link>
       
                                            
                                         </div>
