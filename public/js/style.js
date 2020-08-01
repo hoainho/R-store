@@ -121,6 +121,7 @@ $(document).ready(function(){
       $(this).addClass('active')
     });
 });
+
 	$(document).ready(function() {
 
     $('.sm_open').on('click', function(){
