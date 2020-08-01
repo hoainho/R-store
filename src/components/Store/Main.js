@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import callApi from '../../utils/apiCaller';
 import {
     BrowserRouter as Router,
     Link,
@@ -6,6 +7,19 @@ import {
     Route 
 } from "react-router-dom";
 export default class Main extends Component {
+    constructor(props){
+        super(props);
+        this.state ={
+            product : []
+        };
+    }
+    componentDidMount(){
+        callApi('product','GET', null).then(res => {
+            this.setState({
+                product : res.data
+            });
+        });
+    }
     render(){
         return (
             <div className="store">
