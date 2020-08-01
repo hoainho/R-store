@@ -1,6 +1,6 @@
 .cart{
     margin: 0 2rem;
-    width: 100%;
+    width: auto;
     &-container{
         position: relative;
         width: 100%;
@@ -123,47 +123,158 @@
                         padding: .5rem;
                         font-size: 1rem;
                         font-weight: 900;
-                        &-iconOn{
-                            position: absolute;
-                            right: 2rem;
-                            display: none;
-                        }
-                        &-iconOff{
-                            right: 2rem;
-                            position: absolute;
-                            display: block;
-                        }
+                        
+                    }
+                    &___button-On{
+                        left: 20rem;
+                        bottom: 1.5rem;
+                        width: 4%;
+                        position: relative;
+                        display: none;
+                    }
+                    &___button-Off{
+                        left: 20rem;
+                        bottom: 1.5rem;
+                        width: 4%;
+                        position: relative;
+                        display: block;
                     }
                     &___checkbox{
                         position: absolute;
-                        width: 30%;
-                        left: 0.9rem;
-                        height: 3vh;
+                        width: 40%;
+                        left: 0.5rem;
+                        height: 5vh;
                         opacity: 0;
                         cursor: pointer;
                     }
                     &___checkbox:checked ~ &___toggle{
                         display: block;
                     }
-                    &___checkbox:checked + &___button-iconOn{
-                        display: block; 
+                    &___checkbox:checked ~   &___button-On{
+                        display: block;
                     }
-                    &___checkbox:checked + &___button-iconOff{
+                    &___checkbox:checked ~   &___button-Off{
                         display: none;
                     }
                     &___toggle{
-                        position: static;
+                        position: relative;
                         display: none;
                         list-style-type: none;
-                        top: 1rem;
+                        bottom: 1rem;
                     }
                     &___placeholder{
-                        
-                        &-title{
+                        padding: .2rem;
 
+                        &-title{
+                            font-size: 1rem;
+                            color: $color-divider;
+                            font-family: serif;
+                            font-weight: bold;
+                        }
+                        &-enter{
+                            position: relative;
+                            width: 100%;
+                            padding: 0.5rem 1rem;
+                            border: 1px solid rgba(149, 152, 155, 0.5);
+                            border-radius: 30px;
+                            color: #95989b;
+                            outline: none; 
+                            font-size: .7rem;
+                            &:focus{
+                                border: 1px solid $color-primary;
+                            }
                         }
                     }
+
                 }  
+                &__bill{
+                    display: flex;
+                    flex-direction:column ; 
+                    &___content{
+                        display: flex;
+                        flex-direction: row;
+                        justify-content:space-between;
+                        margin: .2rem;
+                    }
+                   
+                }
+                &__code{
+                    position: relative;
+                    &___button{
+                        text-decoration:none;
+                        border: none;
+                        outline: none;
+                        padding: .5rem;
+                        font-size: 1rem;
+                        font-weight: 900;
+                        position: relative;
+                        bottom: 3rem;
+                    }
+                    &___button-On{
+                        left: 20rem;
+                        top: -0.5rem;
+                        width: 4%;
+                        position: relative;
+                        display: none;
+                    }
+                    &___button-Off{
+                        left: 20rem;
+                        top: -0.5rem;
+                        width: 4%;
+                        position: relative;
+                        display: block;
+                    }
+                    &___checkbox{
+                        position: relative;
+                        top: 1.3rem;
+                        width: 28%;
+                        left: 0.5rem;
+                        height: 5vh;
+                        opacity: 0;
+                        cursor: pointer;
+                        z-index: 1;
+                    }
+                    &___checkbox:checked ~ &___placeholder{
+                        display: block;
+                    }
+                    &___checkbox:checked ~   &___button-On{
+                        display: block;
+                    }
+                    &___checkbox:checked ~   &___button-Off{
+                        display: none;
+                    }
+                    &___placeholder{
+                        position: relative;
+                        display: none;
+                        list-style-type: none;
+                        top: -3rem;
+                        padding: .2rem;
+                        &-title{
+                            font-size: 1rem;
+                            color: $color-divider;
+                            font-family: serif;
+                            font-weight: bold;
+                        }
+                        &-enter{
+                            position: relative;
+                            width: 100%;
+                            padding: 0.5rem 1rem;
+                            border: 1px solid rgba(149, 152, 155, 0.5);
+                            border-radius: 30px;
+                            color: #95989b;
+                            outline: none; 
+                            font-size: .7rem;
+                            &:focus{
+                                border: 1px solid $color-primary;
+                            }
+                        }
+                    }
+                }
+                &__payment{
+                    position: relative;
+                    top: -1rem;
+                    left: 38%;
+                }
                 
                 
             }

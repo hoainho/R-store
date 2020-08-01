@@ -4201,7 +4201,7 @@ html * {
 
 .cart {
   margin: 0 2rem;
-  width: 100%; }
+  width: auto; }
   .cart-container {
     position: relative;
     width: 100%; }
@@ -4292,29 +4292,123 @@ html * {
         padding: .5rem;
         font-size: 1rem;
         font-weight: 900; }
-        .cart-container--payment_box__information___button-iconOn {
-          position: absolute;
-          right: 2rem;
-          display: none; }
-        .cart-container--payment_box__information___button-iconOff {
-          right: 2rem;
-          position: absolute;
-          display: block; }
+      .cart-container--payment_box__information___button-On {
+        left: 20rem;
+        bottom: 1.5rem;
+        width: 4%;
+        position: relative;
+        display: none; }
+      .cart-container--payment_box__information___button-Off {
+        left: 20rem;
+        bottom: 1.5rem;
+        width: 4%;
+        position: relative;
+        display: block; }
       .cart-container--payment_box__information___checkbox {
         position: absolute;
-        width: 30%;
-        left: 0.9rem;
-        height: 3vh;
+        width: 40%;
+        left: 0.5rem;
+        height: 5vh;
         opacity: 0;
         cursor: pointer; }
       .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___toggle {
         display: block; }
-      .cart-container--payment_box__information___checkbox:checked + .cart-container--payment_box__information___button-iconOn {
+      .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___button-On {
         display: block; }
-      .cart-container--payment_box__information___checkbox:checked + .cart-container--payment_box__information___button-iconOff {
+      .cart-container--payment_box__information___checkbox:checked ~ .cart-container--payment_box__information___button-Off {
         display: none; }
       .cart-container--payment_box__information___toggle {
-        position: static;
+        position: relative;
         display: none;
         list-style-type: none;
-        top: 1rem; }
+        bottom: 1rem; }
+      .cart-container--payment_box__information___placeholder {
+        padding: .2rem; }
+        .cart-container--payment_box__information___placeholder-title {
+          font-size: 1rem;
+          color: #95989b;
+          font-family: serif;
+          font-weight: bold; }
+        .cart-container--payment_box__information___placeholder-enter {
+          position: relative;
+          width: 100%;
+          padding: 0.5rem 1rem;
+          border: 1px solid rgba(149, 152, 155, 0.5);
+          border-radius: 30px;
+          color: #95989b;
+          outline: none;
+          font-size: .7rem; }
+          .cart-container--payment_box__information___placeholder-enter:focus {
+            border: 1px solid #ff7e00; }
+      .cart-container--payment_box__bill {
+        display: flex;
+        flex-direction: column; }
+        .cart-container--payment_box__bill___content {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          margin: .2rem; }
+      .cart-container--payment_box__code {
+        position: relative; }
+        .cart-container--payment_box__code___button {
+          text-decoration: none;
+          border: none;
+          outline: none;
+          padding: .5rem;
+          font-size: 1rem;
+          font-weight: 900;
+          position: relative;
+          bottom: 3rem; }
+        .cart-container--payment_box__code___button-On {
+          left: 20rem;
+          top: -0.5rem;
+          width: 4%;
+          position: relative;
+          display: none; }
+        .cart-container--payment_box__code___button-Off {
+          left: 20rem;
+          top: -0.5rem;
+          width: 4%;
+          position: relative;
+          display: block; }
+        .cart-container--payment_box__code___checkbox {
+          position: relative;
+          top: 1.3rem;
+          width: 28%;
+          left: 0.5rem;
+          height: 5vh;
+          opacity: 0;
+          cursor: pointer;
+          z-index: 1; }
+        .cart-container--payment_box__code___checkbox:checked ~ .cart-container--payment_box__code___placeholder {
+          display: block; }
+        .cart-container--payment_box__code___checkbox:checked ~ .cart-container--payment_box__code___button-On {
+          display: block; }
+        .cart-container--payment_box__code___checkbox:checked ~ .cart-container--payment_box__code___button-Off {
+          display: none; }
+        .cart-container--payment_box__code___placeholder {
+          position: relative;
+          display: none;
+          list-style-type: none;
+          top: -3rem;
+          padding: .2rem; }
+          .cart-container--payment_box__code___placeholder-title {
+            font-size: 1rem;
+            color: #95989b;
+            font-family: serif;
+            font-weight: bold; }
+          .cart-container--payment_box__code___placeholder-enter {
+            position: relative;
+            width: 100%;
+            padding: 0.5rem 1rem;
+            border: 1px solid rgba(149, 152, 155, 0.5);
+            border-radius: 30px;
+            color: #95989b;
+            outline: none;
+            font-size: .7rem; }
+            .cart-container--payment_box__code___placeholder-enter:focus {
+              border: 1px solid #ff7e00; }
+      .cart-container--payment_box__payment {
+        position: relative;
+        top: -1rem;
+        left: 38%; }
