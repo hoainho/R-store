@@ -1,6 +1,6 @@
 import  { combineReducers } from 'redux';
 
- const myReducer combineReducers({
+ const myReducer = combineReducers({
 
 });
 export default myReducer;
