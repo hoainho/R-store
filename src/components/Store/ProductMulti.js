@@ -1,6 +1,6 @@
 import React , { Component } from 'react';
 
-export default class Product extends Component {
+export default class ProductMulti extends Component {
     render (){
         return(
             <div className="col-lg-2 col-md-2 col-sm-2 col-xs-2 store-main--container_content__box-self">
