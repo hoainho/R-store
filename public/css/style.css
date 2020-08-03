@@ -3363,14 +3363,14 @@ html * {
         .store-main--container_menu-options--sort_box__container-select {
           background-color: red !important; }
   .store-main--container_content {
-    display: flex;
     background-image: url(../../img/bgproducttab.png);
     background-size: cover;
     background-repeat: repeat; }
     .store-main--container_content__box {
       margin-bottom: 1rem;
       border-bottom: 1px solid rgba(149, 152, 155, 0.1);
-      padding-bottom: 1rem; }
+      padding-bottom: 1rem;
+      display: flex; }
       .store-main--container_content__box-self {
         height: 40vh; }
         .store-main--container_content__box-self:nth-last-child(-n+6) {
