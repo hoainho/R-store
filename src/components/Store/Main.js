@@ -277,12 +277,14 @@ export default class Main extends Component {
                                 <Switch>
                                     <Route exact path="/store">
                                         <div id="tab_multi" className="store-main--container_content tab-pane active ">
+                                           <div className="store-main--container_content__box">
                                             <ProductMulti />
                                             <ProductMulti />
                                             <ProductMulti />
                                             <ProductMulti />
                                             <ProductMulti />
                                             <ProductMulti />
+                                           </div>
                                 </div>
                                     </Route>
                                     <Route path="/Product-Single">
