@@ -3363,6 +3363,7 @@ html * {
         .store-main--container_menu-options--sort_box__container-select {
           background-color: red !important; }
   .store-main--container_content {
+    display: flex;
     background-image: url(../../img/bgproducttab.png);
     background-size: cover;
     background-repeat: repeat; }

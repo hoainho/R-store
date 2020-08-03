@@ -482,9 +482,10 @@
                 }
             }
             &_content{
+                display: flex;
                 background-image: url(../../img/bgproducttab.png);
-                    background-size: cover;
-                    background-repeat:repeat; 
+                background-size: cover;
+                background-repeat:repeat; 
                 &__box{
                     margin-bottom:1rem;
                     border-bottom: 1px solid rgba($color-divider, .1);
