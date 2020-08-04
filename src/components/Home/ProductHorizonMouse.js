@@ -87,6 +87,12 @@ class ProductHorizonMouse extends Component {
                                 <Route path="/tab_mousesony">    
                                     <Slider>
                                         <ProductItem/>
+                                        <ProductItem/>
+                                        <ProductItem/>
+                                        <ProductItem/>
+                                        <ProductItem/>
+                                        <ProductItem/>
+                                        <ProductItem/>
                                     </Slider>
                                 </Route>   
                             </Switch>
