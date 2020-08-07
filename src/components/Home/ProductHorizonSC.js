@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
 import ProductItem from './ProductItem';
+import axios from 'axios';
+
 import {
     BrowserRouter as Router,
     Switch,
@@ -10,6 +12,16 @@ import {
 class ProductHorizonSC extends Component {
     
     render(){
+        axios ({
+            method : 'GET',
+            url : 'https://5f1446062710570016b37d7d.mockapi.io/:endpoint',
+            data : null
+        }).then(res => {
+            console.log(res);
+        }).catch(err => {
+            console.log(err);
+        });
+        var products = [];
         const settings = {
             dots: false,
             accessibility:true,
