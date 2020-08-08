@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import {Link } from 'react-router-dom';
 
 export default class Main extends Component {
     render() {
@@ -33,22 +33,22 @@ export default class Main extends Component {
                                 <h4 className="news-container--menu_categories__tittle">Sản Phẩm</h4>
                                 <ul className="news-container--menu_categories__list">
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Tai Nghe</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Tai Nghe</Link>
                                     </li>
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Bàn Phím</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Bàn Phím</Link>
                                     </li>
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Chuột</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Chuột</Link>
                                     </li>
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Phụ kiện PC</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Phụ kiện PC</Link>
                                     </li>
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Tin công nghệ</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Tin công nghệ</Link>
                                     </li>
                                     <li className="news-container--menu_categories__item">
-                                        <a href="#" className="news-container--menu_categories__link">Tin khác</a>
+                                        <Link to="/" className="news-container--menu_categories__link">Tin khác</Link>
                                     </li>
                                 </ul>
                                 
@@ -59,35 +59,35 @@ export default class Main extends Component {
                                     <li className="news-container--menu_recent__item">
                                         <img src="./img/HeadphoneAsus7A.png" alt="" className="news-container--menu_recent__item-pic"/>
                                         <div className="news-container--menu_recent__item-content">
-                                            <a href="#" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</a>
+                                            <Link to="/" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</Link>
                                             <span className="news-container--menu_recent__item-content--sub"> 06-07-2020 </span>
                                         </div>
                                     </li>
                                     <li className="news-container--menu_recent__item">
                                         <img src="./img/HeadphoneAsus7A.png" alt="" className="news-container--menu_recent__item-pic"/>
                                         <div className="news-container--menu_recent__item-content">
-                                            <a href="#" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</a>
+                                            <Link to="/" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</Link>
                                             <span className="news-container--menu_recent__item-content--sub"> 06-07-2020 </span>
                                         </div>
                                     </li>
                                     <li className="news-container--menu_recent__item">
                                         <img src="./img/HeadphoneAsus7A.png" alt="" className="news-container--menu_recent__item-pic"/>
                                         <div className="news-container--menu_recent__item-content">
-                                            <a href="#" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</a>
+                                            <Link to="/" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</Link>
                                             <span className="news-container--menu_recent__item-content--sub"> 06-07-2020 </span>
                                         </div>
                                     </li>
                                     <li className="news-container--menu_recent__item">
                                         <img src="./img/HeadphoneAsus7A.png" alt="" className="news-container--menu_recent__item-pic"/>
                                         <div className="news-container--menu_recent__item-content">
-                                            <a href="#" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</a>
+                                            <Link to="/" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</Link>
                                             <span className="news-container--menu_recent__item-content--sub"> 06-07-2020 </span>
                                         </div>
                                     </li>
                                     <li className="news-container--menu_recent__item">
                                         <img src="./img/HeadphoneAsus7A.png" alt="" className="news-container--menu_recent__item-pic"/>
                                         <div className="news-container--menu_recent__item-content">
-                                            <a href="#" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</a>
+                                            <Link to="/" className="news-container--menu_recent__item-content--link">Lorem ipsum dolor sit amet consectetur, adipisicing elit.inventore sit!</Link>
                                             <span className="news-container--menu_recent__item-content--sub"> 06-07-2020 </span>
                                         </div>
                                     </li>
@@ -97,10 +97,10 @@ export default class Main extends Component {
                                 <h4 className="news-container--menu_archive__tittle">Năm Phát Hành</h4>
                                 <ul className="news-container--menu_archive__list">
                                     <li className="news-container--menu_archive__item">
-                                        <a href="#" className="news-container--menu_archive__link">2019</a>
+                                        <Link to="/" className="news-container--menu_archive__link">2019</Link>
                                     </li>
                                     <li className="news-container--menu_archive__item">
-                                        <a href="#" className="news-container--menu_archive__link">2020</a>
+                                        <Link to="/" className="news-container--menu_archive__link">2020</Link>
                                     </li>
                                 </ul>
                             </div>
@@ -128,8 +128,8 @@ export default class Main extends Component {
                                     <div className="news-container--content_link">
                                         <button className="news-container--content_link__button"> Xem Ngay</button>
                                         <span className="news-container--content_link__tag">
-                                            <a href="#" className="news-container--content_link__tag-sub">#SanPham</a>
-                                            <a href="#" className="news-container--content_link__tag-sub">#GanDay</a>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#SanPham</Link>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#GanDay</Link>
                                         </span>
                                     </div>
                                 </div>
@@ -153,8 +153,8 @@ export default class Main extends Component {
                                     <div className="news-container--content_link">
                                         <button className="news-container--content_link__button"> Xem Ngay</button>
                                         <span className="news-container--content_link__tag">
-                                            <a href="#" className="news-container--content_link__tag-sub">#SanPham</a>
-                                            <a href="#" className="news-container--content_link__tag-sub">#GanDay</a>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#SanPham</Link>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#GanDay</Link>
                                         </span>
                                     </div>
                                 </div>
@@ -180,8 +180,8 @@ export default class Main extends Component {
                                     <div className="news-container--content_link">
                                         <button className="news-container--content_link__button"> Xem Ngay</button>
                                         <span className="news-container--content_link__tag">
-                                            <a href="#" className="news-container--content_link__tag-sub">#SanPham</a>
-                                            <a href="#" className="news-container--content_link__tag-sub">#GanDay</a>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#SanPham</Link>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#GanDay</Link>
                                         </span>
                                     </div>
                                 </div>
@@ -205,8 +205,8 @@ export default class Main extends Component {
                                     <div className="news-container--content_link">
                                         <button className="news-container--content_link__button"> Xem Ngay</button>
                                         <span className="news-container--content_link__tag">
-                                            <a href="#" className="news-container--content_link__tag-sub">#SanPham</a>
-                                            <a href="#" className="news-container--content_link__tag-sub">#GanDay</a>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#SanPham</Link>
+                                            <Link to="/" className="news-container--content_link__tag-sub">#GanDay</Link>
                                         </span>
                                     </div>
                                 </div>

@@ -17,7 +17,7 @@ export default class Main extends Component{
                 </div>
                 <div className="contact">
                 
-                <form action="" method="POST" className="form-horizontal contact-container" role="form">
+                <form action="" method="POST" className="form-horizontal contact-container" >
                         <div className="form-group contact-container--tittle">
                             <legend className="contact-container--tittle_details">Liên Hệ</legend>
                         </div>

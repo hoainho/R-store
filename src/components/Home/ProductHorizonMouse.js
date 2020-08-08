@@ -34,7 +34,7 @@ class ProductHorizonMouse extends Component {
                                 <ul className="product-tab--container_tittle-category__list nav nav-tabs">
                                     <h4 className="product-tab--container_tittle-category__tittle-headphone product-tab--container_tittle-category__tittle-headphone-mouse">Chuôt</h4>
                                     <li  className="product-tab--container_tittle-category__item product-tab--container_tittle-category__item">
-                                        <Link exact to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
+                                        <Link to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
                                     </li>
                                     
                                     <li  className="product-tab--container_tittle-category__item product-tab--container_tittle-category__item-mouse">

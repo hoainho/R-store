@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-
+import {Link} from 'react-router-dom';
 export default class ProductMulti extends Component {
     render (){
         return(
@@ -7,9 +7,11 @@ export default class ProductMulti extends Component {
                 <div className="product-tab--container_content__category___product store-main--container_content__box-self--content">
                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B store-main--container_content__box-self--content_pic" src="/img/mouse2A.png" alt="ROG Strix Flar"/>
                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A store-main--container_content__box-self--content_pic" src="/img/mouse2B.png" alt="ROG Strix Flar"/>
-                    <span className="product-tab--container_content__category___product-details store-main--container_content__box-self--content_details"><a className="sm_open product-tab--container_content__box___product-details--link" data-modal="exampleAdvanced" data-effect="pushup" data-icons="is_right">
+                    <span className="product-tab--container_content__category___product-details store-main--container_content__box-self--content_details">
+                        <Link className="sm_open product-tab--container_content__box___product-details--link" >
                             <i className="fas fa-arrows-alt product-tab--container_content__category___product-details--icon store-main--container_content__box-self--content_details__icon"></i>
-                        </a></span>
+                        </Link>
+                    </span>
                     <h4 className="product-tab--container_content__category___product-name store-main--container_content__box-self--content_name"> Chuột Gaming Phamtom 2.0</h4>
                     <span className="product-tab--container_content__category___product-vote store-main--container_content__box-self--content_vote">
                         <i className="fas fa-star"></i>
