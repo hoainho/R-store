@@ -38,9 +38,9 @@ export default class login extends Component {
                                 </div>
                             </div>
                             <div className="account-content--forgetpassword">
-                                <a href="" className="account-content--forgetpassword_link">
+                                <Link to="" className="account-content--forgetpassword_link">
                                     Quên mật khẩu ?
-                                </a>
+                                </Link>
                             </div>
                         </form>
                         <div className="account-create">

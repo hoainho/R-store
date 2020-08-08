@@ -1,5 +1,6 @@
-import React, { Component,useState }from 'react';
-import { Collapse, Button, CardBody, Card } from 'reactstrap';
+import React, { Component }from 'react';
+import {Link} from 'react-router-dom';
+
 export default class Cart extends Component {
     render(){
         return (
@@ -34,7 +35,7 @@ export default class Cart extends Component {
                              </div>
                              <div className="cart-container--storage_products">
                                 <div className="cart-container--storage_products__name">
-                                    <img className="cart-container--storage_products__name___picture" src="../img/HeadphoneAcer1A.png"/>
+                                    <img className="cart-container--storage_products__name___picture" src="../img/HeadphoneAcer1A.png" alt ="Headphone"/>
                                     <span className="cart-container--storage_products__name___text">Tai Nghe Acer Alpha 2</span>
                                 </div> 
                                 <div className="cart-container--storage_products__price">
@@ -48,14 +49,14 @@ export default class Cart extends Component {
                                 </div>
                              </div>
                              <div className="cart-container--storage_edit">
-                                 <a className="btn btn-primary contact-container--submit_box__details  mr-2"> Sửa </a>
-                                 <a className="btn btn-primary contact-container--submit_box__details  mr-2"> Xóa </a>
+                                 <Link to="" className="btn btn-primary contact-container--submit_box__details  mr-2"> Sửa </Link>
+                                 <Link to="" className="btn btn-primary contact-container--submit_box__details  mr-2"> Xóa </Link>
                              </div>
                              <div className="cart-container--storage_control">
-                                <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__home"> Trang Chủ </a>
+                                <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__home"> Trang Chủ </Link>
                                 <div className="cart-container--storage_control__box">
-                                    <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Xóa Tất Cả</a>
-                                    <a className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Cập Nhật </a>
+                                    <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Xóa Tất Cả</Link>
+                                    <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Cập Nhật </Link>
                                 </div>
                              </div>
                         </div>  

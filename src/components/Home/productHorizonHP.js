@@ -29,33 +29,33 @@ export default class ProductHorizon extends Component {
     };
         return (
             // <!-- PRODUCT-CATEGORY-TABS  -->
-                <div class="product-tab product-tab--category">
-                    <div class="product-tab--container">
+                <div className="product-tab product-tab--category">
+                    <div className="product-tab--container">
                         <Router>
-                            <div class="product-tab--container_tittle-category">
-                                <ul   id="nav-tab" class="product-tab--container_tittle-category__list nav nav-tabs">
-                                    <h4 class="product-tab--container_tittle-category__tittle-headphone">Tai nghe</h4>
-                                    <li   class="product-tab--container_tittle-category__item  nav-item">
-                                        <Link exact to="/" class="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
+                            <div className="product-tab--container_tittle-category">
+                                <ul   id="nav-tab" className="product-tab--container_tittle-category__list nav nav-tabs">
+                                    <h4 className="product-tab--container_tittle-category__tittle-headphone">Tai nghe</h4>
+                                    <li   className="product-tab--container_tittle-category__item  nav-item">
+                                        <Link to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
                                     </li>
                                     
-                                    <li   class="product-tab--container_tittle-category__item  nav-item">
-                                        <Link to="/tab_acer"  class="product-tab--container_tittle-category__link  nav-link ">Acer</Link>
+                                    <li   className="product-tab--container_tittle-category__item  nav-item">
+                                        <Link to="/tab_acer"  className="product-tab--container_tittle-category__link  nav-link ">Acer</Link>
                                     </li>
                                     
-                                    <li   class="product-tab--container_tittle-category__item  nav-item">
-                                        <Link to="/tab_logitech" class="product-tab--container_tittle-category__link  nav-link ">Logitech</Link>
+                                    <li   className="product-tab--container_tittle-category__item  nav-item">
+                                        <Link to="/tab_logitech" className="product-tab--container_tittle-category__link  nav-link ">Logitech</Link>
                                     </li>
                                     
-                                    <li   class="product-tab--container_tittle-category__item  nav-item">
-                                        <Link to="/tab_sony" class="product-tab--container_tittle-category__link  nav-link ">Sony</Link>
+                                    <li   className="product-tab--container_tittle-category__item  nav-item">
+                                        <Link to="/tab_sony" className="product-tab--container_tittle-category__link  nav-link ">Sony</Link>
                                     </li>
                                 </ul>
                             </div>
-                            <div class="product-tab--container_content product-tab--container_content-category ">
+                            <div className="product-tab--container_content product-tab--container_content-category ">
                             <Switch>
                                 <Route exact path="/">
-                                    <Slider { ...settings } class="product-tab--container_content__category tab-pane active">
+                                    <Slider { ...settings } className="product-tab--container_content__category tab-pane active">
                                         <ProductItem />
                                         <ProductItem />
                                         <ProductItem />
@@ -67,7 +67,7 @@ export default class ProductHorizon extends Component {
                                     </Slider>  
                                 </Route> 
                                 <Route path="/tab_acer">
-                                    <Slider { ...settings }  class=" product-tab--container_content__category  tab-pane active">
+                                    <Slider { ...settings }  className=" product-tab--container_content__category  tab-pane active">
                                         <ProductItem />
                                         <ProductItem />
                                         <ProductItem />
@@ -79,7 +79,7 @@ export default class ProductHorizon extends Component {
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_logitech">
-                                    <Slider { ...settings }  class=" product-tab--container_content__category  tab-pane active ">
+                                    <Slider { ...settings }  className=" product-tab--container_content__category  tab-pane active ">
                                         <ProductItem />
                                         <ProductItem />
                                         <ProductItem />
@@ -91,7 +91,7 @@ export default class ProductHorizon extends Component {
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_sony">
-                                    <Slider { ...settings }  class="product-tab--container_content__category  tab-pane active ">
+                                    <Slider { ...settings }  className="product-tab--container_content__category  tab-pane active ">
                                         <ProductItem />
                                         <ProductItem />
                                         <ProductItem />

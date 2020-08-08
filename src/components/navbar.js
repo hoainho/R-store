@@ -40,15 +40,15 @@ class navbar extends Component {
                                             <div className="navbar-content--menu_menuNavbar__sticky navbar-hidden--content_container__menu-box--navbar_sticky">
                                                 <ul className="navbar-hidden--content_container__menu-box--navbar_list nav nav-tabs "  >
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item">
-                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" exact to="/" > Trang Chủ</Link>
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" to="/" > Trang Chủ</Link>
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item ">
                                                         <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"      to="/store" > Cửa Hàng</Link> 
                                                     </li>
                                                     <li className="navbar-hidden--content_container__menu-box--navbar_item navbar-content--menu_menuNavbar__sticky___itemFeatures ">
-                                                        <a className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/featured" > Chức Năng</a> 
+                                                        <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/featured" > Chức Năng</Link> 
                                                         <ul className="navbar-content--menu_menuNavbar__sticky___item-features navbar-hidden--content_container__menu-box--navbar_item__features">
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</a>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</Link>
                                                                 <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype navbar-hidden--content_container__menu-box--navbar_item__features-type">
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
                                                                         <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
@@ -67,7 +67,7 @@ class navbar extends Component {
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</a>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</Link>
                                                                 <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct navbar-hidden--content_container__menu-box--navbar_item__features-sort">
                                                                     <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
                                                                         <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Đánh giá </Link>
@@ -83,7 +83,7 @@ class navbar extends Component {
                                                                     </li>
                                                                 </ul>
                                                             </li>
-                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </a></li>
+                                                            <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </Link></li>
         
                                                         </ul>
                                                     </li>
@@ -145,8 +145,8 @@ class navbar extends Component {
                                             <div className="dropdown navbar-content--top_features__row___right-content--language" >
                                                 <div id="dropdownMenuButton" className="dropdown-toggle navbar-content--top_features__row___right-content--language_btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Ngôn ngữ</div>
                                                 <ul  className="dropdown-menu navbar-content--top_features__row___right-content--language_list" aria-labelledby="dropdownMenuButton">
-                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>ENG</strong></a></li>
-                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <a className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>VN</strong></a></li>
+                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <Link className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>ENG</strong></Link></li>
+                                                    <li className="dropdown-item navbar-content--top_features__row___right-content--language_link"> <Link className="dropdown-item navbar-content--top_features__row___right-content--language_item" to="/"><strong>VN</strong></Link></li>
                                                 </ul>
                                             </div>
                                             <div className="navbar-content--top_features__row___right-content--info">
@@ -157,14 +157,14 @@ class navbar extends Component {
                                                         </Link>
                                                     </li>
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a to="/" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <Link to="/" className="navbar-content--top_features__row___right-content--info_link">
                                                              Yêu Thích
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                     <li className="navbar-content--top_features__row___right-content--info_item">
-                                                        <a to="/" className="navbar-content--top_features__row___right-content--info_link">
+                                                        <Link to="/" className="navbar-content--top_features__row___right-content--info_link">
                                                             So Sánh
-                                                        </a>
+                                                        </Link>
                                                     </li>
                                                 </ul>
                                             </div>
@@ -247,16 +247,9 @@ class navbar extends Component {
                                                 <div className="navbar-content--header_main__features___control-search--box_input">
                                                     <input id="search" 
                                                     type="text" 
-                                                    name="q" 
-                                                    value="" 
                                                     placeholder="Tai nghe, bàn phím, chuột gaming, chuột văn phòng,..." 
                                                     className="input-text navbar-content--header_main__features___control-search--box_input__enter" 
-                                                    maxlength="128" 
-                                                    role="combobox" 
-                                                    aria-haspopup="false" 
-                                                    aria-autocomplete="both" 
-                                                    aria-expanded="false" 
-                                                    autocomplete="off"/>
+                                                    />
                                                 </div>
                                                 <div className="navbar-content--header_main__features___control-search--box_button">
                                                     <button className="navbar-content--header_main__features___control-search--box_button__search">Tìm kiếm</button>
@@ -313,7 +306,7 @@ class navbar extends Component {
                                         <div className="navbar-content--menu_menuNavbar__sticky ">
                                             <ul className="navbar-content--menu_menuNavbar__sticky___list nav nav-tabs " id="myTab" role="tablist">
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
-                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" exact to="/" > Trang Chủ</Link>
+                                                    <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link active" to="/" > Trang Chủ</Link>
                                                 </li>
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item nav-item">
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"         to="/Store" > Cửa Hàng</Link> 
@@ -321,7 +314,7 @@ class navbar extends Component {
                                                 <li className="navbar-content--menu_menuNavbar__sticky___item navbar-content--menu_menuNavbar__sticky___itemFeatures nav-item">
                                                     <Link className="navbar-content--menu_menuNavbar__sticky___link nav-link"          to="/featured" > Chức Năng</Link> 
                                                     <ul className="navbar-content--menu_menuNavbar__sticky___item-features">
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</a>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Loại</Link>
                                                             <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype">
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-item">
                                                                     <Link to="/" className="navbar-content--menu_menuNavbar__sticky___item-features--item_producttype-link">
@@ -340,7 +333,7 @@ class navbar extends Component {
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</a>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Sắp Xếp</Link>
                                                             <ul className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct">
                                                                 <li className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-item">
                                                                     <Link className="navbar-content--menu_menuNavbar__sticky___item-features--item_sortproduct-link" to="/"> Đánh giá </Link>
@@ -356,7 +349,7 @@ class navbar extends Component {
                                                                 </li>
                                                             </ul>
                                                         </li>
-                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><a className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </a></li>
+                                                        <li className="navbar-content--menu_menuNavbar__sticky___item-features--item"><Link className="navbar-content--menu_menuNavbar__sticky___item-features--link" to="/">Thương Hiệu </Link></li>
     
                                                     </ul>
                                                 </li>

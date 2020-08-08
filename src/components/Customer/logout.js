@@ -19,7 +19,7 @@ export default class logout extends Component {
                         <h3 className=" account-tittle--details"> Tài khoản </h3>
                     </div>
                     <div>
-                        <form action="" method="POST" className="form-horizontal contact-container account-content account-Create" role="form">
+                        <form action="" method="POST" className="form-horizontal contact-container account-content account-Create">
                             <div className="form-group contact-container--tittle">
                                 <legend className="contact-container--tittle_details">Đăng kí</legend>
                             </div>

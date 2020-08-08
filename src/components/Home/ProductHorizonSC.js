@@ -21,7 +21,7 @@ class ProductHorizonSC extends Component {
         }).catch(err => {
             console.log(err);
         });
-        var products = [];
+        // var products = [];
         const settings = {
             dots: false,
             accessibility:true,
@@ -47,7 +47,7 @@ class ProductHorizonSC extends Component {
                                 <ul  className="product-tab--container_tittle-category__list nav nav-tabs">
                                     <h4 className="product-tab--container_tittle-category__tittle-keyboard">Màn Hình</h4>
                                     <li  className="product-tab--container_tittle-category__item nav-item">
-                                        <Link exact to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
+                                        <Link to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
                                     </li>
                                     
                                     <li  className="product-tab--container_tittle-category__item nav-item">

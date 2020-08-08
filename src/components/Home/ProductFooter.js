@@ -1,10 +1,5 @@
 import React, { Component } from "react";
-import {
-    BrowserRouter as Router,
-    Switch,
-    Route,
-    Link
-}   from "react-router-dom";
+import { Link }   from "react-router-dom";
 export default class ProductFooter extends Component{
     render () {
         return (
@@ -18,7 +13,7 @@ export default class ProductFooter extends Component{
                                 <h5 className="product-TOP--category_content__container___tittle">Tai nghe</h5>
                                 <ul className="product-TOP--category_content__container___list">
                                     <li className="product-TOP--category_content__container___item">
-                                        <Link exact to="/" className="product-TOP--category_content__container___link"> Asus</Link>
+                                        <Link to="/" className="product-TOP--category_content__container___link"> Asus</Link>
                                     </li>
                                     <li className="product-TOP--category_content__container___item">
                                         <Link to="/" className="product-TOP--category_content__container___link"> Acer</Link>

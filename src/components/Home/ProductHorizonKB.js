@@ -34,14 +34,14 @@ class ProductHorizonKB extends Component {
                                 <ul id="nav-tab" className="product-tab--container_tittle-category__list nav nav-tabs">
                                     <h4 className="product-tab--container_tittle-category__tittle-keyboard">Bàn Phím</h4>
                                     <li  className="product-tab--container_tittle-category__item active-tab--item nav-item">
-                                        <Link exact to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
+                                        <Link to="/" className="product-tab--container_tittle-category__link  nav-link ">Asus</Link>
                                     </li>
                                     
-                                    <li   className="product-tab--container_tittle-category__item active-tab--item nav-item">
+                                    <li  className="product-tab--container_tittle-category__item active-tab--item nav-item">
                                         <Link to="/tab_KBacer" className="product-tab--container_tittle-category__link  nav-link ">Acer</Link>
                                     </li>
                                     
-                                    <li  lassName="product-tab--container_tittle-category__item active-tab--item nav-item">
+                                    <li  className="product-tab--container_tittle-category__item active-tab--item nav-item">
                                         <Link to="/tab_KBlogitech"className="product-tab--container_tittle-category__link  nav-link ">Logitech</Link>
                                     </li>
                                     

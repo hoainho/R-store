@@ -1,5 +1,5 @@
 import React , { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 export default class Footer extends Component {
     render (){
         return (
@@ -71,16 +71,16 @@ export default class Footer extends Component {
                                             <h4 className="footer-center--content_tittle">Phương thức thanh toán</h4>
                                             <ul className="footer-center--content_list">
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Visa</a>
+                                                    <Link to="" className="footer-center--content_link">Visa</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Ship Cod</a>
+                                                    <Link to="" className="footer-center--content_link">Ship Cod</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Ví momo</a>
+                                                    <Link to="" className="footer-center--content_link">Ví momo</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Chuyển khoản</a>
+                                                    <Link to="" className="footer-center--content_link">Chuyển khoản</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -88,16 +88,16 @@ export default class Footer extends Component {
                                             <h4 className="footer-center--content_tittle">Chính sách bảo hành</h4>
                                             <ul className="footer-center--content_list">
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Hoàn tiền trong 30 ngày</a>
+                                                    <Link to="" className="footer-center--content_link">Hoàn tiền trong 30 ngày</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Bảo hành R-Vip</a>
+                                                    <Link to="" className="footer-center--content_link">Bảo hành R-Vip</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Bảo hành phần mềm 1 năm</a>
+                                                    <Link to="" className="footer-center--content_link">Bảo hành phần mềm 1 năm</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Chính sách 1 đổi 1</a>
+                                                    <Link to="" className="footer-center--content_link">Chính sách 1 đổi 1</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -107,16 +107,16 @@ export default class Footer extends Component {
                                             <h4 className="footer-center--content_tittle">Vì sao chọn chúng tôi</h4>
                                             <ul className="footer-center--content_list">
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">An toàn</a>
+                                                    <Link to="" className="footer-center--content_link">An toàn</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Tiện lợi</a>
+                                                    <Link to="" className="footer-center--content_link">Tiện lợi</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Chất lượng cao</a>
+                                                    <Link to="" className="footer-center--content_link">Chất lượng cao</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Giá rẻrẻ</a>
+                                                    <Link to="" className="footer-center--content_link">Giá rẻrẻ</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -124,16 +124,16 @@ export default class Footer extends Component {
                                             <h4 className="footer-center--content_tittle">Thông tin R-Store</h4>
                                             <ul className="footer-center--content_list">
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Giấy phép kinh doanh</a>
+                                                    <Link to="" className="footer-center--content_link">Giấy phép kinh doanh</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Feedback</a>
+                                                    <Link to="" className="footer-center--content_link">Feedback</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Nguồn gốc sản phẩm</a>
+                                                    <Link to="" className="footer-center--content_link">Nguồn gốc sản phẩm</Link>
                                                 </li>
                                                 <li className="footer-center--content_item">
-                                                    <a href="#" className="footer-center--content_link">Thành viên</a>
+                                                    <Link to="" className="footer-center--content_link">Thành viên</Link>
                                                 </li>
                                             </ul>
                                         </div>
@@ -144,7 +144,7 @@ export default class Footer extends Component {
                             <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 footer-right">
                                 <div className="footer-right--contact">
                                     <h4 className="footer-right--contact_tittle">
-                                        Đăng nhập & Theo dõi
+                                        Đăng nhập {'&'} Theo dõi
                                     </h4>
                                     <span className="footer-right--contact_sub">
                                         100+ mã khuyến mãi mỗi tuần khi bạn theo dõi R-Store <br/>
@@ -152,8 +152,7 @@ export default class Footer extends Component {
                                     </span>
                                     <form className="footer-right--contact_follow" action="" method="post">
                                         <input className="footer-right--contact_follow__input"
-                                        type="email" 
-                                        maxlength="128" 
+                                        type="email"
                                         placeholder="Nhập email của bạn..."
                                         name="email"  
                                         pattern="\S+.*"/>
@@ -175,7 +174,7 @@ export default class Footer extends Component {
                                         <span className="footer-right--contact_payment__box"><img className="footer-right--contact_payment__box___icon" src="img/momo.png" alt="payonline"/></span>
                                         <span className="footer-right--contact_payment__box"><img className="footer-right--contact_payment__box___icon" src="img/airpay.png" alt="payonline"/></span>
                                     </div>
-                                    <span className="footer-right--contact_copyright">Copyright © <a className="high-light" href="#"> R-Store </a>All Rights Reserved. <a className="high-light"  href="#"> Remalw</a> </span>
+                                    <span className="footer-right--contact_copyright">Copyright © <Link className="high-light" to=""> R-Store </Link>All Rights Reserved. <Link to="" className="high-light"> Remalw</Link> </span>
                                 </div>
                             </div>
                             

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import { Link } from 'react-router-dom';
 export default class ProductDetails extends Component{
     render(){
         return(
@@ -17,7 +17,8 @@ export default class ProductDetails extends Component{
                         <div className="sm_area_bottom">
                             
                         </div>
-                        <a className="sm_close sm_close_button"></a>
+                        <Link to="" className="sm_close sm_close_button"  ></Link>
+                        
                         </div>
                     </div>
                     </div>
@@ -129,7 +130,7 @@ export default class ProductDetails extends Component{
                         </div>
                         <div className="sm_content_inner_wrap">
                         <div className="sm_area_all"></div>
-                        <a className="sm_close sm_close_button">Đóng</a>
+                        <Link to="" className="sm_close sm_close_button">Đóng</Link>
                         </div>
                     </div>
                     </div>

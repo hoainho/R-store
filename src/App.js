@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './App.scss';
 import Navbar from './components/navbar';
 import Home from './components/Home/Home';
