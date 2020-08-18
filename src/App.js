@@ -18,6 +18,7 @@ import Contact from './components/contact/main';
 import Login from './components/Customer/login';
 import Logout from './components/Customer/logout';
 import Storage from './components/Features/Cart';
+import Text from './reducer/main';
 function App() {
   return (
     <div className="App">
@@ -25,11 +26,13 @@ function App() {
         <div>
           {/* Narbar */}
             <Navbar />
+            
           {/* ----- */}
           {/* Content */}
             <Switch>
             <Route exact path="/">
                 <Home />
+                <Text />
               </Route>
               <Route  path="/Store">
                 <Store />
@@ -69,8 +72,9 @@ function App() {
           {/* ----- */}
         </div>
       </Router>
+      
     </div>
-   
+  
   );
 }
 
