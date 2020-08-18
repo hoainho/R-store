@@ -1,8 +1,6 @@
 import  {createStore } from 'redux';
+import {Status,Sort} from './../action/index';
 
-// const myReducer = combineReducers({
-
-// });
 var initialState = {
     status : false ,
     sort : {
@@ -10,21 +8,14 @@ var initialState = {
         value  : 1
     }
 }
-var action = {type : 'TOGGLE_STATUS'};
-var sortAction  = {
-    type : 'Sort',
-    sort :{
-        by : 'name',
-        value : -1
-    }
-}
+
 var myReducers = (state = initialState , action) => {
     if(action.type === 'TOGGLE_STATUS'){
         state.status = !state.status
         return state;
     }
-    if(action.type === 'Sort'){
-        var {by,value} = sortAction.sort;
+    if(action.type === 'SORT'){
+        var {by,value} = action.sort;
         var {status} = state;
         return {
             status : status,
@@ -39,10 +30,9 @@ var myReducers = (state = initialState , action) => {
     return state;
 }
 const store = createStore(myReducers);
-
 console.log('Default : ', store.getState());
-store.dispatch(action);
+store.dispatch(Status());
 console.log('TOGGLE_STATUS : ',store.getState());
-store.dispatch(sortAction);
+store.dispatch(Sort());
 console.log('Sort : ', store.getState());
 export default myReducers;
