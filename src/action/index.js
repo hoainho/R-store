@@ -1,13 +1,12 @@
+import * as types from "./../const/Config";
 export const Status = () =>{
  return{
-    type : 'TOGGLE_STATUS'
+    type : types.TOGGLE_STATUS
     }
 };
-export const Sort = () =>{
+export const Sort = (sort) =>{
     return  {
-        type : 'Sort',
-        sort :{
-            by : 'name',
-            value : -1
-        }
-}   
+        type : types.SORT,
+        sort 
+    }   
+}
