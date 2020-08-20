@@ -69,7 +69,7 @@ import CartPay from './CartPay/CartPay';
                 </div>
                 <div className="cart"> 
                     <div className="row cart-container">  
-                        <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button>
+                        {/* <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button> */}
                         <CartState tasks = { tasks } />
                         <CartPay />
                     </div>
