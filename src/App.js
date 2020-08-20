@@ -18,7 +18,8 @@ import Contact from './components/contact/main';
 import Login from './components/Customer/login';
 import Logout from './components/Customer/logout';
 import Storage from './components/Features/Cart';
-import Text from './reducer/main';
+import './reducer/main';
+// import Text from './reducer/main';
 function App() {
   return (
     <div className="App">
@@ -32,7 +33,6 @@ function App() {
             <Switch>
             <Route exact path="/">
                 <Home />
-                <Text />
               </Route>
               <Route  path="/Store">
                 <Store />
