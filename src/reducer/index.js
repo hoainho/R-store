@@ -1,9 +1,7 @@
-import status from './status';
-import sort from './sort';
+import task from './tasks';
 import { combineReducers} from 'redux';
 
  const myReducer = combineReducers({
-    status,
-    sort
+    task // task : task
 })
 export default myReducer;
