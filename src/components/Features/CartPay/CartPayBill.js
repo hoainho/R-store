@@ -1,6 +1,7 @@
 import React, { Component }from 'react';
 export default class CartPayBill extends Component {
     render(){
+        var { task } = this.props;
         return (
         
             <div className="cart-container--payment_box__bill">
