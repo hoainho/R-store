@@ -20,20 +20,24 @@ import CartPay from './CartPay/CartPay';
     }
     
     onGenerateData = () => {
+        
         var tasks = [{
             id : this.generateID(),
-            name: "Hoc Lap Trinh",
-            status : false
+            name: "Tai Nghe Acer Alpha 2",
+            price : 700000,
+            quanlity : 2
+       },
+        {
+            id : this.generateID(),
+            name: "Tai Nghe Asus Nitro 5",
+            price : 500000,
+            quanlity : 3
         },
         {
             id : this.generateID(),
-            name: "Hoc Anh Van",
-            status : true
-        },
-        {
-            id : this.generateID(),
-            name: "Hoc Game",
-            status : false
+            name: "Tai Nghe Lenovo Atrix 1.0",
+            price : 500000,
+            quanlity : 1
         },
     ];
     this.setState ({
@@ -49,6 +53,7 @@ import CartPay from './CartPay/CartPay';
         return this.s4() + this.s4() + '-' +this.s4() + '-' + this.s4() + this.s4() + this.s4() + '-' +this.s4() ;
     }
     render(){
+        var {tasks} = this.state;
         return (
             <div>
                 <div className="store-tittle news-tittle">
@@ -65,7 +70,7 @@ import CartPay from './CartPay/CartPay';
                 <div className="cart"> 
                     <div className="row cart-container">  
                         <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button>
-                        <CartState />
+                        <CartState tasks = { tasks } />
                         <CartPay />
                     </div>
                 </div>
