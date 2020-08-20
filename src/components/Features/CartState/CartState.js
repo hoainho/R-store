@@ -9,21 +9,6 @@ import CartStateStorage from './CartStateStorage';
         })
         return ( 
             <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 cart-container--storage">
-                {/* <div className="cart-container--storage_title">
-                    <div className="cart-container--storage_title__name">
-                        Sản phẩm
-                    </div>
-                    <div className="cart-container--storage_title__price">
-                        Giá
-                    </div>
-                    <div className="cart-container--storage_title__quanlity">
-                        Số Lượng
-                    </div>
-                    <div className="cart-container--storage_title__total">
-                        Tổng cộng
-                    </div>
-                </div>
-                 */}
                 <table class="table table-hover ">
                     <thead>
                         <tr>
