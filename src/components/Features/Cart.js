@@ -1,7 +1,53 @@
 import React, { Component }from 'react';
-import {Link} from 'react-router-dom';
+import { connect } from 'react-redux';
+import CartState from './CartState/CartState';
+import CartPay from './CartPay/CartPay';
+ class Cart extends Component {
+    constructor(props) {
+        super(props);
+        this.state ={
+            tasks : []
+        }
+    }
+    componentWillMount(){
+        if(localStorage != null && localStorage.getItem('tasks')){
+            var tasks =  JSON.parse(localStorage.getItem('tasks'));
+            this.setState({
+                tasks : tasks
+            });
+        }
+        console.log(tasks);
+    }
+    
+    onGenerateData = () => {
+        var tasks = [{
+            id : this.generateID(),
+            name: "Hoc Lap Trinh",
+            status : false
+        },
+        {
+            id : this.generateID(),
+            name: "Hoc Anh Van",
+            status : true
+        },
+        {
+            id : this.generateID(),
+            name: "Hoc Game",
+            status : false
+        },
+    ];
+    this.setState ({
+        tasks : tasks
+    });
+    localStorage.setItem('tasks',JSON.stringify(tasks));
+    }
 
-export default class Cart extends Component {
+    s4(){
+        return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
+    }
+    generateID(){
+        return this.s4() + this.s4() + '-' +this.s4() + '-' + this.s4() + this.s4() + this.s4() + '-' +this.s4() ;
+    }
     render(){
         return (
             <div>
@@ -18,99 +64,19 @@ export default class Cart extends Component {
                 </div>
                 <div className="cart"> 
                     <div className="row cart-container">  
-                        <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 cart-container--storage">
-                             <div className="cart-container--storage_title">
-                                <div className="cart-container--storage_title__name">
-                                    Sản phẩm
-                                </div>
-                                <div className="cart-container--storage_title__price">
-                                    Giá
-                                </div>
-                                <div className="cart-container--storage_title__quanlity">
-                                    Số Lượng
-                                </div>
-                                <div className="cart-container--storage_title__total">
-                                    Tổng cộng
-                                </div>
-                             </div>
-                             <div className="cart-container--storage_products">
-                                <div className="cart-container--storage_products__name">
-                                    <img className="cart-container--storage_products__name___picture" src="../img/HeadphoneAcer1A.png" alt ="Headphone"/>
-                                    <span className="cart-container--storage_products__name___text">Tai Nghe Acer Alpha 2</span>
-                                </div> 
-                                <div className="cart-container--storage_products__price">
-                                    $1.800.000Vnd
-                                </div>
-                                <div className="cart-container--storage_products__quanlity">
-                                    1
-                                </div>
-                                <div className="cart-container--storage_products__total">
-                                    $1.800.000Vnd
-                                </div>
-                             </div>
-                             <div className="cart-container--storage_edit">
-                                 <Link to="" className="btn btn-primary contact-container--submit_box__details  mr-2"> Sửa </Link>
-                                 <Link to="" className="btn btn-primary contact-container--submit_box__details  mr-2"> Xóa </Link>
-                             </div>
-                             <div className="cart-container--storage_control">
-                                <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__home"> Trang Chủ </Link>
-                                <div className="cart-container--storage_control__box">
-                                    <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Xóa Tất Cả</Link>
-                                    <Link to="" className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction"> Cập Nhật </Link>
-                                </div>
-                             </div>
-                        </div>  
-                        <div className="col-xs-3 col-sm-3 col-md-3 col-lg-3 cart-container--payment">
-                             <div className="cart-container--payment_box">
-                                <div className="cart-container--payment_box__title">Tổng cộng</div>
-                                <div className="cart-container--payment_box__information">
-                                    <input type="checkbox" className="cart-container--payment_box__information___checkbox" />
-                                    <button className=" cart-container--payment_box__information___button">Thông tin giao hàng </button>
-                                    <span className="cart-container--payment_box__information___button-On">&#11033;</span>
-                                    <span className="cart-container--payment_box__information___button-Off">&#11032;</span>
-                                    <div className="cart-container--payment_box__information___toggle">
-                                        <div className="cart-container--payment_box__information___placeholder">
-                                            <h5 className="cart-container--payment_box__information___placeholder-title">Địa chỉ</h5>
-                                            <input className="cart-container--payment_box__information___placeholder-enter" type="text" placeholder="Địa chỉ nhận hàng..."/>
-                                        </div>
-                                        <div className="cart-container--payment_box__information___placeholder">
-                                            <h5 className="cart-container--payment_box__information___placeholder-title">Số điện thoại</h5>
-                                            <input className="cart-container--payment_box__information___placeholder-enter" type="tel" placeholder="Chúng tôi sẽ liên lạc sau vài phút..."/>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div className="cart-container--payment_box__bill">
-                                        <div className="cart-container--payment_box__bill___content" >
-                                            <span className="basic-text">Giá sản phẩm</span>
-                                            <span className="basic-text">$1.800.000vnd</span>
-                                        </div>
-                                        <div className="cart-container--payment_box__bill___content" >
-                                            <span className="basic-text">Phụ Phí</span>
-                                            <span className="basic-text">$0</span>
-                                        </div>
-                                        <div className="cart-container--payment_box__bill___content" >
-                                            <span className="basic-text">Tổng hóa đơn</span>
-                                            <span className="special-text">$1.800.000vnd</span>
-                                        </div>
-                                    </div>
-                                <div className="cart-container--payment_box__code">
-                                    <input type="checkbox" className="cart-container--payment_box__code___checkbox" />
-                                    <span className="cart-container--payment_box__code___button-On">&#11033;</span>
-                                    <span className="cart-container--payment_box__code___button-Off">&#11032;</span>
-                                    <button className="cart-container--payment_box__code___button">Mã giảm giá</button>
-                                        <div className="cart-container--payment_box__code___placeholder">
-                                            <h5 className="cart-container--payment_box__code___placeholder-title">Nhập giảm giá</h5>
-                                            <input className="cart-container--payment_box__code___placeholder-enter " type="text" placeholder="Nhập mã ở đây"/>
-                                        </div>
-                                    
-                                </div>
-                                <button className="btn btn-primary contact-container--submit_box__details circle cart-container--storage_control__box___reaction cart-container--payment_box__payment"> Thanh Toán </button>
-                            </div>
-                        </div>
+                        <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button>
+                        <CartState />
+                        <CartPay />
                     </div>
                 </div>
             </div>
         );
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        tasks : state.task,
+    }
+}
+export default connect(mapStateToProps,null)(Cart);
