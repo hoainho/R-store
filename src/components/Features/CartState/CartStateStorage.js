@@ -1,13 +1,16 @@
 import React, { Component }from 'react';
 export default class CartStateStorage extends Component {
-    
+    onDelete = () =>{
+        this.props.onDelete(this.props.task.id);
+    }
     render(){
         var { task } = this.props;
         var total = (price,quanlity) => {
            return price * quanlity;
         }
-        return (
-                <tr>
+        
+        return (    
+                <tr onClick={ this.onDelete }>
                     <td className="cart-container--storage_products__name">
                         <img className="cart-container--storage_products__name___picture" src="../img/HeadphoneAcer1A.png" alt ="Headphone"/>
                         <span className="cart-container--storage_products__name___text">{task.name}</span>
