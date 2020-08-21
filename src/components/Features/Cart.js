@@ -45,7 +45,27 @@ import CartPay from './CartPay/CartPay';
     });
     localStorage.setItem('tasks',JSON.stringify(tasks));
     }
-
+    findIndex = (id) => {
+        var {tasks} = this.state;
+        var result = -1;
+        tasks.forEach((task,index) => {
+            if(task.id === id) {
+                result = index;
+            }
+        });
+        return result;
+    }
+    onDelete = (id) =>{
+        var {tasks} = this.state;
+        var index = this.findIndex(id);
+        if(index !== -1){
+            tasks.splice(tasks,1);
+            this.setState({
+                tasks  : tasks
+            });
+        }
+        localStorage.setItem('tasks',JSON.stringify(tasks));
+    }
     s4(){
         return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
     }
@@ -70,7 +90,7 @@ import CartPay from './CartPay/CartPay';
                 <div className="cart"> 
                     <div className="row cart-container">  
                         {/* <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button> */}
-                        <CartState tasks = { tasks } />
+                        <CartState tasks = { tasks } onDelete={ this.onDelete } />
                         <CartPay />
                     </div>
                 </div>

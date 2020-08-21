@@ -5,8 +5,14 @@ import CartStateStorage from './CartStateStorage';
     render(){
         var { tasks } = this.props;
         var elmTasks = tasks.map((task,index) => {
-            return <CartStateStorage key={task.id} index={index} task ={task}/> 
-        })
+            return <CartStateStorage key={task.id} 
+                                    index={index} 
+                                    task ={task}
+                                    findIndex = {this.props.findIndex}
+                                    // onDelete ={this.props.onDelete}
+                                    /> 
+        });
+        
         return ( 
             <div className="col-xs-9 col-sm-9 col-md-9 col-lg-9 cart-container--storage">
                 <table class="table table-hover ">
