@@ -16,7 +16,7 @@ import CartPay from './CartPay/CartPay';
                 tasks : tasks
             });
         }
-        console.log(tasks);
+        // console.log(tasks);
     }
     
     onGenerateData = () => {
@@ -44,6 +44,7 @@ import CartPay from './CartPay/CartPay';
         tasks : tasks
     });
     localStorage.setItem('tasks',JSON.stringify(tasks));
+    
     }
     findIndex = (id) => {
         var {tasks} = this.state;
@@ -65,6 +66,14 @@ import CartPay from './CartPay/CartPay';
             });
         }
         localStorage.setItem('tasks',JSON.stringify(tasks));
+        
+    }
+    DeleteCart = (cart) => {
+        var {tasks} = this.state;
+        if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
+           this.onDelete(tasks);
+        }
+
     }
     s4(){
         return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
@@ -89,7 +98,7 @@ import CartPay from './CartPay/CartPay';
                 </div>
                 <div className="cart"> 
                     <div className="row cart-container">  
-                        {/* <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button> */}
+                        <button onClick={ this.onGenerateData } className="btn btn-danger"> Generate Data </button>
                         <CartState tasks = { tasks } onDelete={ this.onDelete } />
                         <CartPay />
                     </div>
