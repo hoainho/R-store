@@ -67,13 +67,7 @@
                 }
             }
             &_edit{
-                padding-bottom:1rem;
-                margin-bottom:1rem;
-                display: flex;
-                flex-direction: row;
-                width: 100%;
-                border-bottom: 1px solid rgba($color-divider, .3);
-                flex-flow: row-reverse;
+                vertical-align: middle !important;
             }
             &_control{
                 padding-bottom:1rem;

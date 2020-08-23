@@ -4256,13 +4256,7 @@ html * {
           .cart-container--storage_products__sign___text {
             text-align: center; }
       .cart-container--storage_edit {
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        border-bottom: 1px solid rgba(149, 152, 155, 0.3);
-        flex-flow: row-reverse; }
+        vertical-align: middle !important; }
       .cart-container--storage_control {
         padding-bottom: 1rem;
         margin-bottom: 1rem;
