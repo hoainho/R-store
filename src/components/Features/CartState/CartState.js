@@ -3,42 +3,19 @@ import CartStateControl from './CartStateControl';
 import CartStateStorage from './CartStateStorage';
 import {findIndex} from 'lodash'
  export default class CartState extends Component {
-    constructor(props) {
-        super(props);
-        this.state ={
-            id : 0
-        }
-    }
-    onDeletee = (id) =>{
-        console.log(this.props.id);
-        // this.setState({id: id})
-        // var {tasks} = this.props;
-        // console.log(id);
-        // if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
-           
-        // var index = findIndex(tasks, (item)=>{
-        //     return item.id === id
-        // })
-        // if(index !== -1){
-        //     tasks.splice(index,1);
-        //     this.setState({
-        //         tasks  : tasks
-        //     });
-        // }
-        // localStorage.setItem('tasks',JSON.stringify(tasks));
-        // }
-      
-        
-    }
-    
+    // constructor(props) {
+    //     super(props);
+    //     this.state ={
+    //         id : 0
+    //     }
+    // }
     render(){
         var { tasks } = this.props;
         var elmTasks = tasks.map((task,index) => {
             return <CartStateStorage key={task.id} 
                                     index={index} 
                                     task ={task}
-                                    findIndex = {this.props.findIndex}
-                                    onDelete ={this.props.onDelete}
+                                    onDelete = { this.props.onDelete }
                                     /> 
             
         });
@@ -60,7 +37,7 @@ import {findIndex} from 'lodash'
                     
                 </table>
                 
-                <CartStateControl id={this.state.id} tasks={tasks}/>
+                <CartStateControl id={tasks.id} tasks={tasks}/>
             </div>
         );
     }
