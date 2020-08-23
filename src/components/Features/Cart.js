@@ -2,6 +2,7 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import CartState from './CartState/CartState';
 import CartPay from './CartPay/CartPay';
+import { Link } from 'react-router-dom';
 // import { findIndex } from 'lodash';
  class Cart extends Component {
     constructor(props) {
@@ -60,33 +61,12 @@ import CartPay from './CartPay/CartPay';
         var {tasks} = this.state;
         var index = this.findIndex(id);
         if(index !== -1){
-            tasks.splice(tasks,1);
+            tasks.splice(index,1);
             this.setState({
                 tasks  : tasks
             });
         }
         localStorage.setItem('tasks',JSON.stringify(tasks));
-    //     var {tasks} = this.state;
-    //     console.log(id);
-    //     if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
-           
-    //     var index = this.findIndex(tasks, (item)=>{
-    //         return item.id === id   
-    //     })
-    //     if(index !== -1){
-    //         tasks.splice(index,1);
-    //         this.setState({
-    //             tasks  : tasks
-    //         });
-    //     }
-    //     localStorage.setItem('tasks',JSON.stringify(tasks));
-    // }
-    // // DeleteCart = (cart) => {
-    //     var {tasks} = this.state;
-    //     if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
-    //        this.onDelete(tasks);
-    //     }
-
     }
     s4(){
         return Math.floor((1 + Math.random()) * 0x10000).toString(16).substring(1);
@@ -100,7 +80,7 @@ import CartPay from './CartPay/CartPay';
             <div>
                 <div className="store-tittle news-tittle">
                     <div className="store-tittle--container">
-                        <a href="#home" className="store-tittle--container_home">Trang chủ</a>
+                        <Link to="/" className="store-tittle--container_home">Trang chủ</Link>
                         <span className="store-tittle--container_iconpresent special">
                             {'>'}
                         </span>

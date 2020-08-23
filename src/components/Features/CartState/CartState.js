@@ -1,14 +1,7 @@
 import React, { Component }from 'react';
 import CartStateControl from './CartStateControl';
 import CartStateStorage from './CartStateStorage';
-import {findIndex} from 'lodash'
  export default class CartState extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state ={
-    //         id : 0
-    //     }
-    // }
     render(){
         var { tasks } = this.props;
         var elmTasks = tasks.map((task,index) => {
@@ -36,8 +29,7 @@ import {findIndex} from 'lodash'
                     </tbody>
                     
                 </table>
-                
-                <CartStateControl id={tasks.id} tasks={tasks}/>
+                <CartStateControl />
             </div>
         );
     }
