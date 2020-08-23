@@ -2,6 +2,13 @@ import React, { Component } from 'react'
 import {Link} from 'react-router-dom';
 
 export default class ProductItem extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+        };
+        
+    }
+    
     render(){
         return (
             <div>
@@ -9,12 +16,12 @@ export default class ProductItem extends Component {
                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--B" src="/img/HeadphoneAsus1A.png" alt=""/>
                     <img className="product-tab--container_content__category___product-pic product-tab--container_content__category___product-pic--A" src="/img/HeadphoneAsus1B.png" alt=""/>
                     <span className="product-tab--container_content__category___product-details">
-                        <Link to="/" className="sm_open product-tab--container_content__box___product-details--link" >
+                        <button type="submit" className="sm_open product-tab--container_content__box___product-details--link"  data-modal="Modal-Product" data-effect="pushup" data-icons="is_right">
                             <i className="fas fa-arrows-alt product-tab--container_content__category___product-details--icon"></i>
-                        </Link>
+                        </button>
                     </span>
-                    <h4 className="product-tab--container_content__category___product-name">Tai nghe Asus AF298</h4>
-                    <span className="product-tab--container_content__category___product-vote">
+                    <h4 className="product-tab--container_content__category___product-name" >Tai nghe Asus AF298</h4>
+                    <span className="product-tab--container_content__category___product-vote" >
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>

@@ -121,7 +121,7 @@ $(document).ready(function(){
       $(this).addClass('active')
     });
 });
-
+//Slim_Modal
 	$(document).ready(function() {
 
     $('.sm_open').on('click', function(){

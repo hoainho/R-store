@@ -15,14 +15,14 @@ export default class Main extends Component {
             product : []
         };
     }
-    componentDidMount(){
-        callApi('product','GET', null).then(res => {
-            this.setState({
-                product : res.data
-            });
-        });
-        console.log(this.state.product);
-    }
+    // componentDidMount(){
+    //     callApi('product','GET', null).then(res => {
+    //         this.setState({
+    //             product : res.data
+    //         });
+    //     });
+    //     console.log(this.state.product);
+    // }
     render(){
         return (
             <div className="store">

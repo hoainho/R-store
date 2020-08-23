@@ -1431,13 +1431,32 @@ input[type="radio"] {
             .product-tab--container_content__box___product-details--icon {
               font-size: 1.5rem;
               position: relative;
-              top: 25%;
-              left: 25%; }
-            .product-tab--container_content__box___product-details--link:hover, .product-tab--container_content__box___product-details--link:active, .product-tab--container_content__box___product-details--link:link, .product-tab--container_content__box___product-details--link:visited, .product-tab--container_content__box___product-details--link:focus {
-              outline: none;
-              border: none;
+              top: 1rem !important;
               color: #fff !important;
-              text-decoration: none; }
+              cursor: pointer; }
+            .product-tab--container_content__box___product-details--link {
+              position: relative !important;
+              color: #fff !important;
+              border: none !important;
+              outline: none !important;
+              background: transparent !important;
+              width: auto !important;
+              align-items: center !important;
+              left: 10% !important;
+              top: 10% !important;
+              text-align: center !important;
+              cursor: pointer; }
+              .product-tab--container_content__box___product-details--link:active, .product-tab--container_content__box___product-details--link:link, .product-tab--container_content__box___product-details--link:visited, .product-tab--container_content__box___product-details--link:focus, .product-tab--container_content__box___product-details--link:hover {
+                position: relative !important;
+                color: #fff !important;
+                border: none !important;
+                outline: none !important;
+                background: transparent !important;
+                width: auto !important;
+                align-items: center !important;
+                left: 10% !important;
+                top: 10% !important;
+                text-align: center !important; }
           .product-tab--container_content__box___product-button {
             opacity: 0;
             position: relative;
@@ -1657,7 +1676,7 @@ input[type="radio"] {
             .product-tab--container_content__category___product-details--icon {
               font-size: 1.5rem;
               position: relative;
-              top: 25%;
+              top: .3rem;
               left: 25%; }
           .product-tab--container_content__category___product-button {
             opacity: 0;

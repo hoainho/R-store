@@ -155,19 +155,38 @@
                         &--icon{
                             font-size: 1.5rem;
                             position: relative;
-                            top: 25%;
-                            left: 25%;
+                            top: 1rem !important;
+                            color: $color-white !important;
+                            cursor: pointer;
                         }
                         &--link{
-                            &:hover,
+                                position: relative !important;
+                                color: $color-white !important;
+                                border: none !important;
+                                outline: none !important;
+                                background: transparent !important;
+                                width: auto !important;
+                                align-items: center !important;
+                                left: 10% !important;
+                                top: 10% !important;
+                                text-align: center !important;
+                                cursor: pointer;
+                            
                             &:active,
                             &:link,
                             &:visited,
-                            &:focus{
-                                outline: none;
-                                border: none;
+                            &:focus,
+                            &:hover{
+                                position: relative !important;
                                 color: $color-white !important;
-                                text-decoration: none;
+                                border: none !important;
+                                outline: none !important;
+                                background: transparent !important;
+                                width: auto !important;
+                                align-items: center !important;
+                                left: 10% !important;
+                                top: 10% !important;
+                                text-align: center !important;
                             }
                         }
                     }
@@ -458,7 +477,7 @@
                         &--icon{
                             font-size: 1.5rem;
                             position: relative;
-                            top: 25%;
+                            top: .3rem;
                             left: 25%;
                         }
                     }
