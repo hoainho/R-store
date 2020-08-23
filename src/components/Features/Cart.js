@@ -2,6 +2,7 @@ import React, { Component }from 'react';
 import { connect } from 'react-redux';
 import CartState from './CartState/CartState';
 import CartPay from './CartPay/CartPay';
+// import { findIndex } from 'lodash';
  class Cart extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +17,6 @@ import CartPay from './CartPay/CartPay';
                 tasks : tasks
             });
         }
-        // console.log(tasks);
     }
     
     onGenerateData = () => {
@@ -57,22 +57,35 @@ import CartPay from './CartPay/CartPay';
         return result;
     }
     onDelete = (id) =>{
+        // var {tasks} = this.state;
+        // var index = this.findIndex(id);
+        // if(index !== -1){
+        //     tasks.splice(tasks,1);
+        //     this.setState({
+        //         tasks  : tasks
+        //     });
+        // }
+        // localStorage.setItem('tasks',JSON.stringify(tasks));
         var {tasks} = this.state;
-        var index = this.findIndex(id);
+        console.log(id);
+        if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
+           
+        var index = this.findIndex(tasks, (item)=>{
+            return item.id === id
+        })
         if(index !== -1){
-            tasks.splice(tasks,1);
+            tasks.splice(index,1);
             this.setState({
                 tasks  : tasks
             });
         }
         localStorage.setItem('tasks',JSON.stringify(tasks));
-        
     }
-    DeleteCart = (cart) => {
-        var {tasks} = this.state;
-        if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
-           this.onDelete(tasks);
-        }
+    // DeleteCart = (cart) => {
+    //     var {tasks} = this.state;
+    //     if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
+    //        this.onDelete(tasks);
+    //     }
 
     }
     s4(){
