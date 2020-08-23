@@ -1,28 +1,6 @@
 import React, { Component }from 'react';
 import {Link} from 'react-router-dom';
-import {findIndex} from 'lodash'
  export default class CartStateControl extends Component {
-    
-
-    // onDeletee = (id) =>{
-    //     var {tasks} = this.props;
-    //     console.log(id);
-    //     if(confirm('Are you sure delete cart ?')){ //eslint-disable-line
-           
-    //     var index = findIndex(tasks, (item)=>{
-    //         return item.id === id
-    //     })
-    //     if(index !== -1){
-    //         tasks.splice(index,1);
-    //         this.setState({
-    //             tasks  : tasks
-    //         });
-    //     }
-    //     localStorage.setItem('tasks',JSON.stringify(tasks));
-    //     }
-      
-        
-    // }
     render(){
         
         return ( 
