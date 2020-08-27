@@ -12,8 +12,7 @@ export default class ProductDetails extends Component{
     }
     
     onSubmit =(event) => {
-        
-    }
+    };
     render(){
 
         return(
@@ -129,7 +128,7 @@ export default class ProductDetails extends Component{
                                                 <i className="fa fa-plus"></i>
                                             </span>
                                         </div>
-                                        <button type="submit" className="product-tab--container_content__category___product-button--card sm-right--control_add">Thêm Sản Phẩm</button>
+                                        <button click={this.onSubmit} type="submit" className="product-tab--container_content__category___product-button--card sm-right--control_add">Thêm Sản Phẩm</button>
                                     </div>
                                 </div>
                             </div>
