@@ -19,26 +19,37 @@ import { Link } from 'react-router-dom';
             });
         }
     }
-    
+    onAddTask = () => {
+        var tasks = [{
+            id,
+            name,
+            price,
+            quantity 
+        }];
+        this.setState({
+            tasks  : tasks
+        });
+        localStorage.setItem('tasks',JSON.stringify(task));
+    }
     onGenerateData = () => {
         
         var tasks = [{
             id : this.generateID(),
             name: "Tai Nghe Acer Alpha 2",
             price : 700000,
-            quanlity : 2
+            quantity : 2
        },
         {
             id : this.generateID(),
             name: "Tai Nghe Asus Nitro 5",
             price : 500000,
-            quanlity : 3
+            quantity : 3
         },
         {
             id : this.generateID(),
             name: "Tai Nghe Lenovo Atrix 1.0",
             price : 500000,
-            quanlity : 1
+            quantity : 1
         },
     ];
     this.setState ({
