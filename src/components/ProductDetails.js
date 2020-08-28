@@ -11,8 +11,6 @@ export default class ProductDetails extends Component{
         }
     }
     
-    onSubmit =(event) => {
-    };
     render(){
 
         return(
