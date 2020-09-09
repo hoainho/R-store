@@ -15,21 +15,21 @@ import { Link } from 'react-router-dom';
         if(localStorage != null && localStorage.getItem('tasks')){
             var tasks =  JSON.parse(localStorage.getItem('tasks'));
             this.setState({
-                tasks : tasks
+                tasks 
             });
         }
     }
     onAddTask = () => {
-        var tasks = [{
-            id,
-            name,
-            price,
-            quantity 
-        }];
-        this.setState({
-            tasks  : tasks
-        });
-        localStorage.setItem('tasks',JSON.stringify(task));
+        // var tasks = [{
+        //     id,
+        //     name,
+        //     price,
+        //     quantity 
+        // }];
+        // this.setState({
+        //     tasks  : tasks
+        // });
+        // localStorage.setItem('tasks',JSON.stringify(task));
     }
     onGenerateData = () => {
 

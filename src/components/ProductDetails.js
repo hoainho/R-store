@@ -1,20 +1,34 @@
 import React, { Component } from 'react';
+import axios from 'axios';
 import { Link } from 'react-router-dom';
+import {API_URL} from '.././const/Config';
 export default class ProductDetails extends Component{
-    constructor(props) {
-        super(props);
-        this.state = {
-            id : 0,
-            name : '',
-            price: 0,
-            quanlity : 0
-        }
+    // constructor(props) {
+    //     super(props);
+    //     this.state = {
+    //         data : []
+    //     }
+    // }
+    state = {
+        data : []
     }
-    
+    componentDidMount(){
+        axios.get("https://5f1446062710570016b37d7d.mockapi.io/Product")
+        .then(res => {
+            const data = res.data;
+            this.setState({ data });
+        })
+        .catch(err => console.log(err));
+    }
+    onSubmit = (t) => {
+        console.log('hi')
+        console.log(t);
+    }
     render(){
-
+       console.log(this.state.data);
         return(
-            // <!-- PRODUCT-DETAILS  -->
+            this.state.data.map( task => 
+                // <!-- PRODUCT-DETAILS  -->
                 <div className="wrapper">
                     <div className="slim_modal" id="examplePlain">
                     <div className="sm_content">
@@ -34,7 +48,7 @@ export default class ProductDetails extends Component{
                     </div>
                     </div>
                     <div className="slim_modal" id="Modal-Product">
-                        <div className="sm_content" onSubmit={this.onSubmit}>
+                        <div className="sm_content" >
                             <div className="sm_header">Chi tiết sản phẩm</div>
                             <div className="sm_icon_menu">
                                 {/* Customer Control */}
@@ -75,8 +89,8 @@ export default class ProductDetails extends Component{
                                 <div className="sm_area_bottom col-xs-6 col-sm-6 col-md-6 col-lg-6">
                                 <div className="sm-right">
                                     <div className="sm-right--content">
-                                        <h1 className="sm-right--content_name" name= "Tai nghe Asus AF298">
-                                        Tai nghe Asus AF298
+                                        <h1 className="sm-right--content_name" name="Tai nghe Asus AF298">
+                                        {task.name}
                                         </h1>
                                         <ul className="sm-right--content_list">
                                             <li className="sm-right--content_item">
@@ -126,7 +140,7 @@ export default class ProductDetails extends Component{
                                                 <i className="fa fa-plus"></i>
                                             </span>
                                         </div>
-                                        <button click={this.onSubmit} type="submit" className="product-tab--container_content__category___product-button--card sm-right--control_add">Thêm Sản Phẩm</button>
+                                        <button onClick={()=>this.onSubmit(task)} type="submit" className="product-tab--container_content__category___product-button--card sm-right--control_add">Thêm Sản Phẩm</button>
                                     </div>
                                 </div>
                             </div>
@@ -149,6 +163,7 @@ export default class ProductDetails extends Component{
                     </div>
                     </div>
                 </div>
+            )
         );
     }
 }
