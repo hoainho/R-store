@@ -428,8 +428,7 @@ select {
             display: flex;
             flex-direction: row;
             width: 100%;
-            position: relative;
-            top: 2rem; }
+            position: relative; }
             .navbar-content--header_main__features___control-cart {
               display: flex;
               flex-direction: row;
@@ -2394,7 +2393,8 @@ html * {
     border: 1px solid rgba(149, 152, 155, 0.3);
     border-radius: 30px;
     margin: 0 1rem;
-    position: relative; }
+    position: relative;
+    height: 2.5rem; }
   .sm-right--control_reduction {
     position: relative;
     top: 15%;
