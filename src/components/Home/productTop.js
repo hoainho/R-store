@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import {
     BrowserRouter as Router,
@@ -7,8 +7,8 @@ import {
     NavLink
 } from "react-router-dom";
 import ProductItem from "./ProductItem";
-class productTop extends Component {
-    render() {
+function productTop(props){
+    const products = props.products
         const settings = {
             dots: false,
             accessibility: true,
@@ -54,48 +54,38 @@ class productTop extends Component {
                             <Switch>
                                 <Route exact path="/">
                                     <Slider { ...settings } aria-labelledby="nav-new-arrival"   className=" product-tab--container_content__box tab-pane active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_best-seller">
                                     <Slider {...settings}   aria-labelledby="nav-best-seller" className=" product-tab--container_content__box tab-pane active ">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />     
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }   
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_featured">
                                     <Slider {...settings}   aria-labelledby="nav-featured" className=" product-tab--container_content__box tab-pane  active ">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_hot-sell">
                                     <Slider {...settings}   aria-labelledby="nav-hot-sell" className=" product-tab--container_content__box tab-pane  active ">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                             </Switch>
@@ -108,6 +98,6 @@ class productTop extends Component {
                 </Router>
             </div>
         );
-    }
+    
 }
 export default productTop;

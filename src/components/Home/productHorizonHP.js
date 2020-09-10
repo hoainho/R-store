@@ -1,4 +1,5 @@
-import React, { Component } from "react";
+import React, { useState, useEffect} from "react";
+import Axios from 'axios';
 import Slider from "react-slick";
 import {
     BrowserRouter as Router,
@@ -7,8 +8,10 @@ import {
     Link
 } from "react-router-dom";
 import ProductItem from './ProductItem';
-export default class ProductHorizon extends Component {
-  render() {
+export default function ProductHorizonHP(props) {
+    
+    const products = props.products
+
     const settings = 
     {   
         dots: false,
@@ -52,18 +55,15 @@ export default class ProductHorizon extends Component {
                                     </li>
                                 </ul>
                             </div>
-                            <div className="product-tab--container_content product-tab--container_content-category ">
-                            <Switch>
+                            <div className="product-tab--container_content product-tab--container_content-category tab-content product-tab--container_content-category product-tab--container_content-category-KB">
+                            <Switch>   
                                 <Route exact path="/">
                                     <Slider { ...settings } className="product-tab--container_content__category tab-pane active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>  
                                 </Route> 
                                 <Route path="/tab_acer">
@@ -110,5 +110,5 @@ export default class ProductHorizon extends Component {
                 </div>
         );
     }
-}
+
     

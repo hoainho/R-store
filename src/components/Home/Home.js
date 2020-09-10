@@ -1,4 +1,4 @@
-import React,{Component} from 'react';
+import React, { useState, useEffect} from 'react';
 import Slider from './slider';
 import Ability from './ability';
 import ProductTop from './productTop';
@@ -9,22 +9,33 @@ import BannerMid from './BannerMid';
 import ProductHorizonMouse from './ProductHorizonMouse';
 import ProductHorizonSC from './ProductHorizonSC';
 import ProductFooter from './ProductFooter';
-class Home extends Component {
-    render(){
+import Axios from 'axios';
+function Home(props){
+    const [products, setProducts ] = useState([])
+
+    useEffect(()=> {
+        Axios.get("https://5f1446062710570016b37d7d.mockapi.io/Product")
+        .then(res => {
+            console.log(res)
+            const data = res.data;
+           setProducts(data);
+        })
+        .catch(err => console.log(err));
+    },[])
         return (
             <div>
                 <Slider />
                 <Ability />
-                <ProductTop />
+                <ProductTop products={products}/>
                 <BannerTop />
-                <ProductHorizonHP />
-                <ProductHorizonKB />
+                <ProductHorizonHP products={products}/>
+                <ProductHorizonKB products={products}/>
                 <BannerMid />
-                <ProductHorizonMouse />
-                <ProductHorizonSC />
+                <ProductHorizonMouse products={products}/>
+                <ProductHorizonSC products={products}/>
                 <ProductFooter />
             </div>
         );
-    }
+    
 }
 export default Home;
