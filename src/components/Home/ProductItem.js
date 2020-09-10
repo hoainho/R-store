@@ -1,11 +1,7 @@
 import React from 'react'
 export default function ProductItem(props){
-    
     console.log(props)
     const product = props.product
-
-
-    
         return (
             <div>
                 <div className="slim_modal" id="Modal-Product">
@@ -111,9 +107,6 @@ export default function ProductItem(props){
                         <button type="submit" className="sm_open product-tab--container_content__box___product-details--link"  data-modal="Modal-Product" data-effect="pushup" data-icons="is_right">
                             <i className="fas fa-arrows-alt product-tab--container_content__category___product-details--icon"></i>
                         </button>
-                        
-                
-                        
                     </span>
                     <h4 className="product-tab--container_content__category___product-name" name>{product.name}</h4>
                     <span className="product-tab--container_content__category___product-vote" >
