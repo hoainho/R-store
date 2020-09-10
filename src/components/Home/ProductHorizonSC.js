@@ -1,7 +1,6 @@
-import React, { Component } from "react";
+import React from "react";
 import Slider from "react-slick";
 import ProductItem from './ProductItem';
-import axios from 'axios';
 
 import {
     BrowserRouter as Router,
@@ -9,18 +8,9 @@ import {
     Route,
     Link
 } from "react-router-dom";
-class ProductHorizonSC extends Component {
+function ProductHorizonSC (props) {
     
-    render(){
-        axios ({
-            method : 'GET',
-            url : 'https://5f1446062710570016b37d7d.mockapi.io/:endpoint',
-            data : null
-        }).then(res => {
-            console.log(res);
-        }).catch(err => {
-            console.log(err);
-        });
+    const products = props.products
         // var products = [];
         const settings = {
             dots: false,
@@ -67,44 +57,40 @@ class ProductHorizonSC extends Component {
                             <Switch>
                                 <Route exact path="/">
                                     <Slider {...settings}  className=" product-tab--container_content__category tab-pane active">
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>   
                                 <Route path="/tab_screenacer">   
                                     <Slider {...settings}   className="  product-tab--container_content__category tab-pane active ">
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                         
                                    </Slider>
                                 </Route>    
                                 <Route path="/tab_screenlogitech">    
                                     <Slider {...settings}   className=" product-tab--container_content__category tab-pane active ">
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                         
                                     </Slider>
                                 </Route>       
                                 <Route path="/tab_screensony">   
                                     <Slider {...settings}   className=" product-tab--container_content__category tab-pane active ">
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
-                                        <ProductItem/>
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                 
                                     </Slider>
                                 </Route>
@@ -115,5 +101,5 @@ class ProductHorizonSC extends Component {
                 </div>
         );
     }
-}
+
 export default ProductHorizonSC;

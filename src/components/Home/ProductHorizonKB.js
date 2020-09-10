@@ -1,4 +1,4 @@
-import React , { Component } from "react";
+import React  from "react";
 import Slider from "react-slick";
 import {
     BrowserRouter as Router,
@@ -7,8 +7,8 @@ import {
     Link
 } from "react-router-dom";
 import ProductItem from './ProductItem';
-class ProductHorizonKB extends Component {
-    render(){
+function ProductHorizonKB(props){
+        const products = props.products
         const settings = {
             dots: false,
             accessibility: true,
@@ -54,50 +54,38 @@ class ProductHorizonKB extends Component {
                             <Switch> 
                                 <Route exact path="/">
                                     <Slider {...settings}  className="product-tab--container_content__category product-tab--container_content__category tab-pane active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                        {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_KBacer">
                                     <Slider {...settings}  className=" product-tab--container_content__category product-tab--container_content__category tab-pane  active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_KBlogitech">
                                     <Slider {...settings}  className=" product-tab--container_content__category product-tab--container_content__category tab-pane  active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                     </Slider>
                                 </Route>
                                 <Route path="/tab_KBsony">
                                     <Slider {...settings}  className="product-tab--container_content__category product-tab--container_content__category tab-pane  active">
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
-                                        <ProductItem />
+                                    {
+                                            products.map((product,index) => <ProductItem key={index} product={product}/>
+                                                // <ProductItem key={index}>{product}</ProductItem>
+                                            )
+                                        }
                                 </Slider>
                                 </Route>
                             </Switch>   
@@ -106,6 +94,6 @@ class ProductHorizonKB extends Component {
                 </Router>
             </div> 
         );
-    }
+    
 }
 export default ProductHorizonKB;
