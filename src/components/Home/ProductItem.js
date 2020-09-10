@@ -32,18 +32,7 @@ export default function ProductItem(props){
                                     </div>
                                     {/* Image Select */}
                                     <div className="sm_box_list">
-                                            {/* <div className="sm_box_item">
-                                                <img src={task.subImage[0]} alt="HeadphoneAfter" className="sm_box_link"/>
-                                            </div>
-                                            <div className="sm_box_item">
-                                                <img src="/img/HeadphoneAsus3.png" alt="HeadphoneAfter" className="sm_box_link"/>
-                                            </div>  
-                                            <div className="sm_box_item">
-                                                <img src="/img/HeadphoneAsus5.png" alt="HeadphoneAfter" className="sm_box_link"/>
-                                            </div>
-                                            <div className="sm_box_item">
-                                                <img src="/img/HeadphoneAsus4B.png" alt="HeadphoneAfter" className="sm_box_link"/>
-                                            </div> */}
+                                            
                                             {
                                             product.subImage.map((image,index) =><div className="sm_box_item">
                                                     <img src={image} alt={index} className="sm_box_link"/>
@@ -123,7 +112,7 @@ export default function ProductItem(props){
                             <i className="fas fa-arrows-alt product-tab--container_content__category___product-details--icon"></i>
                         </button>
                         
-                        </div>
+                
                         
                     </span>
                     <h4 className="product-tab--container_content__category___product-name" name>{product.name}</h4>
