@@ -123,9 +123,6 @@ export default function ProductItem(props){
                             <i className="fas fa-arrows-alt product-tab--container_content__category___product-details--icon"></i>
                         </button>
                         
-                        <button data-modal="Modal-Products" data-effect="pushup" data-icons="is_right">button</button>
-                        <div  className="slim_modal" id="Modal-Products">
-                            <h1> hi </h1>
                         </div>
                         
                     </span>

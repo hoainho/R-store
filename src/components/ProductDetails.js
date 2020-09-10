@@ -23,10 +23,6 @@ export default class ProductDetails extends Component{
     onSubmit = (data) => {
         console.log(data);
     }
-
-
-   
-
     render(){
        console.log(this.state.data);
         return(
