@@ -30,7 +30,8 @@ export default class ProductDetails extends Component{
 
         this.state.dislayDetail ? //Nếu dislayDetail = true
         elmModal =( this.state.data.map( task =>        
-            <div className="sm_container">
+            
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <div className="sm_container">
                 <div className="wrapper" key={task.name}>
                 <div className="slim_modal" id="Modal-Product">
                     <div className="sm_content" >
