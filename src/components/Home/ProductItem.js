@@ -37,7 +37,7 @@ export default function ProductItem(props){
                     </div>
                 </div>     
                 {/* Product-Details */}
-                     <ProductDetails />                
+                {/* <ProductDetails />                 */}
             </div>
         );
     
