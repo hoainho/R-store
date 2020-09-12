@@ -2473,6 +2473,9 @@ html * {
 .sm_area_all {
   padding: 1rem !important; }
 
+.sm_container {
+  position: absolute; }
+
 .slim_modal {
   position: fixed;
   width: 100%;
@@ -2494,10 +2497,10 @@ html * {
   -webkit-justify-content: center;
   -moz-justify-content: center;
   justify-content: center;
-  background: rgba(0, 0, 0, 0.85);
+  background: rgba(0, 0, 0, 0.25);
   background-image: url("../../img/bgproducttab1.png");
-  z-index: 13;
-  display: none;
+  z-index: 999999999;
+  display: flex;
   font-size: 1em;
   -webkit-transition: background 0.5s ease 0.06s;
   -moz-transition: background 0.5s ease 0.06s;
@@ -2631,7 +2634,8 @@ html * {
       opacity: 1;
       box-sizing: border-box;
       position: absolute;
-      top: 40px;
+      top: 9rem;
+      left: 72.5rem;
       background: whitesmoke;
       -webkit-transition: all 0.3s ease 0s;
       -moz-transition: all 0.3s ease 0s;
@@ -2782,7 +2786,7 @@ html * {
       box-sizing: border-box;
       right: 0;
       left: 0;
-      top: 0;
+      top: 13%;
       bottom: 0;
       color: transparent;
       -webkit-text-stroke: 0.1rem #ff7e00;
@@ -2793,7 +2797,7 @@ html * {
       display: inline-block;
       height: 40px;
       line-height: 40px;
-      opacity: 0;
+      opacity: 1;
       -webkit-transition: all 0.3s ease 0s;
       -moz-transition: all 0.3s ease 0s;
       -ms-transition: all 0.3s ease 0s;
@@ -2848,7 +2852,7 @@ html * {
       @media only screen and (min-width: 1401px) {
         .slim_modal .sm_content .sm_header {
           position: absolute;
-          width: 90%;
+          width: 38%;
           background: whitesmoke;
           border-radius: 4px 4px 0px 0px;
           -webkit-border-radius: 4px 4px 0px 0px;
