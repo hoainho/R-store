@@ -597,7 +597,9 @@ html * {
  .sm_area_all {
 	padding: 1rem !important;
 }
-
+.sm_container{
+	position: absolute;
+}
 // This is just a straightforward flexbox-based modal you can use as is, or to learn from and build-upon. I became frustrated doing over-ride css with the framework libraries out there (Foundation, Bootstrap, Semantic UI, etc.).
 
 // OVERLAY
@@ -610,10 +612,10 @@ html * {
 	@include flexbox;
 	@include align-items(center);
 	@include justify-content(center);
-	background: rgba(0,0,0,0.85);
+	background: rgba(0,0,0,0.25);
 	background-image:url('../../img/bgproducttab1.png');
-	z-index: 13;
-	display: none;
+	z-index: 999999999;
+	display: flex;
 	font-size: 1em;
 	@include transition(background, .5s, ease, .06s);
 	&.none {
@@ -727,7 +729,8 @@ html * {
 			opacity: 1;
 			box-sizing: border-box;
 			position: absolute;
-			top: 40px;
+			top: 9rem;//new
+    		left: 72.5rem;//new
 			background: darken($segment_color, 4%);
 			@include transition(all, .3s, ease, 0s);
 		}
@@ -736,7 +739,7 @@ html * {
 			box-sizing: border-box;
 			right: 0;
 			left: 0;
-			top: 0;
+			top: 13%;
 			bottom: 0;
 			color: transparent; 
 			-webkit-text-stroke: 0.1rem $color-primary;
@@ -747,14 +750,14 @@ html * {
 			display: inline-block;
 			height: $sm_header_height;
 			line-height: $sm_header_height;
-			opacity: 0;
+			opacity: 1;
 			
 			@include transition(all, .3s, ease, 0s);
 			@include MQ(XS) {position: relative;width: 100%;background: darken(#ffffff, 10%);@include border-radius(0px);padding-top: 0;}
 			@include MQ(S) {position: relative;width: 100%;background: darken(#ffffff, 10%);@include border-radius(0px);padding-top: 0;}
 			@include MQ(M) {position: absolute;width: 90%;background: darken($segment_color, 4%);@include border-radius(4px 4px 0px 0px);padding-top: $sm_content_padding/2;text-align: center;}
 			@include MQ(L) {position: absolute;width: 90%;background: darken($segment_color, 4%);@include border-radius(4px 4px 0px 0px);padding-top: $sm_content_padding/2;text-align: center;}    
-			@include MQ(XL) {position: absolute;width: 90%;background: darken($segment_color, 4%);@include border-radius(4px 4px 0px 0px);padding-top: $sm_content_padding/2;text-align: center;}
+			@include MQ(XL) {position: absolute;width: 38%;background: darken($segment_color, 4%);@include border-radius(4px 4px 0px 0px);padding-top: $sm_content_padding/2;text-align: center;}
 		}
 		&.pushup {
 			@include transform(scale(.98) translateY(20px));

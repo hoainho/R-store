@@ -9,7 +9,7 @@ import {
   Route
 } from "react-router-dom";
 import Trademark from './components/trademark';
-import ProductDetails from './components/ProductDetails';
+// import ProductDetails from './components/ProductDetails';  
 import ScrollTop from './components/Scroll';
 import Store from './components/Store/Main';
 import News from './components/news/main';
@@ -61,8 +61,7 @@ function App() {
           {/* Trademark */}
             <Trademark />
           {/* ----- */}
-          {/* Product-Details */}
-          <ProductDetails />
+          
           {/* ----- */}
           {/* Scroll to Top */}
           <ScrollTop scrollStepInPx="50" delayInMs="16.66"/>
