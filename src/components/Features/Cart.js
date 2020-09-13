@@ -3,7 +3,6 @@ import { connect } from 'react-redux';
 import CartState from './CartState/CartState';
 import CartPay from './CartPay/CartPay';
 import { Link } from 'react-router-dom';
-// import { findIndex } from 'lodash';
  class Cart extends Component {
     constructor(props) {
         super(props);
