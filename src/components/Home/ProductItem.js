@@ -1,6 +1,8 @@
 import React from 'react'
-import ProductDetails from '../ProductDetails'
 export default function ProductItem(props){
+    function onSubmit(product){
+        console.log(product);
+    }
     const {product} = props
         return (
             <div>
@@ -15,6 +17,7 @@ export default function ProductItem(props){
                     </span>
                     <h4 className="product-tab--container_content__category___product-name" name>{product.name}</h4>
                     <span className="product-tab--container_content__category___product-vote" >
+
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
                         <i className="fas fa-star"></i>
@@ -29,15 +32,14 @@ export default function ProductItem(props){
                         -10%
                     </span>
                     <div className="product-tab--container_content__category___product-button">
-                        <button className="product-tab--container_content__category___product-button--card">Thêm Sản Phẩm</button>
+                        <button onClick={ () => onSubmit(product) } className="product-tab--container_content__category___product-button--card">Thêm Sản Phẩm</button>
                         <div className="product-tab--container_content__category___product-button--control">
                             <span className="product-tab--container_content__category___product-button--control_heard"><i className="product-tab--container_content__category___product-button--control_heard__icon fas fa-heartbeat"></i></span>
                             <span className="product-tab--container_content__category___product-button--control_compare"><i className="fas fa-balance-scale product-tab--container_content__category___product-button--control_compare__icon"></i></span>
-                        </div>
+                        </div>  
                     </div>
                 </div>     
-                {/* Product-Details */}
-                {/* <ProductDetails />                 */}
+               
             </div>
         );
     
